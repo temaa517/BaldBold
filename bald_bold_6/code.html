@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bald &amp; Bold — Авторизация и Регистрация</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#eeeef0",
+            "primary-container": "#1e1e24",
+            "inverse-surface": "#2f3132",
+            "on-primary-fixed": "#1b1b21",
+            "outline": "#78767b",
+            "secondary-fixed-dim": "#d6c4a7",
+            "on-secondary-container": "#6f6149",
+            "inverse-on-surface": "#f0f0f2",
+            "on-primary": "#ffffff",
+            "secondary": "#6a5d45",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#633f00",
+            "on-tertiary-fixed": "#2a1800",
+            "on-secondary-fixed": "#241a07",
+            "primary-fixed-dim": "#c8c5cd",
+            "on-tertiary-container": "#b87900",
+            "error-container": "#ffdad6",
+            "primary": "#05050a",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#47464d",
+            "tertiary-fixed-dim": "#ffb956",
+            "on-error-container": "#93000a",
+            "secondary-container": "#f0ddbf",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffddb5",
+            "inverse-primary": "#c8c5cd",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#51452f",
+            "primary-fixed": "#e4e1ea",
+            "on-primary-container": "#87858d",
+            "secondary-fixed": "#f3e0c2",
+            "outline-variant": "#c8c5cb",
+            "surface-dim": "#d9dadc",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f9f9fb",
+            "surface-tint": "#5e5e65",
+            "surface-container-low": "#f3f3f5",
+            "on-surface-variant": "#47464b",
+            "surface-container-high": "#e8e8ea",
+            "on-background": "#1a1c1d",
+            "on-surface": "#1a1c1d",
+            "surface": "#f9f9fb",
+            "surface-container-highest": "#e2e2e4",
+            "tertiary-container": "#2d1a00",
+            "surface-variant": "#e2e2e4",
+            "tertiary": "#0a0400",
+            "surface-bright": "#f9f9fb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Montserrat"],
+            "body-md-medium": ["Inter"],
+            "display-mobile": ["Montserrat"],
+            "display": ["Montserrat"],
+            "body-md": ["Inter"],
+            "headline-sm": ["Montserrat"],
+            "body-lg": ["Inter"],
+            "label-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Montserrat"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Montserrat"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+            "body-md-medium": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+            "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+            "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+          }
+        }
+      }
+    };
+  </script>
+<script src="../shared/tailwind.config.js"></script>
+<script>
+    tailwind.config = window.BB.extendTailwindConfig(tailwind.config);
+    document.addEventListener('DOMContentLoaded', window.BB.initTheme);
+  </script>
+<script src="../shared/bb-app.js"></script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-gradient-glow {
+      background: radial-gradient(circle at 75% 25%, rgba(242, 169, 59, 0.18) 0%, rgba(30, 30, 36, 0) 65%);
+    }
+  </style>
+<style type="text/tailwindcss">
+    .bb-peer-input {
+      @apply w-full h-12 px-4 rounded-xl border border-outline-variant bg-surface-container-lowest text-on-surface text-body-md transition-colors duration-150 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 dark:bg-primary-container dark:text-on-primary dark:border-outline dark:focus:border-brand-400;
+    }
+    .bb-field-frame {
+      @apply pointer-events-none absolute inset-0 rounded-xl border border-transparent transition-all duration-150 peer-focus:border-brand-400 peer-focus:ring-2 peer-focus:ring-brand-400/25;
+    }
+    .bb-field-error {
+      @apply pt-1.5 text-label-sm font-label-sm text-red-600 dark:text-red-400;
+    }
+    .bb-eye-button {
+      @apply absolute inset-y-0 right-0 px-3 flex items-center text-outline hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors dark:hover:text-brand-300;
+    }
+    .bb-strength-bar {
+      @apply h-1.5 flex-1 rounded-full bg-surface-container transition-colors duration-300 dark:bg-primary-container;
+    }
+    .bb-consent {
+      @apply relative inline-flex items-start gap-3 cursor-pointer pt-1 rounded-lg transition-colors has-[:checked]:bg-brand-50/60 dark:has-[:checked]:bg-brand-900/20;
+    }
+    .bb-submit {
+      @apply w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-sm transition-all duration-150 active:scale-[0.98] flex items-center justify-center gap-2 mt-2 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-brand-400 dark:text-primary dark:focus:ring-brand-400/40;
+    }
+</style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-tertiary-fixed-dim selection:text-primary">
+<button aria-label="Переключить тему" aria-pressed="false" class="fixed right-4 top-4 z-[60] w-10 h-10 rounded-xl border border-outline-variant/40 bg-surface-container-lowest/90 text-on-surface-variant shadow-lg backdrop-blur flex items-center justify-center transition-colors hover:text-primary hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary/30 dark:bg-primary-container dark:text-on-primary dark:border-outline dark:hover:text-brand-300 sm:right-6" data-theme-toggle="" type="button"><span class="material-symbols-outlined text-[20px]" data-theme-icon="">dark_mode</span></button>
+<!-- Main Split Canvas: Screen 6 (Auth & Registration) -->
+<main class="flex-1 w-full min-h-screen flex flex-col lg:flex-row">
+<!-- LEFT COLUMN: Decorative Brand Sanctuary (50% split) -->
+<section class="lg:w-1/2 bg-primary-container relative flex flex-col justify-between p-8 sm:p-12 lg:p-16 overflow-hidden custom-gradient-glow text-on-primary">
+<!-- Amber ambient light spill -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-tertiary-fixed-dim/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-[480px] h-[480px] rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<!-- Header / Brand Mark -->
+<header class="relative z-10 flex items-center justify-between">
+<a class="flex items-center gap-3 group" href="../bald_bold_1/code.html"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" fill="none" style="width:100%;height:100%"><g transform="translate(10, 8)"><path d="M27 50 C13 50 5 39 5 24 C5 9 15 0 27 0 C39 0 49 9 49 24 C49 39 41 50 27 50 Z" fill="#1E1E24"/><path d="M15 14 C19 6 25 4 31 4" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M35 8 L38 1 L41 8 L48 11 L41 14 L38 21 L35 14 L28 11 Z" fill="#F2A93B"/><circle cx="20" cy="24" r="2.5" fill="#FFFFFF"/><circle cx="34" cy="24" r="2.5" fill="#FFFFFF"/><path d="M22 33 C24 37 30 37 32 33" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg></div><span class="text-headline-md font-headline-md font-bold tracking-tight text-on-primary">Bald &amp; Bold</span></a>
+<a class="hidden sm:inline-flex items-center gap-1.5 font-label-lg text-label-lg text-outline-variant hover:text-tertiary-fixed-dim transition-colors" href="../bald_bold_1/code.html">
+<span>На главную</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</header>
+<!-- Center Hero & Manifesto -->
+<div class="relative z-10 my-10 lg:my-14 flex flex-col gap-8 max-w-xl">
+<!-- Visual badge icon -->
+<div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface-container-lowest/10 backdrop-blur-md border border-outline/30 w-fit">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]" style="font-variation-settings: 'FILL' 1;">flare</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">Уход, который заметят все</span>
+</div>
+<div class="space-y-4">
+<h1 class="font-display text-headline-lg lg:text-[48px] lg:leading-[54px] font-extrabold tracking-tight text-on-primary uppercase">
+            Bald is <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary-fixed-dim via-secondary-fixed to-on-primary">Beautiful</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container dark:text-secondary-fixed leading-relaxed">
+            Присоединяйся к клубу уверенных в себе. Эксклюзивные скидки, персональный подбор ухода и 500 бонусов = 16,50 Br на первое сияние.
+          </p>
+</div>
+<!-- Silhouette Illustration Graphic Card -->
+<div class="relative bg-surface-container-lowest/5 border border-outline-variant/20 rounded-2xl p-6 backdrop-blur-md flex items-center gap-6 overflow-hidden">
+<div class="relative w-20 h-20 shrink-0 rounded-xl bg-gradient-to-br from-tertiary-fixed-dim/20 to-surface-container-lowest/5 flex items-center justify-center border border-tertiary-fixed-dim/40 shadow-[0_0_24px_rgba(242,169,59,0.25)]">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">face_6</span>
+<span class="absolute -top-1.5 -right-1.5 material-symbols-outlined text-tertiary-fixed-dim text-lg animate-pulse" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="space-y-1">
+<p class="font-headline-sm text-headline-sm font-semibold text-on-primary">Клуб совершенного блеска</p>
+<p class="font-body-sm text-body-sm text-on-primary-container dark:text-secondary-fixed">Инновационные средства для бритых голов: от сатинового финиша до солнцезащитного щита SPF 50.</p>
+</div>
+</div>
+<!-- 3 Benefit Pillars -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+<div class="p-3.5 rounded-xl bg-surface-container-lowest/5 border border-outline-variant/15 flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed-dim/15 flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">percent</span>
+</div>
+<p class="font-label-sm text-label-sm font-semibold text-on-primary">-10% на первый заказ</p>
+<p class="font-label-sm text-[11px] leading-4 text-outline-variant">Активируется автоматически сразу после авторизации</p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-lowest/5 border border-outline-variant/15 flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed-dim/15 flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<p class="font-label-sm text-label-sm font-semibold text-on-primary">Трихолог онлайн</p>
+<p class="font-label-sm text-[11px] leading-4 text-outline-variant">Бесплатная консультация эксперта по коже головы</p>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-lowest/5 border border-outline-variant/15 flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed-dim/15 flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+<p class="font-label-sm text-label-sm font-semibold text-on-primary">Клуб «Шейверс»</p>
+<p class="font-label-sm text-[11px] leading-4 text-outline-variant">Закрытые релизы и дропы лимитированных серий</p>
+</div>
+</div>
+</div>
+<!-- Bottom Status Note -->
+<footer class="relative z-10 pt-4 border-t border-outline/20 flex flex-wrap items-center justify-between gap-4 text-outline-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+          Бонусный счет: 16,50 Br за регистрацию доступно сегодня
+        </span>
+<span>© <span data-year>2026</span> Bald &amp; Bold</span>
+</footer>
+</section>
+<!-- RIGHT COLUMN: Interactive Auth & Registration Canvas (50% split) -->
+<section class="lg:w-1/2 bg-surface-container-lowest flex flex-col justify-between p-6 sm:p-12 lg:p-16">
+<!-- Top Utility Nav -->
+<div class="w-full max-w-lg mx-auto flex items-center justify-between pb-6 pr-12">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Безопасный 256-битный протокол</span>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="mailto:support@baldbold.by">
+<span>Справка</span>
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+</a>
+</div>
+<!-- Main Form Wrapper -->
+<div class="w-full max-w-lg mx-auto my-auto space-y-8">
+<!-- Segmented Tab Switcher -->
+<div aria-label="Авторизация и регистрация" class="bg-surface-container-low p-1.5 rounded-xl flex items-center gap-1 border border-outline-variant/30" role="tablist">
+<button aria-controls="panel-login" aria-selected="true" class="flex-1 h-12 px-4 rounded-xl font-label-lg text-label-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-semibold flex items-center justify-center gap-2" id="tab-login-btn" onclick="switchAuthTab('login')" role="tab" tabindex="0" type="button">
+<span class="material-symbols-outlined text-[18px]">login</span>
+            Войти в аккаунт
+          </button>
+<button aria-controls="panel-register" aria-selected="false" class="flex-1 h-12 px-4 rounded-xl font-label-lg text-label-lg transition-all duration-200 text-on-surface-variant hover:text-primary flex items-center justify-center gap-2" id="tab-register-btn" onclick="switchAuthTab('register')" role="tab" tabindex="-1" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+            Регистрация
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary-container text-on-secondary-container">+16,50 Br</span>
+</button>
+</div>
+<!-- 1. LOGIN FORM PANEL -->
+<div aria-labelledby="tab-login-btn" class="space-y-6" id="panel-login" role="tabpanel">
+<div class="space-y-2">
+<h2 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Добро пожаловать обратно</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Введите учетные данные для доступа к клубу и истории заказов</p>
+</div>
+<form class="space-y-4" id="login-form" novalidate>
+<!-- Email -->
+<div class="space-y-1.5">
+<label class="block font-label-lg text-label-lg text-primary" for="login-email">Электронная почта</label>
+<div class="relative">
+<input aria-describedby="login-error" autocomplete="email" class="w-full h-12 px-4 rounded-xl border border-outline-variant bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors" data-login-input="email" id="login-email" name="email" placeholder="demo@baldbold.local" required="" type="email"/>
+<div class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+<p aria-live="polite" class="hidden pt-1 font-label-sm text-label-sm text-red-600 dark:text-red-400" data-login-error="email"></p>
+</div>
+<!-- Password -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block font-label-lg text-label-lg text-primary" for="login-password">Пароль</label>
+<button aria-haspopup="dialog" class="bg-transparent p-0 font-label-sm text-label-sm text-secondary hover:text-primary font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/30 rounded" data-bb-recovery type="button">Забыли пароль?</button>
+</div>
+<div class="relative">
+<input aria-describedby="login-error" autocomplete="current-password" class="w-full h-12 pl-4 pr-12 rounded-xl border border-outline-variant bg-surface-container-lowest text-on-surface text-body-md focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors" data-login-input="password" id="login-password" name="password" placeholder="••••••••••••" required="" type="password"/>
+<button aria-expanded="false" aria-label="Показать пароль" aria-pressed="false" class="absolute inset-y-0 right-0 px-3.5 flex items-center text-outline hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors" onclick="togglePasswordVisibility('login-password', 'eye-login-icon')" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eye-login-icon">visibility</span>
+</button>
+</div>
+<p aria-live="polite" class="hidden pt-1 font-label-sm text-label-sm text-red-600 dark:text-red-400" data-login-error="password"></p>
+</div>
+<!-- Remember me checkbox -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+<label class="inline-flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors cursor-pointer" name="remember" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-primary transition-colors">Запомнить меня на этом устройстве</span>
+</label>
+<button class="bg-transparent p-0 font-label-sm text-label-sm text-secondary hover:text-primary font-medium underline-offset-2 hover:underline focus:outline-none focus:ring-2 focus:ring-primary/30 rounded" data-bb-demo-fill type="button">Заполнить демо-данные</button>
+</div>
+<p aria-live="polite" class="hidden pt-1 text-label-sm font-label-sm text-red-600 dark:text-red-400" id="login-error"></p>
+<!-- Main CTA (Amber Accent Button) -->
+<button class="w-full h-12 bg-tertiary-fixed-dim hover:bg-[#d88f23] dark:hover:bg-brand-400 text-primary font-label-lg text-label-lg font-semibold rounded-xl shadow-sm transition-all duration-150 active:scale-[0.98] flex items-center justify-center gap-2 mt-2" type="submit">
+<span id="login-submit-label">Войти в личный кабинет</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative flex items-center justify-center my-6">
+<div class="border-t border-outline-variant/50 w-full"></div>
+<span class="bg-surface-container-lowest px-4 font-label-sm text-label-sm text-outline">или войдите через</span>
+</div>
+<!-- Social Quick Sign-In -->
+<div class="grid grid-cols-3 gap-3">
+<button class="h-12 border border-outline-variant rounded-xl flex items-center justify-center gap-2 text-primary hover:bg-surface-container-low transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30" data-bb-social="Google" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Google</span>
+</button>
+<button class="h-12 border border-outline-variant rounded-xl flex items-center justify-center gap-2 text-primary hover:bg-surface-container-low transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30" data-bb-social="Apple ID" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Apple ID</span>
+</button>
+<button class="h-12 border border-outline-variant rounded-xl flex items-center justify-center gap-2 text-primary hover:bg-surface-container-low transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30" data-bb-social="Яндекс" type="button">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Яндекс</span>
+</button>
+</div>
+</div>
+<!-- 2. REGISTRATION FORM PANEL (Toggleable) -->
+<div aria-labelledby="tab-register-btn" class="space-y-6 hidden" id="panel-register" role="tabpanel">
+<div class="space-y-2">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">celebration</span>
+              500 бонусов = 16,50 Br на счет
+            </div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Регистрация в клубе</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Заполните поля, чтобы получить постоянную скидку и доступ к сервисам</p>
+</div>
+<form aria-label="Форма регистрации" class="space-y-4" id="register-form" novalidate>
+<!-- Name -->
+<div class="space-y-1.5">
+<label class="block font-label-lg text-label-lg text-primary dark:text-on-primary" for="reg-name">Ваше имя</label>
+<div class="relative">
+<input aria-invalid="false" aria-label="Ваше имя" autocomplete="name" class="bb-peer-input peer" id="reg-name" name="name" placeholder="Константин" required="" type="text"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error absolute left-0 top-full z-10 hidden">Укажите ваше имя</p>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-1.5">
+<label class="block font-label-lg text-label-lg text-primary dark:text-on-primary" for="reg-email">Email для чеков и трекинга</label>
+<div class="relative">
+<input aria-invalid="false" aria-label="Email для чеков и трекинга" autocomplete="email" class="bb-peer-input peer pr-10" id="reg-email" name="email" placeholder="konstantin@example.com" required="" type="email"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error absolute left-0 top-full z-10 hidden">Введите корректный email</p>
+<div class="absolute inset-y-0 right-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+</div>
+</div>
+<!-- Grid Passwords -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="space-y-1.5">
+<label class="block font-label-lg text-label-lg text-primary dark:text-on-primary" for="reg-password">Придумайте пароль</label>
+<div class="relative">
+<input aria-invalid="false" aria-label="Придумайте пароль, минимум 8 знаков" autocomplete="new-password" class="bb-peer-input peer pl-4 pr-10" id="reg-password" minlength="8" name="password" placeholder="Минимум 8 знаков" required="" type="password"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error absolute left-0 top-full z-10 hidden">Пароль должен содержать минимум 8 знаков</p>
+<button aria-expanded="false" aria-label="Показать пароль" aria-pressed="false" class="bb-eye-button" onclick="togglePasswordVisibility('reg-password', 'eye-reg-icon-1')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-reg-icon-1">visibility</span>
+</button>
+</div>
+<div aria-label="Надёжность пароля" aria-valuemax="4" aria-valuemin="0" aria-valuenow="0" class="grid grid-cols-4 gap-1.5 pt-1" id="password-strength" role="progressbar">
+<span class="bb-strength-bar data-[filled=true]:bg-semantic-danger" data-bar="1" data-filled="false"></span>
+<span class="bb-strength-bar data-[filled=true]:bg-semantic-warning" data-bar="2" data-filled="false"></span>
+<span class="bb-strength-bar data-[filled=true]:bg-semantic-warning" data-bar="3" data-filled="false"></span>
+<span class="bb-strength-bar data-[filled=true]:bg-semantic-success" data-bar="4" data-filled="false"></span>
+</div>
+<div class="flex items-center justify-between pt-0.5 text-label-sm font-label-sm text-on-surface-variant dark:text-outline">
+<span>Надёжность пароля</span>
+<span aria-live="polite" id="password-strength-label">Не задан</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="block font-label-lg text-label-lg text-primary dark:text-on-primary" for="reg-password-repeat">Повторите пароль</label>
+<div class="relative">
+<input aria-invalid="false" aria-label="Повторите пароль" autocomplete="new-password" class="bb-peer-input peer pl-4 pr-10" data-password-confirm="" id="reg-password-repeat" minlength="8" name="password-confirm" placeholder="Повторите" required="" type="password"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error absolute left-0 top-full z-10 hidden">Пароли не совпадают</p>
+<button aria-expanded="false" aria-label="Показать пароль" aria-pressed="false" class="bb-eye-button" onclick="togglePasswordVisibility('reg-password-repeat', 'eye-reg-icon-2')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-reg-icon-2">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Terms Checkbox -->
+<label class="bb-consent group" for="reg-consent">
+<input aria-invalid="false" aria-label="Согласие с правилами клуба и политикой конфиденциальности" class="peer mt-1 w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-2 focus:ring-primary/20 transition-colors cursor-pointer" id="reg-consent" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight group-hover:text-primary transition-colors dark:text-outline-variant">
+                Согласен с <button aria-haspopup="dialog" class="bg-transparent p-0 underline underline-offset-2 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-primary/30 rounded" data-bb-terms="rules" type="button">правилами клуба</button> и <button aria-haspopup="dialog" class="bg-transparent p-0 underline underline-offset-2 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-primary/30 rounded" data-bb-terms="privacy" type="button">политикой конфиденциальности</button>
+</span>
+<p class="bb-field-error absolute left-8 top-full z-10 hidden">Необходимо согласие с правилами клуба</p>
+</label>
+<!-- Register Button -->
+<button aria-busy="false" class="bb-submit group data-[state=loading]:cursor-wait" data-state="idle" id="register-submit" type="submit">
+<span class="flex items-center gap-2 group-data-[state=loading]:hidden">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]" style="font-variation-settings: 'FILL' 1;">redeem</span>
+<span>Создать аккаунт и получить 16,50 Br</span>
+</span>
+<span aria-hidden="true" class="hidden items-center gap-2 group-data-[state=loading]:flex">
+<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span>
+<span>Создаём аккаунт...</span>
+</span>
+</button>
+</form>
+<!-- Social Quick Sign-In for Registration -->
+<div class="pt-2">
+<div class="relative flex items-center justify-center my-4">
+<div class="border-t border-outline-variant/50 w-full"></div>
+<span class="bg-surface-container-lowest px-4 font-label-sm text-label-sm text-outline">или быстрая регистрация через</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="h-12 border border-outline-variant rounded-xl flex items-center justify-center font-label-sm text-label-sm font-semibold text-primary hover:bg-surface-container-low transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30" data-bb-social="Google" type="button">Google</button>
+<button class="h-12 border border-outline-variant rounded-xl flex items-center justify-center font-label-sm text-label-sm font-semibold text-primary hover:bg-surface-container-low transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30" data-bb-social="Apple ID" type="button">Apple ID</button>
+<button class="h-12 border border-outline-variant rounded-xl flex items-center justify-center font-label-sm text-label-sm font-semibold text-primary hover:bg-surface-container-low transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30" data-bb-social="Яндекс" type="button">Яндекс</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Support Footer -->
+<footer class="w-full max-w-lg mx-auto pt-8 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">forum</span>
+<span>Нужна помощь?</span>
+<a class="font-body-md-medium text-primary hover:underline" href="mailto:support@baldbold.by">Служба заботы о клиентах</a>
+</div>
+<div class="flex items-center gap-3"><button class="bg-transparent p-0 font-body-sm text-body-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary/30 rounded" data-bb-info="privacy" type="button">Конфиденциальность</button><span class="text-outline text-label-sm">24/7 online</span></div>
+</footer>
+</section>
+</main>
+<div aria-labelledby="recovery-title" aria-modal="true" class="hidden fixed inset-0 z-[80] flex items-center justify-center bg-primary/60 p-4 backdrop-blur-sm" id="recovery-modal" role="dialog">
+<div class="w-full max-w-md rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-2xl dark:bg-primary-container">
+<div class="flex items-start justify-between gap-4">
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary" id="recovery-title">Восстановление пароля</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-outline">Введите email — отправим ссылку для сброса пароля.</p>
+</div>
+<button aria-label="Закрыть окно восстановления" class="w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container-low hover:text-primary dark:hover:bg-inverse-surface dark:hover:text-on-primary focus:outline-none focus:ring-2 focus:ring-primary/30" data-bb-modal-close="" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button>
+</div>
+<div class="mt-5 space-y-2">
+<label class="block font-label-sm text-label-sm font-semibold text-primary dark:text-on-primary" for="recovery-email">Электронная почта</label>
+<input aria-describedby="recovery-error" autocomplete="email" class="bb-peer-input peer" id="recovery-email" name="email" placeholder="alex@example.com" type="email"/>
+<p aria-live="polite" class="hidden pt-1 text-label-sm font-label-sm text-red-600 dark:text-red-400" id="recovery-error"></p>
+</div>
+<div class="mt-6 flex justify-end gap-3">
+<button class="h-12 rounded-xl border border-outline-variant px-4 font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low dark:text-outline dark:hover:bg-inverse-surface focus:outline-none focus:ring-2 focus:ring-primary/30" data-bb-modal-close="" type="button">Отмена</button>
+<button class="h-12 rounded-xl bg-primary px-4 font-label-lg text-label-lg font-semibold text-on-primary hover:bg-inverse-surface dark:bg-tertiary-fixed-dim dark:text-primary dark:hover:bg-secondary-fixed-dim focus:outline-none focus:ring-2 focus:ring-primary/30" id="recovery-submit" type="button">Отправить ссылку</button>
+</div>
+</div>
+</div>
+<div aria-labelledby="terms-title" aria-modal="true" class="hidden fixed inset-0 z-[80] flex items-center justify-center bg-primary/60 p-4 backdrop-blur-sm" id="terms-modal" role="dialog">
+<div class="w-full max-w-lg max-h-[80vh] overflow-y-auto rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-2xl dark:bg-primary-container">
+<div class="flex items-start justify-between gap-4">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary" id="terms-title">Правила клуба</h3>
+<button aria-label="Закрыть окно с правилами" class="w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container-low hover:text-primary dark:hover:bg-inverse-surface dark:hover:text-on-primary focus:outline-none focus:ring-2 focus:ring-primary/30" data-bb-modal-close="" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button>
+</div>
+<p class="pt-4 font-body-sm text-body-sm leading-relaxed text-on-surface-variant dark:text-outline" id="terms-content"></p>
+<div class="mt-6 flex justify-end">
+<button class="h-12 rounded-xl bg-primary px-5 font-label-lg text-label-lg font-semibold text-on-primary hover:bg-inverse-surface dark:bg-tertiary-fixed-dim dark:text-primary dark:hover:bg-secondary-fixed-dim focus:outline-none focus:ring-2 focus:ring-primary/30" data-bb-modal-close="" type="button">Понятно</button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript logic for Tabs and Password Visibility -->
+<script>
+    const redirectToAccount = function () {
+      window.location.href = '../bald_bold_5/code.html';
+    };
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function switchAuthTab(tab) {
+      const loginBtn = document.getElementById('tab-login-btn');
+      const registerBtn = document.getElementById('tab-register-btn');
+      const loginPanel = document.getElementById('panel-login');
+      const registerPanel = document.getElementById('panel-register');
+      const loginActive = tab === 'login';
+
+      loginPanel.classList.toggle('hidden', !loginActive);
+      registerPanel.classList.toggle('hidden', loginActive);
+      loginBtn.setAttribute('aria-selected', String(loginActive));
+      registerBtn.setAttribute('aria-selected', String(!loginActive));
+      loginBtn.setAttribute('tabindex', loginActive ? '0' : '-1');
+      registerBtn.setAttribute('tabindex', loginActive ? '-1' : '0');
+
+      [loginBtn, registerBtn].forEach(function (button, index) {
+        const active = index === 0 ? loginActive : !loginActive;
+        button.classList.toggle('bg-surface-container-lowest', active);
+        button.classList.toggle('text-primary', active);
+        button.classList.toggle('shadow-sm', active);
+        button.classList.toggle('font-semibold', active);
+        button.classList.toggle('text-on-surface-variant', !active);
+        button.classList.toggle('hover:text-primary', !active);
+      });
+    }
+
+    document.addEventListener('keydown', function (event) {
+      const tab = document.activeElement;
+      if (!tab || !tab.matches || !tab.matches('[role="tab"][id^="tab-"]')) return;
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const next = tab.id === 'tab-login-btn' ? 'register' : 'login';
+      switchAuthTab(next);
+      document.getElementById(next === 'login' ? 'tab-login-btn' : 'tab-register-btn').focus();
+    });
+
+    function togglePasswordVisibility(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (!input || !icon) return;
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.textContent = 'visibility';
+      }
+      const button = icon.closest('button');
+      if (button) {
+        const revealed = input.type === 'text';
+        button.setAttribute('aria-label', revealed ? 'Скрыть пароль' : 'Показать пароль');
+        button.setAttribute('aria-pressed', String(revealed));
+        button.setAttribute('aria-expanded', String(revealed));
+      }
+    }
+
+    function setLoginFieldError(field, message) {
+      const error = document.querySelector('[data-login-error="' + field + '"]');
+      const input = document.querySelector('[data-login-input="' + field + '"]');
+      if (error) {
+        error.textContent = message || '';
+        error.classList.toggle('hidden', !message);
+      }
+      if (input) {
+        input.setAttribute('aria-invalid', message ? 'true' : 'false');
+        input.classList.toggle('border-red-500', Boolean(message));
+      }
+    }
+
+    function clearLoginErrors() {
+      setLoginFieldError('email', '');
+      setLoginFieldError('password', '');
+      const summary = document.getElementById('login-error');
+      if (summary) {
+        summary.textContent = '';
+        summary.classList.add('hidden');
+      }
+    }
+
+    function submitLogin() {
+      const emailField = document.getElementById('login-email');
+      const passwordField = document.getElementById('login-password');
+      const remember = document.querySelector('#login-form input[name="remember"]');
+      const email = emailField.value.trim();
+      const password = passwordField.value;
+      clearLoginErrors();
+      const invalid = [];
+      if (!emailPattern.test(email)) {
+        setLoginFieldError('email', 'Введите корректный email.');
+        invalid.push(emailField);
+      }
+      if (password.length < 6) {
+        setLoginFieldError('password', 'Пароль должен содержать минимум 6 символов.');
+        invalid.push(passwordField);
+      }
+      if (invalid.length) {
+        const summary = document.getElementById('login-error');
+        if (summary) {
+          summary.textContent = 'Проверьте email и пароль.';
+          summary.classList.remove('hidden');
+        }
+        invalid[0].focus();
+        return;
+      }
+      const stored = window.BBStore.user();
+      const name = stored && stored.name ? stored.name : email.split('@')[0];
+      window.BBStore.setUser({ name: name, email: email });
+      try {
+        localStorage.setItem('bb:remember:v1', JSON.stringify({
+          remember: Boolean(remember && remember.checked),
+          email: remember && remember.checked ? email : ''
+        }));
+      } catch (error) { void error; }
+      const label = document.getElementById('login-submit-label');
+      if (label) label.textContent = 'Вход выполнен';
+      window.BBStore.toast('Добро пожаловать, ' + name + '!', 'success');
+      window.setTimeout(redirectToAccount, 600);
+    }
+
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        submitLogin();
+      });
+    }
+
+    (function () {
+      const emailField = document.getElementById('login-email');
+      const passwordField = document.getElementById('login-password');
+      const remember = document.querySelector('#login-form input[name="remember"]');
+      const label = document.getElementById('login-submit-label');
+      let saved = null;
+      try { saved = JSON.parse(localStorage.getItem('bb:remember:v1') || 'null'); } catch (error) { saved = null; }
+      if (saved && typeof saved.remember === 'boolean' && remember) remember.checked = saved.remember;
+      if (saved && saved.remember && saved.email && emailField) emailField.value = saved.email;
+      const stored = window.BBStore.user();
+      if (stored && stored.email && !(saved && saved.remember && saved.email) && emailField) emailField.value = stored.email;
+      if (stored && stored.name && label) label.textContent = 'Войти как ' + stored.name;
+      if (remember) {
+        remember.addEventListener('change', function () {
+          try {
+            localStorage.setItem('bb:remember:v1', JSON.stringify({
+              remember: remember.checked,
+              email: remember.checked && emailField ? emailField.value.trim() : ''
+            }));
+          } catch (error) { void error; }
+        });
+      }
+      [emailField, passwordField].forEach(function (input) {
+        if (!input) return;
+        input.addEventListener('input', function () { setLoginFieldError(input.id === 'login-email' ? 'email' : 'password', ''); });
+      });
+      const demoFill = document.querySelector('[data-bb-demo-fill]');
+      if (demoFill) {
+        demoFill.addEventListener('click', function () {
+          if (emailField) emailField.value = 'demo@baldbold.local';
+          if (passwordField) passwordField.value = 'DemoOnly123';
+          clearLoginErrors();
+          window.BBStore.toast('Демо-данные подставлены только для демонстрации', 'info');
+        });
+      }
+      document.querySelectorAll('[data-year]').forEach(function (node) { node.textContent = String(new Date().getFullYear()); });
+    })();
+
+    (function () {
+      document.querySelectorAll('[data-bb-social]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          const provider = button.dataset.bbSocial;
+          const socialGuests = {
+            'Google': { name: 'Google Гость', email: 'google.guest@baldbold.local' },
+            'Apple ID': { name: 'Apple Гость', email: 'apple.guest@baldbold.local' },
+            'Яндекс': { name: 'Yandex Гость', email: 'yandex.guest@baldbold.local' }
+          };
+          const guest = socialGuests[provider] || { name: 'Социальный Гость', email: 'social.guest@baldbold.local' };
+          window.BBStore.setUser(guest);
+          window.BBStore.toast('Демо-вход через ' + provider + ' выполнен', 'success');
+          window.setTimeout(redirectToAccount, 600);
+        });
+      });
+    })();
+
+    (function () {
+      const recoveryModal = document.getElementById('recovery-modal');
+      const termsModal = document.getElementById('terms-modal');
+      const recoveryEmail = document.getElementById('recovery-email');
+      const recoveryError = document.getElementById('recovery-error');
+      const termsTitle = document.getElementById('terms-title');
+      const termsContent = document.getElementById('terms-content');
+      let lastTrigger = null;
+      let modalOverflow = '';
+
+      function openModal(modal, trigger) {
+        lastTrigger = trigger || null;
+        modalOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        modal.classList.remove('hidden');
+        const focusable = modal.querySelector('input') || modal.querySelector('button');
+        if (focusable) window.setTimeout(function () { focusable.focus(); }, 0);
+      }
+
+      function closeModal(modal) {
+        if (!modal || modal.classList.contains('hidden')) return;
+        modal.classList.add('hidden');
+        if ([recoveryModal, termsModal].every(function (item) { return item.classList.contains('hidden'); })) {
+          document.body.style.overflow = modalOverflow;
+        }
+        if (lastTrigger && lastTrigger.focus) lastTrigger.focus();
+        lastTrigger = null;
+      }
+
+      document.querySelectorAll('[data-bb-recovery]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          recoveryEmail.value = '';
+          recoveryEmail.setAttribute('aria-invalid', 'false');
+          recoveryError.textContent = '';
+          recoveryError.classList.add('hidden');
+          openModal(recoveryModal, link);
+        });
+      });
+
+      document.querySelectorAll('[data-bb-terms]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          const rules = link.dataset.bbTerms === 'rules';
+          termsTitle.textContent = rules ? 'Правила клуба' : 'Политика конфиденциальности';
+          termsContent.textContent = rules
+            ? 'Клуб Bald & Bold дарит 500 бонусов = 16,50 Br после регистрации, -10% на первый заказ и доступ к закрытым дропам. Бонусы начисляются автоматически и действуют на следующий заказ.'
+            : 'Мы используем email только для чеков, статуса заказов и важных обновлений клуба. Данные не передаются третьим лицам, а отписаться от рассылки можно в любой момент.';
+          openModal(termsModal, link);
+        });
+      });
+
+      document.querySelectorAll('[data-bb-modal-close]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          closeModal(button.closest('[role="dialog"]'));
+        });
+      });
+
+      [recoveryModal, termsModal].forEach(function (modal) {
+        modal.addEventListener('click', function (event) {
+          if (event.target === modal) closeModal(modal);
+        });
+        modal.addEventListener('keydown', function (event) {
+          if (event.key !== 'Tab') return;
+          const focusable = Array.from(modal.querySelectorAll('button, input, [href], [tabindex]:not([tabindex="-1"])'))
+            .filter(function (element) { return !element.disabled && element.offsetParent !== null; });
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key !== 'Escape') return;
+        if (!termsModal.classList.contains('hidden')) closeModal(termsModal);
+        else if (!recoveryModal.classList.contains('hidden')) closeModal(recoveryModal);
+      });
+
+      document.getElementById('recovery-submit').addEventListener('click', function () {
+        const email = recoveryEmail.value.trim();
+        const valid = emailPattern.test(email);
+        recoveryEmail.setAttribute('aria-invalid', String(!valid));
+        if (!valid) {
+          recoveryError.textContent = 'Введите корректный email.';
+          recoveryError.classList.remove('hidden');
+          recoveryEmail.focus();
+          return;
+        }
+        closeModal(recoveryModal);
+        window.BBStore.toast('Ссылка для восстановления отправлена на ' + email, 'success');
+      });
+    })();
+
+    (function () {
+      const form = document.getElementById('register-form');
+      const nameField = document.getElementById('reg-name');
+      const emailField = document.getElementById('reg-email');
+      const password = document.getElementById('reg-password');
+      const confirm = document.querySelector('[data-password-confirm]');
+      const consent = document.getElementById('reg-consent');
+      const strength = document.getElementById('password-strength');
+      const strengthLabel = document.getElementById('password-strength-label');
+      const bars = Array.from(strength.querySelectorAll('[data-bar]'));
+      const submit = document.getElementById('register-submit');
+      const labels = ['Не задан', 'Слабый', 'Средний', 'Хороший', 'Надёжный'];
+
+      function makeConfig(field, message) {
+        const error = field.parentElement ? field.parentElement.querySelector('.bb-field-error') : null;
+        return { field: field, error: error, message: message };
+      }
+      const configs = [
+        makeConfig(nameField, 'Укажите ваше имя'),
+        makeConfig(emailField, 'Введите корректный email'),
+        makeConfig(password, 'Пароль должен содержать минимум 8 знаков'),
+        makeConfig(confirm, 'Повторите пароль')
+      ];
+      const confirmConfig = configs[3];
+      const consentError = consent.closest('label').querySelector('.bb-field-error');
+
+      function score(value) {
+        if (!value) return 0;
+        let result = 1;
+        if (value.length >= 8) result += 1;
+        if (/[A-ZА-ЯЁ]/.test(value) && /[a-zа-яё]/.test(value)) result += 1;
+        if (/\d/.test(value) || /[^A-Za-zА-Яа-яЁё0-9]/.test(value)) result += 1;
+        return Math.min(4, result);
+      }
+
+      function applyConfig(config, message) {
+        config.field.setAttribute('aria-invalid', message ? 'true' : 'false');
+        config.field.classList.toggle('border-red-500', Boolean(message));
+        if (config.error) {
+          config.error.textContent = message || config.message;
+          config.error.classList.toggle('hidden', !message);
+        }
+        const frame = config.field.parentElement ? config.field.parentElement.querySelector('.bb-field-frame') : null;
+        if (frame) frame.classList.toggle('border-red-500', Boolean(message));
+      }
+
+      function messageFor(config) {
+        if (config.field === nameField) return nameField.value.trim() ? '' : 'Укажите ваше имя';
+        if (config.field === emailField) return emailPattern.test(emailField.value.trim()) ? '' : 'Введите корректный email';
+        if (config.field === password) return password.value.length >= 8 ? '' : 'Пароль должен содержать минимум 8 знаков';
+        if (!confirm.value) return 'Повторите пароль';
+        return confirm.value === password.value ? '' : 'Пароли не совпадают';
+      }
+
+      function validateAll() {
+        let firstInvalid = null;
+        configs.forEach(function (config) {
+          const message = messageFor(config);
+          applyConfig(config, message);
+          if (message && !firstInvalid) firstInvalid = config.field;
+        });
+        const consentInvalid = !consent.checked;
+        consent.setAttribute('aria-invalid', String(consentInvalid));
+        if (consentError) {
+          consentError.textContent = consentInvalid ? 'Необходимо согласие с правилами клуба' : '';
+          consentError.classList.toggle('hidden', !consentInvalid);
+        }
+        if (consentInvalid && !firstInvalid) firstInvalid = consent;
+        return firstInvalid;
+      }
+
+      password.addEventListener('input', function () {
+        const level = score(password.value);
+        strength.setAttribute('aria-valuenow', String(level));
+        strengthLabel.textContent = labels[level];
+        bars.forEach(function (bar, index) {
+          bar.dataset.filled = String(index < level);
+          bar.setAttribute('aria-hidden', 'true');
+        });
+        applyConfig(configs[2], '');
+        if (confirm.value) applyConfig(confirmConfig, confirm.value === password.value ? '' : 'Пароли не совпадают');
+      });
+
+      configs.forEach(function (config) {
+        config.field.addEventListener('input', function () { applyConfig(config, ''); });
+      });
+      consent.addEventListener('change', function () {
+        consent.setAttribute('aria-invalid', String(!consent.checked));
+        if (consentError) {
+          consentError.textContent = '';
+          consentError.classList.add('hidden');
+        }
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const firstInvalid = validateAll();
+        if (firstInvalid) {
+          strengthLabel.textContent = 'Проверьте поля формы';
+          firstInvalid.focus();
+          return;
+        }
+        submit.dataset.state = 'loading';
+        submit.disabled = true;
+        submit.setAttribute('aria-busy', 'true');
+        window.setTimeout(function () {
+          submit.dataset.state = 'idle';
+          submit.disabled = false;
+          submit.setAttribute('aria-busy', 'false');
+          strengthLabel.textContent = 'Аккаунт создан';
+          window.BBStore.setUser({ name: nameField.value.trim(), email: emailField.value.trim() });
+          window.BBStore.toast('Аккаунт создан. Добро пожаловать в клуб!', 'success');
+          window.setTimeout(redirectToAccount, 900);
+        }, 1200);
+      });
+    })();
+  </script>
+</body></html>

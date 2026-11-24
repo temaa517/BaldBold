@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bald &amp; Bold — Личный кабинет</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#eeeef0",
+            "primary-container": "#1e1e24",
+            "inverse-surface": "#2f3132",
+            "on-primary-fixed": "#1b1b21",
+            "outline": "#78767b",
+            "secondary-fixed-dim": "#d6c4a7",
+            "on-secondary-container": "#6f6149",
+            "inverse-on-surface": "#f0f0f2",
+            "on-primary": "#ffffff",
+            "secondary": "#6a5d45",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#633f00",
+            "on-tertiary-fixed": "#2a1800",
+            "on-secondary-fixed": "#241a07",
+            "primary-fixed-dim": "#c8c5cd",
+            "on-tertiary-container": "#b87900",
+            "error-container": "#ffdad6",
+            "primary": "#05050a",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#47464d",
+            "tertiary-fixed-dim": "#ffb956",
+            "on-error-container": "#93000a",
+            "secondary-container": "#f0ddbf",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffddb5",
+            "inverse-primary": "#c8c5cd",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#51452f",
+            "primary-fixed": "#e4e1ea",
+            "on-primary-container": "#87858d",
+            "secondary-fixed": "#f3e0c2",
+            "outline-variant": "#c8c5cb",
+            "surface-dim": "#d9dadc",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f9f9fb",
+            "surface-tint": "#5e5e65",
+            "surface-container-low": "#f3f3f5",
+            "on-surface-variant": "#47464b",
+            "surface-container-high": "#e8e8ea",
+            "on-background": "#1a1c1d",
+            "on-surface": "#1a1c1d",
+            "surface": "#f9f9fb",
+            "surface-container-highest": "#e2e2e4",
+            "tertiary-container": "#2d1a00",
+            "surface-variant": "#e2e2e4",
+            "tertiary": "#0a0400",
+            "surface-bright": "#f9f9fb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Montserrat"],
+            "body-md-medium": ["Inter"],
+            "display-mobile": ["Montserrat"],
+            "display": ["Montserrat"],
+            "body-md": ["Inter"],
+            "headline-sm": ["Montserrat"],
+            "body-lg": ["Inter"],
+            "label-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Montserrat"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Montserrat"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-md-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<script src="../shared/tailwind.config.js"></script>
+<script>
+    tailwind.config = window.BB.extendTailwindConfig(tailwind.config);
+    document.addEventListener('DOMContentLoaded', window.BB.initTheme);
+  </script>
+<script src="../shared/bb-app.js"></script>
+<style>
+    .custom-shadow {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+    .custom-shadow-hover:hover {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @layer components {
+      .btn-ui { @apply inline-flex items-center justify-center gap-2 rounded-xl font-label-lg text-label-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tertiary-fixed-dim disabled:opacity-50 disabled:pointer-events-none; }
+      .btn-ui-sm { @apply px-3 py-2 text-label-sm; }
+      .btn-ui-md { @apply px-4 py-2.5; }
+      .btn-ui-lg { @apply px-6 py-3; }
+      .btn-ui-primary { @apply bg-primary-container text-on-primary hover:bg-inverse-surface dark:bg-tertiary-fixed-dim dark:text-primary-container dark:hover:bg-secondary-fixed-dim; }
+      .btn-ui-secondary { @apply border border-outline-variant text-primary hover:bg-surface-container-low dark:border-outline/40 dark:text-on-primary dark:hover:bg-inverse-surface; }
+      .btn-ui-ghost { @apply text-primary hover:bg-surface-container-low dark:text-on-primary dark:hover:bg-inverse-surface; }
+      .btn-ui-danger { @apply bg-semantic-danger text-white hover:bg-error; }
+      .input-ui { @apply w-full rounded-xl border border-outline-variant/60 bg-surface-container-lowest px-4 py-2.5 text-body-sm text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary dark:border-outline/30 dark:bg-surface-container-low dark:text-on-primary; }
+      .badge-ui { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-label-sm font-semibold; }
+      .card-ui { @apply rounded-2xl border border-surface-container-highest bg-surface-container-lowest p-5 shadow-sm dark:border-outline/20 dark:bg-primary-container; }
+      .alert-ui { @apply flex items-start gap-3 rounded-xl border p-4 text-body-sm; }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-tertiary-fixed selection:text-tertiary">
+<header class="bg-surface-container-lowest dark:bg-primary-container border-b border-outline-variant/40 dark:border-outline/20 shadow-sm top-0 sticky z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-8">
+<a class="flex items-center gap-3 group" href="../bald_bold_1/code.html"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" fill="none" style="width:100%;height:100%"><g transform="translate(10, 8)"><path d="M27 50 C13 50 5 39 5 24 C5 9 15 0 27 0 C39 0 49 9 49 24 C49 39 41 50 27 50 Z" fill="#1E1E24"/><path d="M15 14 C19 6 25 4 31 4" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M35 8 L38 1 L41 8 L48 11 L41 14 L38 21 L35 14 L28 11 Z" fill="#F2A93B"/><circle cx="20" cy="24" r="2.5" fill="#FFFFFF"/><circle cx="34" cy="24" r="2.5" fill="#FFFFFF"/><path d="M22 33 C24 37 30 37 32 33" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg></div><span class="text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-on-primary">Bald & Bold</span></a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_1/code.html">Главная</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_2/code.html">Каталог</a>
+<a class="text-label-lg font-label-lg text-primary font-semibold border-b-2 border-primary pb-1 transition-colors" href="../bald_bold_5/code.html">Кабинет</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_4/code.html">Корзина</a>
+</nav>
+<div class="flex items-center gap-1 sm:gap-4">
+<div class="relative hidden lg:block w-48">
+<input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-xl px-3 py-2 pl-9 text-body-sm font-body-sm focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" placeholder="Поиск товаров..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-on-surface-variant text-[18px]">search</span>
+</div>
+<button aria-label="Поиск" class="sm:hidden p-2 rounded-xl text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<a aria-label="Личный кабинет" class="hidden sm:inline-flex p-2 rounded-xl bg-secondary-container/40 text-primary transition-colors" href="../bald_bold_5/code.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</a>
+          <button aria-label="Переключить тему" class="p-2 rounded-xl text-on-surface-variant hover:text-primary transition-colors dark:text-outline-variant dark:hover:text-on-primary" data-theme-toggle type="button">
+            <span class="material-symbols-outlined" data-theme-icon>dark_mode</span>
+          </button>
+          <a aria-label="Корзина" class="p-2 rounded-xl text-on-surface-variant hover:text-primary transition-colors relative" href="../bald_bold_4/code.html">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-tertiary-fixed-dim rounded-full" data-bb-cart-count="" data-bb-hide-empty="true"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+<main class="flex-1 w-full bg-background dark:bg-primary">
+  <input class="peer hidden" id="dashboard-sidebar" type="checkbox"/>
+  <aside class="fixed inset-y-0 left-0 z-40 w-64 h-screen overflow-y-auto -translate-x-full peer-checked:translate-x-0 lg:translate-x-0 transition-transform duration-300 bg-surface-container-lowest dark:bg-primary-container border-r border-surface-container-highest dark:border-outline/20" id="dashboard-sidebar-panel">
+    <div class="p-6 border-b border-surface-container-highest dark:border-outline/20 flex items-center justify-between">
+      <div>
+        <p class="text-headline-sm font-headline-sm text-primary dark:text-on-primary">Dashboard</p>
+        <p class="text-label-sm text-on-surface-variant dark:text-outline-variant">Bald &amp; Bold Cabinet</p>
+      </div>
+      <button aria-controls="dashboard-sidebar-panel" aria-expanded="false" aria-label="Закрыть панель кабинета" class="lg:hidden p-2 rounded-lg hover:bg-surface-container-low dark:hover:bg-inverse-surface cursor-pointer text-primary dark:text-on-primary" data-sidebar-close type="button"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <nav class="p-4 space-y-2 text-body-sm">
+      <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-secondary-container/50 text-primary dark:text-on-primary font-medium" href="#account-overview"><span class="material-symbols-outlined text-[20px]">person</span><span>Профиль</span></a>
+      <a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low dark:text-outline-variant dark:hover:bg-inverse-surface" href="#messenger"><span class="material-symbols-outlined text-[20px]">chat</span><span>Messenger</span></a>
+    </nav>
+  </aside>
+  <label aria-label="Закрыть панель кабинета" class="fixed inset-0 z-30 bg-primary/30 hidden peer-checked:block lg:hidden" for="dashboard-sidebar"></label>
+  <div class="lg:pl-64 min-w-0">
+    <div class="sticky top-16 sm:top-20 z-20 bg-background/95 dark:bg-primary/95 backdrop-blur border-b border-surface-container-highest dark:border-outline/20">
+      <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-3">
+        <button aria-controls="dashboard-sidebar-panel" aria-expanded="false" aria-label="Открыть панель кабинета" class="lg:hidden p-2 rounded-xl border border-outline-variant/40 text-primary dark:text-on-primary cursor-pointer" data-sidebar-open type="button"><span class="material-symbols-outlined">menu</span></button>
+        <div class="relative flex-1 max-w-xl">
+          <span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-on-surface-variant dark:text-outline-variant">search</span>
+          <input class="w-full rounded-xl border border-outline-variant/50 bg-surface-container-lowest dark:bg-primary-container dark:border-outline/30 dark:text-on-primary pl-10 pr-4 py-2 text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" data-dashboard-search placeholder="Поиск по кабинету..." type="text"/>
+        </div>
+        <div class="flex items-center gap-3 ml-auto">
+          <span class="hidden sm:block text-label-sm text-on-surface-variant dark:text-outline-variant">Александр</span>
+          <img alt="Аватар пользователя" class="w-10 h-10 rounded-full object-cover border border-outline-variant/40" data-bb-avatar="self" src="data:,"/>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-10">
+      <nav class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">
+        <a class="hover:text-primary dark:hover:text-on-primary transition-colors" href="../bald_bold_1/code.html">Главная</a>
+        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+        <span class="text-primary dark:text-on-primary font-medium">Личный кабинет</span>
+      </nav>
+      <div class="hidden items-start gap-3 rounded-2xl border border-outline-variant/50 bg-surface-container-lowest p-5 text-body-sm text-on-surface-variant dark:border-outline/30 dark:bg-primary-container dark:text-outline-variant" data-dashboard-empty role="status"><span class="material-symbols-outlined text-tertiary-fixed-dim">search_off</span><div><p class="font-semibold text-primary dark:text-on-primary">Ничего не найдено</p><p class="mt-1">Попробуйте другой запрос или очистите поле поиска по кабинету.</p></div></div>
+      <section class="grid grid-cols-1 xl:grid-cols-[320px_minmax(0,1fr)] gap-6 scroll-mt-32 sm:scroll-mt-40" id="account-overview">
+        <article class="w-full xl:w-[320px] bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-surface-container-highest dark:border-outline/20 custom-shadow flex flex-col gap-4">
+          <img alt="Аватар профиля" class="w-20 h-20 rounded-full object-cover border-2 border-tertiary-fixed-dim/40" data-bb-avatar="self" src="data:,"/>
+          <div class="space-y-2">
+            <div>
+              <h1 class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary" data-bb-user-name="Александр Блестящий">Александр Блестящий</h1>
+              <p class="text-body-sm text-on-surface-variant dark:text-outline-variant">Brand Ambassador / VIP Grooming Lead</p>
+            </div>
+            <p class="text-body-sm text-on-surface dark:text-outline-variant">Эксперт по уходу за кожей головы, тестирую продукты Bald &amp; Bold и помогаю сообществу выбирать идеальный глянец.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <button aria-pressed="false" class="btn-ui btn-ui-primary btn-ui-md" data-profile-follow type="button">Follow</button>
+            <button class="btn-ui btn-ui-secondary btn-ui-md" data-profile-message type="button">Message</button>
+          </div>
+        </article>
+        <div class="min-w-0 flex flex-col gap-6">
+          <section class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-8 custom-shadow border border-surface-container-highest dark:border-outline/20">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+              <div class="flex items-center gap-6">
+                <div class="relative group">
+                  <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tertiary-fixed-dim/40 p-0.5 bg-surface-container-lowest shadow-sm">
+                    <img class="w-full h-full object-cover rounded-full" alt="Портрет пользователя" data-bb-avatar="self" src="data:,"/>
+                  </div>
+                  <button aria-label="Сменить фото" class="absolute bottom-0 right-0 w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md hover:bg-tertiary-container transition-colors" data-change-photo title="Сменить фото" type="button">
+                    <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+                  </button>
+                  <button aria-label="Сбросить аватар" class="absolute -bottom-1 -left-1 w-8 h-8 rounded-full border border-outline-variant/50 bg-surface-container-lowest text-primary dark:bg-primary-container dark:text-on-primary flex items-center justify-center shadow-md hover:bg-surface-container-high transition-colors hidden" data-avatar-reset title="Сбросить аватар" type="button">
+                    <span class="material-symbols-outlined text-[16px]">restart_alt</span>
+                  </button>
+                  <input accept="image/*" class="hidden" data-photo-input type="file"/>
+                </div>
+                <div class="flex flex-col gap-1.5">
+                  <div class="flex items-center gap-3 flex-wrap">
+                    <h2 class="text-headline-md font-headline-md font-bold text-primary dark:text-on-primary" data-bb-user-name="Александр Блестящий">Александр Блестящий</h2>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container text-label-sm font-label-sm font-semibold tracking-wide border border-secondary-fixed-dim/30">
+                      <span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">stars</span>
+                      Мастер Зеркального Глянца (VIP)
+                    </span>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-x-6 gap-y-1 text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">
+                    <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">mail</span>alex.gloss@baldandbold.ru</span>
+                    <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">call</span>+7 (999) 000-11-22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-surface-container-low dark:bg-inverse-surface rounded-xl p-5 border border-surface-container-highest dark:border-outline/20 min-w-0 sm:min-w-[320px] flex flex-col justify-between gap-3">
+                <div class="flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-tertiary-fixed-dim/20 flex items-center justify-center text-on-tertiary-container dark:text-brand-300">
+                      <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+                    </div>
+                    <div>
+                      <div class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary leading-tight" data-bonus-balance>850 баллов</div>
+                      <div class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant">1 балл = 1 Br на следующий заказ</div>
+                    </div>
+                  </div>
+                  <button class="btn-ui btn-ui-ghost btn-ui-sm font-semibold" data-bonus-spend type="button">Списать<span class="material-symbols-outlined text-[14px]">arrow_forward</span></button>
+                </div>
+                <div class="flex flex-col gap-1.5 pt-2 border-t border-surface-container-highest/60 dark:border-outline/20">
+                  <div class="flex justify-between items-center text-label-sm font-label-sm">
+                    <span class="text-on-surface-variant dark:text-outline-variant">Прогресс до «Платинового» уровня</span>
+                    <span class="font-bold text-primary dark:text-on-primary" data-bonus-progress>85%</span>
+                  </div>
+                  <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden dark:bg-outline/30"><div class="bg-tertiary-fixed-dim h-full rounded-full" data-bonus-progress-bar style="width: 85%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="border-b border-surface-container-highest dark:border-outline/20 flex gap-8 text-body-md font-body-md overflow-x-auto" role="tablist" aria-label="Разделы личного кабинета">
+            <button aria-controls="panel-orders" aria-selected="true" class="pb-3 text-primary dark:text-on-primary font-bold border-b-2 border-tertiary-fixed-dim flex items-center gap-2 whitespace-nowrap" data-tab="orders" id="tab-orders" role="tab" tabindex="0" type="button"><span class="material-symbols-outlined text-[20px]">package_2</span>Мои заказы (<span data-count-orders>2</span>)</button>
+            <button aria-controls="panel-favorites" aria-selected="false" class="pb-3 text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap" data-tab="favorites" id="tab-favorites" role="tab" tabindex="-1" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span>Избранное (<span data-count-favorites>5</span>)</button>
+            <button aria-controls="panel-settings" aria-selected="false" class="pb-3 text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap" data-tab="settings" id="tab-settings" role="tab" tabindex="-1" type="button"><span class="material-symbols-outlined text-[20px]">settings</span>Настройки профиля</button>
+            <button aria-controls="panel-bonuses" aria-selected="false" class="pb-3 text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap" data-tab="bonuses" id="tab-bonuses" role="tab" tabindex="-1" type="button"><span class="material-symbols-outlined text-[20px]">loyalty</span>Бонусная программа</button>
+          </div>
+          <div aria-labelledby="tab-orders" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" data-panel="orders" id="panel-orders" role="tabpanel" tabindex="0">
+            <section class="lg:col-span-8 flex flex-col gap-5 min-w-0">
+              <article class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-tertiary-fixed-dim/40 custom-shadow" data-order-card>
+                <div class="flex flex-wrap items-center justify-between pb-4 border-b border-surface-container-highest dark:border-outline/20 gap-3">
+                  <div class="flex items-center gap-3"><span class="font-bold text-headline-sm font-headline-sm text-primary dark:text-on-primary">#BB-10492</span><span class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">от 14 января 2026</span></div>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm font-semibold"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">local_shipping</span>В пути (доставка завтра)</span>
+                </div>
+                <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div class="flex items-center gap-4 min-w-0">
+                    <div class="w-16 h-16 rounded-xl bg-surface-container-low p-2 flex items-center justify-center border border-surface-container-highest flex-shrink-0"><img class="max-h-full max-w-full object-contain" alt="Блеск для лысины SPF50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBid9YO744BfEjrz3XuzKP2jhZteT3s2kp7RLfL3BKDo3w2giW-VDgLdvq9v240gnO_Y0WkB7w09WMzd8KyGlnjT3T7cAAkvYVweDZOeS1lEZVa66Yc7A3SWg66-T6g8kToboIKpuEndRXaAjCNF6GIENNbzRYikar_pnI_iJ53bt_hiiBBma7K3SJzaMYlXuVSWzr9H2j81Hh5S-P_sBOd8Twf4WMRih-9EgBlz6PVD3mdJWSkFi3eag"/></div>
+                    <div class="w-16 h-16 rounded-xl bg-surface-container-low p-2 flex items-center justify-center border border-surface-container-highest flex-shrink-0"><img class="max-h-full max-w-full object-contain" alt="Массажная щетка" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsdemqmEuWVXj6-74Ul-ncLCbWHLQA4UqIuRNgJKGdrZO5llca8l2o-B4p0c7nd2d8mhLlbMNxccVhWkyxOGLBOX7huxZV4DDGnISSh8qOr6Cena0ZTP83Y7M1njJV5i2ppk7eAc-Wg1foY5CuW5C7-LvnpHtsB4LcCOtE4_CJ3mW455lCUc4wVe8jziS5HPqUO63Na7Aw8Wxg83A27lSe8s0DFwLGSuTadcrDjmmLTU6LtwDsjWEoYQ"/></div>
+                    <div class="flex flex-col min-w-0"><p class="font-body-md-medium text-body-md-medium text-primary dark:text-on-primary">2 товара</p><p class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant truncate">Блеск для лысины SPF50 + Массажная щетка</p></div>
+                  </div>
+                  <div class="text-right"><span class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant block">Итого</span><span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary">95,04 Br</span></div>
+                </div>
+                <div class="pt-4 border-t border-surface-container-highest dark:border-outline/20 flex flex-wrap items-center justify-end gap-3">
+                  <button class="btn-ui btn-ui-secondary btn-ui-md" data-repeat="shine-spf50,skullcare-pro" type="button"><span class="material-symbols-outlined text-[18px]">replay</span>Повторить заказ</button>
+                  <button class="btn-ui btn-ui-primary btn-ui-md" data-track="#BB-10492" type="button"><span class="material-symbols-outlined text-[18px]">near_me</span>Отследить посылку</button>
+                </div>
+              </article>
+              <article class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-surface-container-highest dark:border-outline/20 custom-shadow" data-order-card>
+                <div class="flex flex-wrap items-center justify-between pb-4 border-b border-surface-container-highest dark:border-outline/20 gap-3">
+                  <div class="flex items-center gap-3"><span class="font-bold text-headline-sm font-headline-sm text-primary dark:text-on-primary">#BB-09314</span><span class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">от 3 декабря 2025</span></div>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest dark:bg-inverse-surface text-on-surface-variant dark:text-outline-variant text-label-sm font-label-sm font-medium"><span class="material-symbols-outlined text-[16px] text-primary dark:text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">check_circle</span>Доставлен</span>
+                </div>
+                <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div class="flex items-center gap-4 min-w-0">
+                    <div class="w-16 h-16 rounded-xl bg-surface-container-low p-2 flex items-center justify-center border border-surface-container-highest flex-shrink-0"><img class="max-h-full max-w-full object-contain" alt="Набор Deluxe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoQyHjsWViLk-lwF05sd3zDrfyl001gTwuCOhK1kZjXbFXfW_Ayp-FBm89ZRJ2JMeS-cTwvgdCrELacXhKMzK2RpEgAeAxmb-a8DCkNXCQySUSGoqSdpyV4FFPHpirnZkUJvzG00K83duwkCPkLDZ8B29bltXUmaVhfqGYwgw-RQSwNl3hmqdyaIwhZQwe9aDWF59C_Afw667MM7VzoWK75AOTrmrIrfy35rQ16GssEevmFaqb8DthtQ"/></div>
+                    <div class="flex flex-col min-w-0"><p class="font-body-md-medium text-body-md-medium text-primary dark:text-on-primary">3 товара</p><p class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant truncate">Набор «Королевский глянец Deluxe»</p></div>
+                  </div>
+                  <div class="text-right"><span class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant block">Итого</span><span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-on-primary">164,67 Br</span></div>
+                </div>
+                <div class="pt-4 border-t border-surface-container-highest dark:border-outline/20 flex flex-wrap items-center justify-end gap-3">
+                  <button class="btn-ui btn-ui-secondary btn-ui-md" data-repeat="gift-deluxe" type="button"><span class="material-symbols-outlined text-[18px]">replay</span>Повторить заказ</button>
+                  <button class="btn-ui btn-ui-primary btn-ui-md" data-track="#BB-09314" type="button"><span class="material-symbols-outlined text-[18px]">near_me</span>Отследить посылку</button>
+                </div>
+              </article>
+            </section>
+            <aside class="lg:col-span-4 flex flex-col gap-6 min-w-0">
+              <div class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-surface-container-highest dark:border-outline/20 custom-shadow" data-address-card>
+                <div class="flex items-center justify-between pb-3 border-b border-surface-container-highest dark:border-outline/20">
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary dark:text-on-primary text-[20px]">home_pin</span><h2 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary text-[18px]">Адрес доставки</h2></div>
+                  <button class="btn-ui btn-ui-ghost btn-ui-sm font-semibold" data-address-edit type="button">Редактировать</button>
+                </div>
+                <div class="pt-3 flex flex-col gap-2" data-address-display><span class="text-label-sm font-label-sm uppercase tracking-wider text-outline">По умолчанию</span><p class="font-body-md-medium text-body-md-medium text-primary dark:text-on-primary" data-address-line1>г. Москва, ул. Тверская 12, кв. 45</p><p class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant" data-address-line2>Курьерская доставка CDEK • До двери</p></div>
+                <div class="pt-3 flex flex-col gap-3 hidden" data-address-form>
+                  <input aria-label="Адрес доставки" class="input-ui" data-address-input="line1" type="text" value="г. Москва, ул. Тверская 12, кв. 45"/>
+                  <input aria-label="Способ доставки" class="input-ui" data-address-input="line2" type="text" value="Курьерская доставка CDEK • До двери"/>
+                  <div class="flex flex-wrap gap-2">
+                    <button class="btn-ui btn-ui-primary btn-ui-md" data-address-save type="button">Сохранить</button>
+                    <button class="btn-ui btn-ui-ghost btn-ui-md" data-address-cancel type="button">Отмена</button>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-surface-container-highest dark:border-outline/20 custom-shadow" id="favorites-card">
+                <div class="flex items-center justify-between pb-3 border-b border-surface-container-highest dark:border-outline/20"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span><h2 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary text-[18px]">Избранное</h2></div><span class="text-label-sm font-label-sm text-on-surface-variant dark:text-outline-variant">Все <span data-count-favorites>5</span></span></div>
+                <div class="pt-4 flex flex-col gap-4" id="favorites-list">
+                  <div class="flex items-center justify-between gap-3 p-2 rounded-xl hover:bg-surface-container-low dark:hover:bg-inverse-surface transition-colors"><div class="flex items-center gap-3 min-w-0"><div class="w-12 h-12 rounded-lg bg-surface-container-low p-1.5 flex items-center justify-center border border-surface-container-highest flex-shrink-0"><img class="max-h-full max-w-full object-contain" alt="Охлаждающий гель" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt3RDpoWrM6bVP-yQWcIgIuC2SJFCu5GxJpCTQNUo-ZMvrG57JmEF-4qcjVZpfw4Bbc3AxPCaTh2f5apOHDMuadWa-MOA4e14JFnKC57agw4zGu1M7JcMLxVmstFcbAclVZOGEPFAkzJ1IDhMaCpxxJjd5mtqeSvjhTZGNo4NvspzSjtfgjD7eIpXvjuJWzdm26MRdl1yIQd9lFFRgDETGhCvnw-JwRajXaCb4-JGyqOjNeCIqQXytCA"/></div><div class="flex flex-col min-w-0"><p class="font-body-md-medium text-body-sm font-bold text-primary dark:text-on-primary leading-tight truncate">Охлаждающий гель</p><span class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">29,37 Br</span></div></div><button aria-label="В корзину" class="w-9 h-9 rounded-xl bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary dark:text-on-primary dark:bg-inverse-surface transition-colors flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span></button></div>
+                </div>
+              </div>
+            </aside>
+          </div>
+          <div aria-labelledby="tab-favorites" class="hidden" data-panel="favorites" id="panel-favorites" role="tabpanel" tabindex="0"></div>
+          <div aria-labelledby="tab-settings" class="hidden" data-panel="settings" id="panel-settings" role="tabpanel" tabindex="0">
+            <div class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-surface-container-highest dark:border-outline/20 custom-shadow grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <label class="block text-label-sm text-on-surface-variant dark:text-outline-variant">Имя<input class="input-ui mt-1" data-settings-input="name" type="text" value="Александр Блестящий"/></label>
+              <label class="block text-label-sm text-on-surface-variant dark:text-outline-variant">Email<input class="input-ui mt-1" data-settings-input="email" type="email" value="alex.gloss@baldandbold.ru"/></label>
+              <label class="block text-label-sm text-on-surface-variant dark:text-outline-variant">Телефон<input class="input-ui mt-1" data-settings-input="phone" type="tel" value="+7 (999) 000-11-22"/></label>
+              <label class="sm:col-span-2 flex items-center gap-3 text-body-sm text-on-surface dark:text-on-primary cursor-pointer"><input class="w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-0" data-messenger-notifications type="checkbox"/>Уведомления в Messenger</label>
+              <div class="flex items-end sm:col-span-2"><button class="btn-ui btn-ui-primary btn-ui-md" data-settings-save type="button">Сохранить изменения</button></div>
+            </div>
+          </div>
+          <div aria-labelledby="tab-bonuses" class="hidden" data-panel="bonuses" id="panel-bonuses" role="tabpanel" tabindex="0">
+            <div class="bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-tertiary-fixed-dim/40 custom-shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div><h3 class="font-headline-sm text-primary dark:text-on-primary">Бонусная программа</h3><p class="text-body-sm text-on-surface-variant dark:text-outline-variant mt-1">1 балл = 1 Br на следующий заказ. Списание — порциями по 100 баллов.</p></div>
+                <div class="text-right flex flex-col items-end gap-2"><p class="text-headline-sm font-bold text-primary dark:text-on-primary" data-bonus-balance>850 баллов</p><button class="btn-ui btn-ui-ghost btn-ui-sm font-semibold" data-bonus-spend type="button">Списать 100 баллов</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-4 scroll-mt-32 sm:scroll-mt-40" id="messenger">
+        <div class="flex items-center justify-between gap-3"><h2 class="text-headline-md font-headline-md text-primary dark:text-on-primary">Messenger</h2><span class="badge-ui bg-secondary-container text-on-secondary-container" data-unread-total>3 unread</span></div>
+        <div class="bg-surface-container-lowest dark:bg-primary-container border border-surface-container-highest dark:border-outline/20 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] min-h-[520px]">
+          <div class="border-b lg:border-b-0 lg:border-r border-surface-container-highest dark:border-outline/20 overflow-y-auto max-h-[520px]">
+            <div class="p-4 space-y-3">
+              <div aria-label="Открыть чат с Марией Стилист" aria-selected="true" class="p-3 rounded-xl bg-secondary-container/40 dark:bg-inverse-surface flex gap-3 items-start" data-conversation="maria" data-conversation-row role="button" tabindex="0">
+                <img class="w-10 h-10 rounded-full object-cover" alt="Мария" data-bb-avatar="Мария Стилист" src="data:,"/>
+                <div class="min-w-0 flex-1"><div class="flex items-center justify-between gap-2"><p class="font-semibold text-primary dark:text-on-primary truncate">Мария Стилист</p><span class="text-label-sm text-on-surface-variant dark:text-outline-variant">12:40</span></div><p class="text-body-sm text-on-surface-variant dark:text-outline-variant truncate">Заказ уже в пути, завтра доставим</p></div><span class="w-5 h-5 rounded-full bg-tertiary-fixed-dim text-[10px] font-bold text-primary-container flex items-center justify-center" data-unread-badge>2</span>
+              </div>
+              <div aria-label="Открыть чат с Дмитрием" aria-selected="false" class="p-3 rounded-xl hover:bg-surface-container-low dark:hover:bg-inverse-surface flex gap-3 items-start" data-conversation="dmitry" data-conversation-row role="button" tabindex="0">
+                <img class="w-10 h-10 rounded-full object-cover shrink-0" data-bb-avatar="Дмитрий" alt="" src="data:,"/>
+                <div class="min-w-0 flex-1"><div class="flex items-center justify-between gap-2"><p class="font-semibold text-primary dark:text-on-primary truncate">Дмитрий</p><span class="text-label-sm text-on-surface-variant dark:text-outline-variant">Вчера</span></div><p class="text-body-sm text-on-surface-variant dark:text-outline-variant truncate">Нужен совет по SPF для кожи головы</p></div><span class="w-5 h-5 rounded-full bg-semantic-info text-[10px] font-bold text-white flex items-center justify-center" data-unread-badge>1</span>
+              </div>
+              <div aria-label="Открыть чат со службой заботы" aria-selected="false" class="p-3 rounded-xl hover:bg-surface-container-low dark:hover:bg-inverse-surface flex gap-3 items-start" data-conversation="care" data-conversation-row role="button" tabindex="0">
+                <img class="w-10 h-10 rounded-full object-cover shrink-0" data-bb-avatar="Служба заботы" alt="" src="data:,"/>
+                <div class="min-w-0 flex-1"><div class="flex items-center justify-between gap-2"><p class="font-semibold text-primary dark:text-on-primary truncate">Служба заботы</p><span class="text-label-sm text-on-surface-variant dark:text-outline-variant">Пн</span></div><p class="text-body-sm text-on-surface-variant dark:text-outline-variant truncate">Ваш отзыв очень помог команде</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col min-w-0">
+            <div class="p-4 border-b border-surface-container-highest dark:border-outline/20 flex items-center gap-3"><img class="w-10 h-10 rounded-full object-cover" id="chat-header-avatar" data-bb-chat-avatar alt="Мария" data-bb-avatar="Мария Стилист" src="data:,"/><div><p class="font-semibold text-primary dark:text-on-primary" id="chat-header-name">Мария Стилист</p><p class="text-label-sm text-semantic-success" id="chat-header-status">online</p></div></div>
+            <div aria-live="polite" class="flex-1 overflow-y-auto p-4 space-y-4 bg-surface-container-low/40 dark:bg-primary [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-outline-variant [&::-webkit-scrollbar-thumb]:rounded-full dark:[&::-webkit-scrollbar-thumb]:bg-outline" id="message-list">
+              <div class="flex justify-start"><div class="max-w-[80%] rounded-2xl rounded-tl-sm bg-surface-container-highest dark:bg-inverse-surface px-4 py-3 text-body-sm text-on-surface dark:text-on-primary"><p>Привет! Подтверждаю, ваш заказ #BB-10492 передан курьеру.</p><span class="block mt-1 text-label-sm text-on-surface-variant dark:text-outline-variant">12:32</span></div></div>
+              <div class="flex justify-end"><div class="max-w-[80%] rounded-2xl rounded-tr-sm bg-primary text-on-primary dark:bg-tertiary-fixed-dim dark:text-primary-container px-4 py-3 text-body-sm"><p>Отлично, а можно доставить после 18:00?</p><span class="block mt-1 text-label-sm text-outline-variant dark:text-primary-container/70">12:35</span></div></div>
+              <div class="flex justify-start"><div class="max-w-[80%] rounded-2xl rounded-tl-sm bg-surface-container-highest dark:bg-inverse-surface px-4 py-3 text-body-sm text-on-surface dark:text-on-primary"><p>Да, я добавила комментарий курьеру. Доставка завтра после 18:00.</p><span class="block mt-1 text-label-sm text-on-surface-variant dark:text-outline-variant">12:40</span></div></div>
+            </div>
+            <div class="sticky bottom-0 p-4 border-t border-surface-container-highest dark:border-outline/20 bg-surface-container-lowest dark:bg-primary-container">
+              <div class="flex items-center gap-3"><input aria-label="Текст сообщения" class="input-ui" id="message-input" placeholder="Напишите сообщение..." type="text"/><button aria-label="Отправить сообщение" class="btn-ui btn-ui-primary btn-ui-md shrink-0" id="message-send" type="button"><span class="material-symbols-outlined text-[18px]">send</span><span class="hidden sm:inline">Send</span></button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+<div aria-labelledby="tracking-title" aria-modal="true" class="hidden fixed inset-0 z-[80] flex items-center justify-center bg-primary/60 p-4 backdrop-blur-sm" id="tracking-modal" role="dialog">
+  <div class="w-full max-w-lg rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-2xl dark:border-outline/30 dark:bg-primary-container">
+    <div class="flex items-start justify-between gap-4">
+      <div class="space-y-1">
+        <h3 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary" id="tracking-title">Отслеживание посылки</h3>
+        <p class="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant">Введите номер заказа, чтобы увидеть текущий статус доставки.</p>
+      </div>
+      <button aria-label="Закрыть окно отслеживания" class="w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container-low hover:text-primary dark:hover:bg-inverse-surface dark:hover:text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tertiary-fixed-dim" data-tracking-close type="button"><span class="material-symbols-outlined text-[20px]">close</span></button>
+    </div>
+    <div class="mt-5 space-y-2">
+      <label class="block font-label-sm text-label-sm font-semibold text-primary dark:text-on-primary" for="tracking-input">Номер посылки</label>
+      <input aria-describedby="tracking-error" class="input-ui" data-tracking-input id="tracking-input" placeholder="#BB-10492" type="text"/>
+      <p aria-live="polite" class="hidden pt-1 font-label-sm text-label-sm text-red-600 dark:text-red-400" data-tracking-error id="tracking-error"></p>
+    </div>
+    <div class="mt-5 hidden rounded-xl border border-outline-variant/40 bg-surface-container-low p-4 dark:border-outline/30 dark:bg-inverse-surface/40" data-tracking-result>
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <p class="font-headline-sm text-headline-sm font-bold text-primary dark:text-on-primary" data-tracking-number></p>
+        <span class="badge-ui bg-secondary-container text-on-secondary-container" data-tracking-status></span>
+      </div>
+      <ol class="mt-4 space-y-3" data-tracking-timeline></ol>
+    </div>
+    <div class="mt-6 flex flex-wrap justify-end gap-3">
+      <button class="btn-ui btn-ui-secondary btn-ui-md" data-tracking-close type="button">Закрыть</button>
+      <button class="btn-ui btn-ui-primary btn-ui-md" data-tracking-submit type="button">Проверить</button>
+    </div>
+  </div>
+</div>
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-primary mt-auto border-t border-outline/20 dark:border-outline-variant/40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 flex flex-col gap-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex items-center gap-3">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" style="width:100%;height:100%"><g transform="translate(10, 10)"><path d="M30 55 C16 55 8 44 8 28 C8 12 18 2 30 2 C42 2 52 12 52 28 C52 44 44 55 30 55 Z" fill="#1E1E24"/><path d="M18 16 C22 8 28 6 34 6" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M38 10 L41 3 L44 10 L51 13 L44 16 L41 23 L38 16 L31 13 Z" fill="#F2A93B"/><circle cx="23" cy="27" r="2.5" fill="#FFFFFF"/><circle cx="37" cy="27" r="2.5" fill="#FFFFFF"/><path d="M25 36 C27 40 33 40 35 36" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg>
+<span class="text-headline-md font-headline-md font-extrabold text-on-primary dark:text-primary">Bald &amp; Bold</span>
+</div>
+<nav class="flex flex-wrap items-center gap-x-8 gap-y-3 text-body-sm font-body-sm text-outline-variant dark:text-on-surface-variant">
+
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_2/code.html">Новинки</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_1/code.html#delivery">Доставка и оплата</a>
+<a class="hover:text-tertiary-fixed dark:hover:text-primary transition-colors duration-150" href="../bald_bold_2/code.html">Возврат</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_1/code.html#about">О нас</a>
+<a class="hover:text-tertiary-fixed dark:hover:text-primary transition-colors duration-150" href="../bald_bold_2/code.html">Политика конфиденциальности</a>
+</nav>
+</div>
+<div class="pt-8 border-t border-outline/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-body-sm font-body-sm text-outline-variant">
+<p>© <span data-year>2026</span> Bald &amp; Bold. Все права защищены. Блестит — значит работает.</p>
+<div class="flex items-center gap-4">
+<span class="text-label-sm font-label-sm uppercase tracking-widest text-tertiary-fixed-dim font-bold">Raw Refinement &amp; Sharp Confidence</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+    function init() {
+      const store = window.BBStore;
+      if (!store) return;
+      const $ = (selector, root) => (root || document).querySelector(selector);
+      const $$ = (selector, root) => Array.from((root || document).querySelectorAll(selector));
+      const toast = (message, type) => store.toast(message, type);
+      const setText = (nodes, value) => nodes.forEach((node) => { node.textContent = value; });
+
+      const sidebar = $('#dashboard-sidebar');
+      if (sidebar) {
+        const openButton = $('[data-sidebar-open]');
+        const closeButton = $('[data-sidebar-close]');
+        const panel = $('#dashboard-sidebar-panel');
+        const syncSidebar = () => {
+          const expanded = sidebar.checked;
+          if (openButton) openButton.setAttribute('aria-expanded', String(expanded));
+          if (closeButton) closeButton.setAttribute('aria-expanded', String(expanded));
+          if (panel) panel.setAttribute('aria-expanded', String(expanded));
+        };
+        const setSidebar = (open, moveFocus) => {
+          sidebar.checked = open;
+          syncSidebar();
+          if (moveFocus) {
+            const target = open ? closeButton : openButton;
+            if (target) target.focus();
+          }
+        };
+        sidebar.addEventListener('change', syncSidebar);
+        if (openButton) openButton.addEventListener('click', () => setSidebar(true, true));
+        if (closeButton) closeButton.addEventListener('click', () => setSidebar(false, true));
+        $$('a', panel).forEach((link) => link.addEventListener('click', () => setSidebar(false, false)));
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && sidebar.checked) setSidebar(false, true);
+        });
+        syncSidebar();
+      }
+
+      const followButton = $('[data-profile-follow]');
+      if (followButton) {
+        let following = false;
+        try { following = localStorage.getItem('bb:follow:v1') === 'true'; } catch (error) { void error; }
+        const syncFollow = (announce) => {
+          followButton.textContent = following ? 'Following' : 'Follow';
+          followButton.setAttribute('aria-pressed', String(following));
+          followButton.classList.toggle('btn-ui-primary', !following);
+          followButton.classList.toggle('btn-ui-secondary', following);
+          if (announce) toast(following ? 'Вы подписались на Александра' : 'Подписка отменена', following ? 'success' : 'info');
+        };
+        syncFollow(false);
+        followButton.addEventListener('click', () => {
+          following = !following;
+          try { localStorage.setItem('bb:follow:v1', String(following)); } catch (error) { void error; }
+          syncFollow(true);
+        });
+      }
+      const messageButton = $('[data-profile-message]');
+      if (messageButton) {
+        messageButton.addEventListener('click', () => {
+          const target = $('#messenger');
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const input = $('#message-input');
+          if (input) window.setTimeout(() => input.focus(), 250);
+          toast('Чат открыт в Messenger', 'info');
+        });
+      }
+      const avatarReset = $('[data-avatar-reset]');
+      const syncAvatarReset = () => {
+        if (!avatarReset) return;
+        let custom = null;
+        try { custom = (JSON.parse(localStorage.getItem('bb:avatars:v1') || '{}') || {}).self; } catch (error) { void error; }
+        avatarReset.classList.toggle('hidden', !custom);
+      };
+      syncAvatarReset();
+      const photoInput = $('[data-photo-input]');
+      const changePhoto = $('[data-change-photo]');
+      if (changePhoto && photoInput) {
+        changePhoto.addEventListener('click', () => photoInput.click());
+        photoInput.addEventListener('change', () => {
+          const file = photoInput.files && photoInput.files[0];
+          if (!file) return;
+          if (!file.type.startsWith('image/')) {
+            toast('Выберите изображение', 'error');
+            return;
+          }
+          const reader = new FileReader();
+          reader.onload = () => {
+            const image = new Image();
+            image.onload = () => {
+              const size = 256;
+              const canvas = document.createElement('canvas');
+              canvas.width = size;
+              canvas.height = size;
+              const context = canvas.getContext('2d');
+              const scale = Math.max(size / image.width, size / image.height);
+              const width = image.width * scale;
+              const height = image.height * scale;
+              context.drawImage(image, (size - width) / 2, (size - height) / 2, width, height);
+              const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+              try {
+                window.BBStore.setAvatar('self', dataUrl);
+              } catch (error) {
+                toast('Фото слишком большое для локального хранения', 'error');
+                return;
+              }
+              syncAvatarReset();
+              toast('Аватар обновлён', 'success');
+            };
+            image.onerror = () => toast('Не удалось прочитать изображение', 'error');
+            image.src = reader.result;
+          };
+          reader.onerror = () => toast('Не удалось загрузить файл', 'error');
+          reader.readAsDataURL(file);
+          photoInput.value = '';
+        });
+      }
+      if (avatarReset) {
+        avatarReset.addEventListener('click', () => {
+          try { window.BBStore.setAvatar('self', null); } catch (error) { void error; }
+          syncAvatarReset();
+          toast('Аватар сброшен', 'info');
+        });
+      }
+
+      const bonusKey = 'bb:bonus:v1';
+      let bonus = 850;
+      try {
+        const storedBonus = localStorage.getItem(bonusKey);
+        if (storedBonus !== null && Number.isFinite(Number(storedBonus))) bonus = Number(storedBonus);
+      } catch (error) { void error; }
+      const spendButtons = $$('[data-bonus-spend]');
+      const renderBonus = () => {
+        setText($$('[data-bonus-balance]'), bonus + ' баллов');
+        const percent = Math.min(100, Math.max(0, Math.round(bonus / 10)));
+        setText($$('[data-bonus-progress]'), percent + '%');
+        $$('[data-bonus-progress-bar]').forEach((bar) => { bar.style.width = percent + '%'; });
+        spendButtons.forEach((button) => {
+          button.disabled = bonus < 100;
+          button.classList.toggle('opacity-50', bonus < 100);
+          button.classList.toggle('pointer-events-none', bonus < 100);
+        });
+      };
+      spendButtons.forEach((button) => button.addEventListener('click', () => {
+        if (bonus < 100) {
+          toast('Недостаточно баллов для списания', 'error');
+          return;
+        }
+        bonus -= 100;
+        try { localStorage.setItem(bonusKey, String(bonus)); } catch (error) { void error; }
+        renderBonus();
+        toast('Списано 100 баллов — применим на следующий заказ', 'success');
+      }));
+      renderBonus();
+
+      const tabs = $$('[role="tab"][data-tab]');
+      const panels = $$('[role="tabpanel"][data-panel]');
+      const favoritesCard = $('#favorites-card');
+      const favoritesPanel = $('#panel-favorites');
+      if (favoritesCard && favoritesPanel) favoritesPanel.appendChild(favoritesCard);
+      const activeTabClass = 'pb-3 text-primary dark:text-on-primary font-bold border-b-2 border-tertiary-fixed-dim flex items-center gap-2 whitespace-nowrap';
+      const idleTabClass = 'pb-3 text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap';
+      const selectTab = (name) => {
+        tabs.forEach((tab) => {
+          const active = tab.dataset.tab === name;
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          tab.className = active ? activeTabClass : idleTabClass;
+        });
+        panels.forEach((panel) => panel.classList.toggle('hidden', panel.dataset.panel !== name));
+      };
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectTab(tab.dataset.tab));
+        tab.addEventListener('keydown', (event) => {
+          if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+          event.preventDefault();
+          const step = event.key === 'ArrowRight' ? 1 : tabs.length - 1;
+          const next = tabs[(index + step) % tabs.length];
+          next.focus();
+          selectTab(next.dataset.tab);
+        });
+      });
+      setText($$('[data-count-favorites]'), String(store.wishlist().length || 5));
+      setText($$('[data-count-orders]'), String($$('[data-order-card]').length));
+      selectTab('orders');
+
+      const favoritesList = $('#favorites-list');
+      if (favoritesList) {
+        const saved = store.wishlist();
+        const ids = saved.length ? saved : ['thermal-gel', 'shine-spf50', 'skullcare-pro', 'gift-deluxe', 'matte-towel'];
+        favoritesList.innerHTML = ids.map((id) => {
+          const product = store.products.find((entry) => entry.id === id);
+          if (!product) return '';
+          return '<div class="flex items-center justify-between gap-3 p-2 rounded-xl hover:bg-surface-container-low dark:hover:bg-inverse-surface transition-colors">' +
+            '<div class="flex items-center gap-3 min-w-0">' +
+              '<div class="w-12 h-12 rounded-lg bg-surface-container-low p-1.5 flex items-center justify-center border border-surface-container-highest flex-shrink-0"><img class="max-h-full max-w-full object-contain" alt="' + product.name + '" src="' + (window.BBStore.products.find((entry) => entry.id === id)?.image || product.image || '') + '"/></div>' +
+              '<div class="flex flex-col min-w-0"><h3 class="text-body-sm font-bold text-primary dark:text-on-primary leading-tight truncate">' + product.name + '</h3><span class="text-body-sm font-body-sm text-on-surface-variant dark:text-outline-variant">' + store.money(product.price) + '</span></div>' +
+            '</div>' +
+            '<button aria-label="В корзину" class="w-9 h-9 rounded-xl bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary dark:text-on-primary dark:bg-inverse-surface transition-colors flex items-center justify-center flex-shrink-0" data-bb-add type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span></button>' +
+          '</div>';
+        }).join('') || '<p class="text-body-sm text-on-surface-variant dark:text-outline-variant">В избранном пока нет товаров.</p>';
+      }
+
+      $$('[data-repeat]').forEach((button) => button.addEventListener('click', () => {
+        button.dataset.repeat.split(',').map((id) => id.trim()).filter(Boolean).forEach((id) => {
+          const product = store.products.find((entry) => entry.id === id);
+          if (product) store.add(product, 1);
+        });
+      }));
+      $$('[data-track]').forEach((button) => button.addEventListener('click', () => openTracking(button.dataset.track, button)));
+
+      const addressDisplay = $('[data-address-display]');
+      const addressForm = $('[data-address-form]');
+      const addressEdit = $('[data-address-edit]');
+      const line1 = $('[data-address-line1]');
+      const line2 = $('[data-address-line2]');
+      const addressInput1 = $('[data-address-input="line1"]', addressForm || document);
+      const addressInput2 = $('[data-address-input="line2"]', addressForm || document);
+      try {
+        const storedAddress = JSON.parse(localStorage.getItem('bb:address:v1') || 'null');
+        if (storedAddress && storedAddress.line1) {
+          if (line1) line1.textContent = storedAddress.line1;
+          if (line2) line2.textContent = storedAddress.line2 || '';
+          if (addressInput1) addressInput1.value = storedAddress.line1;
+          if (addressInput2) addressInput2.value = storedAddress.line2 || '';
+        }
+      } catch (error) { void error; }
+      const toggleAddress = (editing) => {
+        if (addressDisplay) addressDisplay.classList.toggle('hidden', editing);
+        if (addressForm) addressForm.classList.toggle('hidden', !editing);
+        if (addressEdit) addressEdit.classList.toggle('hidden', editing);
+      };
+      if (addressEdit && addressForm) {
+        addressEdit.addEventListener('click', () => {
+          if (addressInput1) addressInput1.value = line1 ? line1.textContent.trim() : '';
+          if (addressInput2) addressInput2.value = line2 ? line2.textContent.trim() : '';
+          toggleAddress(true);
+          if (addressInput1) addressInput1.focus();
+        });
+      }
+      const addressCancel = $('[data-address-cancel]');
+      if (addressCancel) addressCancel.addEventListener('click', () => toggleAddress(false));
+      const addressSave = $('[data-address-save]');
+      if (addressSave) {
+        addressSave.addEventListener('click', () => {
+          const nextLine1 = addressInput1 ? addressInput1.value.trim() : '';
+          const nextLine2 = addressInput2 ? addressInput2.value.trim() : '';
+          if (!nextLine1) {
+            toast('Введите адрес доставки', 'error');
+            return;
+          }
+          if (line1) line1.textContent = nextLine1;
+          if (line2) line2.textContent = nextLine2;
+          try { localStorage.setItem('bb:address:v1', JSON.stringify({ line1: nextLine1, line2: nextLine2 })); } catch (error) { void error; }
+          toggleAddress(false);
+          toast('Адрес доставки обновлён', 'success');
+        });
+      }
+
+      const storedUser = store.user();
+      if (storedUser) {
+        $$('[data-settings-input]').forEach((input) => {
+          const key = input.dataset.settingsInput;
+          if (storedUser[key]) input.value = storedUser[key];
+        });
+      }
+      const messengerToggle = $('[data-messenger-notifications]');
+      const messengerSettingsKey = 'bb:messenger-settings:v1';
+      try {
+        const settings = JSON.parse(localStorage.getItem(messengerSettingsKey) || 'null');
+        if (settings && typeof settings.notifications === 'boolean' && messengerToggle) messengerToggle.checked = settings.notifications;
+      } catch (error) { void error; }
+      if (messengerToggle) {
+        messengerToggle.addEventListener('change', () => {
+          try { localStorage.setItem(messengerSettingsKey, JSON.stringify({ notifications: messengerToggle.checked })); } catch (error) { void error; }
+          toast('Настройки Messenger сохранены', 'success');
+        });
+      }
+      const settingsSave = $('[data-settings-save]');
+      if (settingsSave) {
+        settingsSave.addEventListener('click', () => {
+          const user = {};
+          $$('[data-settings-input]').forEach((input) => { user[input.dataset.settingsInput] = input.value.trim(); });
+          if (!user.email || !user.email.includes('@')) {
+            toast('Введите корректный email', 'error');
+            return;
+          }
+          store.setUser(user);
+          toast('Настройки профиля сохранены', 'success');
+        });
+      }
+
+      const chatData = {
+        maria: {
+          name: 'Мария Стилист',
+          status: 'online',
+          unread: 2,
+          messages: [
+            { own: false, text: 'Привет! Подтверждаю, ваш заказ #BB-10492 передан курьеру.', time: '12:32' },
+            { own: true, text: 'Отлично, а можно доставить после 18:00?', time: '12:35' },
+            { own: false, text: 'Да, я добавила комментарий курьеру. Доставка завтра после 18:00.', time: '12:40' }
+          ]
+        },
+        dmitry: {
+          name: 'Дмитрий',
+          status: 'был недавно',
+          unread: 1,
+          messages: [
+            { own: false, text: 'Здравствуйте! Нужен совет по SPF для кожи головы.', time: 'Вчера' },
+            { own: true, text: 'Здравствуйте! Рекомендую Блеск-флюид SPF 50 Matt & Glow.', time: 'Вчера' }
+          ]
+        },
+        care: {
+          name: 'Служба заботы',
+          status: 'на связи',
+          unread: 0,
+          messages: [
+            { own: false, text: 'Ваш отзыв очень помог команде, спасибо!', time: 'Пн' },
+            { own: true, text: 'Рад был помочь!', time: 'Пн' }
+          ]
+        }
+      };
+      const messagesKey = 'bb:messages:v1';
+      let savedMessages = null;
+      try { savedMessages = JSON.parse(localStorage.getItem(messagesKey)); } catch (error) { savedMessages = null; }
+      if (!savedMessages || typeof savedMessages !== 'object') savedMessages = {};
+      const savedThreads = savedMessages.threads || {};
+      const savedUnread = savedMessages.unread || {};
+      const threads = {};
+      const unread = {};
+      Object.keys(chatData).forEach((key) => {
+        threads[key] = Array.isArray(savedThreads[key]) && savedThreads[key].length ? savedThreads[key] : chatData[key].messages.slice();
+        unread[key] = typeof savedUnread[key] === 'number' ? savedUnread[key] : chatData[key].unread;
+      });
+      let activeChat = savedMessages.active && chatData[savedMessages.active] ? savedMessages.active : 'maria';
+      const messageList = $('#message-list');
+      const messageInput = $('#message-input');
+      const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+      const persistMessages = () => {
+        try { localStorage.setItem(messagesKey, JSON.stringify({ active: activeChat, threads: threads, unread: unread })); } catch (error) { void error; }
+      };
+      const renderMessages = () => {
+        if (!messageList) return;
+        messageList.innerHTML = threads[activeChat].map((message) => {
+          const wrapper = message.own ? 'flex justify-end' : 'flex justify-start';
+          const bubble = message.own
+            ? 'max-w-[80%] rounded-2xl rounded-tr-sm bg-primary text-on-primary dark:bg-tertiary-fixed-dim dark:text-primary-container px-4 py-3 text-body-sm'
+            : 'max-w-[80%] rounded-2xl rounded-tl-sm bg-surface-container-highest dark:bg-inverse-surface px-4 py-3 text-body-sm text-on-surface dark:text-on-primary';
+          const timeClass = message.own
+            ? 'block mt-1 text-label-sm text-outline-variant dark:text-primary-container/70'
+            : 'block mt-1 text-label-sm text-on-surface-variant dark:text-outline-variant';
+          return '<div class="' + wrapper + '"><div class="' + bubble + '"><p>' + escapeHtml(message.text) + '</p><span class="' + timeClass + '">' + escapeHtml(message.time) + '</span></div></div>';
+        }).join('');
+        messageList.scrollTop = messageList.scrollHeight;
+        const nameNode = $('#chat-header-name');
+        if (nameNode) nameNode.textContent = chatData[activeChat].name;
+        const statusNode = $('#chat-header-status');
+        if (statusNode) statusNode.textContent = chatData[activeChat].status;
+        const chatAvatar = $('[data-bb-chat-avatar]');
+        if (chatAvatar) {
+          chatAvatar.dataset.bbAvatar = chatData[activeChat].name;
+          chatAvatar.setAttribute('src', window.BBStore.avatarFor(chatData[activeChat].name));
+        }
+        $$('[data-conversation-row]').forEach((row) => {
+          const key = row.dataset.conversation;
+          const selected = key === activeChat;
+          row.classList.toggle('bg-secondary-container/40', selected);
+          row.classList.toggle('dark:bg-inverse-surface', selected);
+          row.classList.toggle('hover:bg-surface-container-low', !selected);
+          row.classList.toggle('dark:hover:bg-inverse-surface', !selected);
+          row.setAttribute('aria-selected', String(selected));
+          const badge = $('[data-unread-badge]', row);
+          if (badge) {
+            badge.textContent = unread[key] ? String(unread[key]) : '';
+            badge.classList.toggle('hidden', !unread[key]);
+          }
+        });
+        const total = Object.keys(unread).reduce((sum, key) => sum + (unread[key] || 0), 0);
+        const totalBadge = $('[data-unread-total]');
+        if (totalBadge) {
+          totalBadge.textContent = total + ' unread';
+          totalBadge.classList.toggle('hidden', total === 0);
+        }
+      };
+      const selectConversation = (key) => {
+        if (!chatData[key]) return;
+        activeChat = key;
+        unread[key] = 0;
+        persistMessages();
+        renderMessages();
+      };
+      $$('[data-conversation-row]').forEach((row) => {
+        row.addEventListener('click', () => selectConversation(row.dataset.conversation));
+        row.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          selectConversation(row.dataset.conversation);
+        });
+      });
+      const sendMessage = () => {
+        if (!messageInput) return;
+        const text = messageInput.value.trim();
+        if (!text) return;
+        threads[activeChat].push({ own: true, text: text, time: new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }) });
+        messageInput.value = '';
+        persistMessages();
+        renderMessages();
+      };
+      const sendButton = $('#message-send');
+      if (sendButton) sendButton.addEventListener('click', sendMessage);
+      if (messageInput) {
+        messageInput.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter') return;
+          event.preventDefault();
+          sendMessage();
+        });
+      }
+      renderMessages();
+
+      const trackingModal = $('#tracking-modal');
+      const trackingInput = $('[data-tracking-input]');
+      const trackingError = $('[data-tracking-error]');
+      const trackingResult = $('[data-tracking-result]');
+      const trackingNumber = $('[data-tracking-number]');
+      const trackingStatus = $('[data-tracking-status]');
+      const trackingTimeline = $('[data-tracking-timeline]');
+      let trackingTrigger = null;
+      let trackingOverflow = '';
+      const closeTracking = () => {
+        if (!trackingModal || trackingModal.classList.contains('hidden')) return;
+        trackingModal.classList.add('hidden');
+        document.body.style.overflow = trackingOverflow;
+        if (trackingTrigger && trackingTrigger.focus) trackingTrigger.focus();
+        trackingTrigger = null;
+      };
+      function openTracking(number, trigger) {
+        if (!trackingModal) return;
+        trackingTrigger = trigger || null;
+        trackingOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        trackingModal.classList.remove('hidden');
+        if (trackingInput) {
+          trackingInput.value = number || '';
+          trackingInput.setAttribute('aria-invalid', 'false');
+        }
+        if (trackingError) {
+          trackingError.textContent = '';
+          trackingError.classList.add('hidden');
+        }
+        if (trackingResult) trackingResult.classList.add('hidden');
+        window.setTimeout(() => { if (trackingInput) trackingInput.focus(); }, 0);
+      }
+      const trackingData = {
+        '#BB-10492': {
+          status: 'В пути · доставка завтра',
+          tone: 'bg-secondary-container text-on-secondary-container',
+          steps: [
+            { title: 'Заказ оформлен', note: '14 января 2026', done: true },
+            { title: 'Передан курьеру', note: 'Сегодня, 09:20', done: true },
+            { title: 'Доставка после 18:00', note: 'Завтра', done: false }
+          ]
+        },
+        '#BB-09314': {
+          status: 'Доставлен',
+          tone: 'bg-semantic-success/10 text-semantic-success',
+          steps: [
+            { title: 'Заказ оформлен', note: '3 декабря 2025', done: true },
+            { title: 'Передан курьеру', note: '5 декабря 2025', done: true },
+            { title: 'Вручён получателю', note: '6 декабря 2025', done: true }
+          ]
+        }
+      };
+      const checkTracking = () => {
+        if (!trackingInput) return;
+        const normalized = trackingInput.value.trim().toUpperCase().replace(/^([^#])/, '#$1');
+        if (!/^#BB-\d{4,6}$/.test(normalized)) {
+          if (trackingError) {
+            trackingError.textContent = 'Введите номер в формате #BB-10492.';
+            trackingError.classList.remove('hidden');
+          }
+          trackingInput.setAttribute('aria-invalid', 'true');
+          trackingInput.focus();
+          if (trackingResult) trackingResult.classList.add('hidden');
+          return;
+        }
+        trackingInput.setAttribute('aria-invalid', 'false');
+        if (trackingError) {
+          trackingError.textContent = '';
+          trackingError.classList.add('hidden');
+        }
+        const info = trackingData[normalized] || {
+          status: 'В обработке',
+          tone: 'bg-semantic-info/10 text-semantic-info',
+          steps: [
+            { title: 'Номер принят', note: 'Проверяем данные заказа', done: true },
+            { title: 'Ожидание статуса', note: 'Обновим информацию в течение часа', done: false }
+          ]
+        };
+        if (trackingNumber) trackingNumber.textContent = normalized;
+        if (trackingStatus) {
+          trackingStatus.textContent = info.status;
+          trackingStatus.className = 'badge-ui ' + info.tone;
+        }
+        if (trackingTimeline) {
+          trackingTimeline.innerHTML = info.steps.map((step) => {
+            const icon = step.done ? 'check_circle' : 'schedule';
+            const color = step.done ? 'text-semantic-success' : 'text-outline';
+            return '<li class="flex gap-3"><span class="material-symbols-outlined text-[20px] ' + color + '">' + icon + '</span><div><p class="font-semibold text-primary dark:text-on-primary">' + step.title + '</p><p class="text-label-sm text-on-surface-variant dark:text-outline-variant">' + step.note + '</p></div></li>';
+          }).join('');
+        }
+        if (trackingResult) trackingResult.classList.remove('hidden');
+        toast('Статус посылки ' + normalized + ' обновлён', 'success');
+      };
+      if (trackingModal) {
+        $$('[data-tracking-close]', trackingModal).forEach((button) => button.addEventListener('click', closeTracking));
+        trackingModal.addEventListener('click', (event) => { if (event.target === trackingModal) closeTracking(); });
+        const trackingSubmit = $('[data-tracking-submit]', trackingModal);
+        if (trackingSubmit) trackingSubmit.addEventListener('click', checkTracking);
+        if (trackingInput) {
+          trackingInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+              event.preventDefault();
+              checkTracking();
+            }
+          });
+        }
+        trackingModal.addEventListener('keydown', (event) => {
+          if (event.key !== 'Tab') return;
+          const focusable = $$('button, input, [href], select, textarea, [tabindex]:not([tabindex="-1"])', trackingModal)
+            .filter((element) => !element.disabled && element.offsetParent !== null);
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        });
+      }
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && trackingModal && !trackingModal.classList.contains('hidden')) closeTracking();
+      });
+
+      const dashboardSearch = $('[data-dashboard-search]');
+      const dashboardEmpty = $('[data-dashboard-empty]');
+      if (dashboardSearch) {
+        const dashboardSections = ['#account-overview', '#messenger']
+          .map((selector) => $(selector)).filter(Boolean);
+        const itemSelector = '[data-order-card], [data-conversation-row], #favorites-list > div, [data-address-card]';
+        const applyDashboardFilter = () => {
+          const query = dashboardSearch.value.trim().toLowerCase();
+          let matches = 0;
+          dashboardSections.forEach((section) => {
+            let sectionMatches = 0;
+            $$(itemSelector, section).forEach((item) => {
+              const text = ((item.textContent || '') + ' ' + (item.getAttribute('aria-label') || '')).toLowerCase();
+              const visible = !query || text.includes(query);
+              item.classList.toggle('hidden', !visible);
+              if (visible) sectionMatches += 1;
+            });
+            if (query) section.classList.toggle('hidden', sectionMatches === 0);
+            else section.classList.remove('hidden');
+            matches += sectionMatches;
+          });
+          if (dashboardEmpty) {
+            dashboardEmpty.classList.toggle('hidden', !query || matches > 0);
+            dashboardEmpty.classList.toggle('flex', Boolean(query) && matches === 0);
+          }
+        };
+        dashboardSearch.addEventListener('input', applyDashboardFilter);
+        dashboardSearch.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter') return;
+          event.preventDefault();
+          applyDashboardFilter();
+          toast('Результаты поиска по кабинету обновлены', 'info');
+        });
+        applyDashboardFilter();
+      }
+
+      $$('[data-year]').forEach((node) => { node.textContent = String(new Date().getFullYear()); });
+      window.BBStore.renderAvatars();
+
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+})();
+</script>
+</body></html>

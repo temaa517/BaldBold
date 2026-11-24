@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bald &amp; Bold — Оформление заказа</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#eeeef0",
+            "primary-container": "#1e1e24",
+            "inverse-surface": "#2f3132",
+            "on-primary-fixed": "#1b1b21",
+            "outline": "#78767b",
+            "secondary-fixed-dim": "#d6c4a7",
+            "on-secondary-container": "#6f6149",
+            "inverse-on-surface": "#f0f0f2",
+            "on-primary": "#ffffff",
+            "secondary": "#6a5d45",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#633f00",
+            "on-tertiary-fixed": "#2a1800",
+            "on-secondary-fixed": "#241a07",
+            "primary-fixed-dim": "#c8c5cd",
+            "on-tertiary-container": "#b87900",
+            "error-container": "#ffdad6",
+            "primary": "#05050a",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#47464d",
+            "tertiary-fixed-dim": "#ffb956",
+            "on-error-container": "#93000a",
+            "secondary-container": "#f0ddbf",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffddb5",
+            "inverse-primary": "#c8c5cd",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#51452f",
+            "primary-fixed": "#e4e1ea",
+            "on-primary-container": "#87858d",
+            "secondary-fixed": "#f3e0c2",
+            "outline-variant": "#c8c5cb",
+            "surface-dim": "#d9dadc",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f9f9fb",
+            "surface-tint": "#5e5e65",
+            "surface-container-low": "#f3f3f5",
+            "on-surface-variant": "#47464b",
+            "surface-container-high": "#e8e8ea",
+            "on-background": "#1a1c1d",
+            "on-surface": "#1a1c1d",
+            "surface": "#f9f9fb",
+            "surface-container-highest": "#e2e2e4",
+            "tertiary-container": "#2d1a00",
+            "surface-variant": "#e2e2e4",
+            "tertiary": "#0a0400",
+            "surface-bright": "#f9f9fb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Montserrat"],
+            "body-md-medium": ["Inter"],
+            "display-mobile": ["Montserrat"],
+            "display": ["Montserrat"],
+            "body-md": ["Inter"],
+            "headline-sm": ["Montserrat"],
+            "body-lg": ["Inter"],
+            "label-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Montserrat"],
+            "body-sm": ["Inter"],
+            "headline-lg-mobile": ["Montserrat"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-md-medium": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "display": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<script src="../shared/tailwind.config.js"></script>
+<script>
+    tailwind.config = window.BB.extendTailwindConfig(tailwind.config);
+    document.addEventListener('DOMContentLoaded', window.BB.initTheme);
+  </script>
+<script src="../shared/bb-app.js"></script>
+<style>
+    .soft-shadow {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+    .hover-lift {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+<style type="text/tailwindcss">
+    .bb-step {
+      @apply relative flex items-center gap-2 rounded-xl border border-outline-variant/50 bg-surface-container-lowest px-3 py-3 text-left text-label-sm font-label-sm text-on-surface-variant transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed data-[state=active]:border-brand-400 data-[state=active]:bg-brand-50 data-[state=active]:text-brand-700 data-[state=complete]:border-semantic-success data-[state=complete]:bg-semantic-success/10 data-[state=complete]:text-semantic-success data-[state=disabled]:opacity-50 dark:bg-primary-container dark:border-outline dark:text-outline-variant dark:data-[state=active]:border-brand-300 dark:data-[state=active]:bg-brand-900/30 dark:data-[state=active]:text-brand-200;
+    }
+    .bb-option {
+      @apply flex items-center justify-between p-4 rounded-xl border border-outline-variant bg-surface-container-lowest cursor-pointer transition-all has-[:checked]:border-2 has-[:checked]:border-primary has-[:checked]:bg-surface-container-low/50 dark:bg-primary-container dark:has-[:checked]:bg-primary-container;
+    }
+    .bb-option-dot {
+      @apply scale-0 transition-transform duration-150;
+    }
+    .bb-option:has(:checked) .bb-option-dot {
+      @apply scale-100;
+    }
+    .bb-option-ring {
+      @apply transition-colors duration-150;
+    }
+    .bb-option:has(:checked) .bb-option-ring {
+      @apply border-primary;
+    }
+    .bb-input {
+      @apply w-full h-12 px-4 rounded-xl border border-outline-variant text-body-md font-body-md bg-surface-container-lowest text-on-surface transition-colors focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 dark:bg-primary-container dark:text-on-primary dark:border-outline dark:focus:border-brand-400;
+    }
+    .bb-field-wrap {
+      @apply relative;
+    }
+    .bb-field-frame {
+      @apply pointer-events-none absolute inset-0 rounded-xl border border-transparent transition-colors peer-focus:border-brand-400 peer-focus:ring-2 peer-focus:ring-brand-400/20 peer-invalid:border-red-500 dark:peer-invalid:border-semantic-danger;
+    }
+    .bb-field-error {
+      @apply hidden pt-1 text-label-sm font-label-sm text-red-600 peer-invalid:block dark:text-red-400;
+    }
+    .bb-nav-button {
+      @apply h-11 px-5 rounded-xl border border-outline-variant text-label-lg font-label-lg font-semibold text-on-surface-variant transition-colors hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed dark:border-outline dark:text-outline-variant dark:hover:bg-primary-container;
+    }
+    .bb-next {
+      @apply h-11 px-5 rounded-xl bg-tertiary-fixed-dim text-primary font-label-lg text-label-lg font-semibold transition-colors hover:bg-on-tertiary-container focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-brand-400 dark:hover:bg-brand-300;
+    }
+    .bb-status {
+      @apply rounded-xl px-4 py-2.5 text-label-sm font-label-sm transition-colors data-[state=error]:bg-semantic-danger/10 data-[state=error]:text-semantic-danger data-[state=success]:bg-semantic-success/10 data-[state=success]:text-semantic-success data-[state=idle]:text-on-surface-variant;
+    }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-tertiary-fixed selection:text-tertiary-container">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-container-lowest border-b border-outline-variant/40 shadow-sm docked full-width top-0 sticky z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-8">
+<!-- Brand Logo + Name -->
+<a class="flex items-center gap-3 group" href="../bald_bold_1/code.html"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" fill="none" style="width:100%;height:100%"><g transform="translate(10, 8)"><path d="M27 50 C13 50 5 39 5 24 C5 9 15 0 27 0 C39 0 49 9 49 24 C49 39 41 50 27 50 Z" fill="#1E1E24"/><path d="M15 14 C19 6 25 4 31 4" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M35 8 L38 1 L41 8 L48 11 L41 14 L38 21 L35 14 L28 11 Z" fill="#F2A93B"/><circle cx="20" cy="24" r="2.5" fill="#FFFFFF"/><circle cx="34" cy="24" r="2.5" fill="#FFFFFF"/><path d="M22 33 C24 37 30 37 32 33" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg></div><span class="text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-on-primary">Bald & Bold</span></a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_1/code.html">Главная</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_2/code.html">Каталог</a>
+<a class="text-label-lg font-label-lg text-primary font-semibold border-b-2 border-primary pb-1 transition-colors" href="../bald_bold_4/code.html">Корзина</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_6/code.html">Войти</a>
+</nav>
+<!-- Trailing Action Icons with Cart Counter Badge -->
+<div class="flex items-center gap-1 sm:gap-5">
+<button aria-label="Переключить тему" aria-pressed="false" class="w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary/20 dark:hover:text-brand-300" data-theme-toggle="" type="button"><span class="material-symbols-outlined" data-theme-icon="">dark_mode</span></button>
+<button aria-label="Поиск" class="w-10 h-10 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors duration-150" type="button">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<a aria-label="Профиль" class="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_5/code.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</a>
+<a aria-label="Корзина" class="relative w-10 h-10 rounded-xl flex items-center justify-center text-primary-container hover:bg-surface-container-low transition-colors" href="../bald_bold_4/code.html">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-tertiary-fixed-dim text-primary rounded-full text-label-sm font-label-sm font-bold flex items-center justify-center ring-2 ring-surface-container-lowest shadow-sm" data-bb-cart-count="" data-bb-hide-empty="true">3</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Layout (1440px desktop frame container) -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-12 py-10">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-6 text-body-sm font-body-sm text-outline">
+<a class="hover:text-primary transition-colors" href="../bald_bold_1/code.html">Главная</a>
+<span class="material-symbols-outlined text-outline-variant text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Корзина и оформление</span>
+</nav>
+<!-- Page Title & Microcopy -->
+<div class="mb-10">
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight mb-2">Оформление заказа</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Ещё пара шагов до идеального сияния черепа</p>
+</div>
+<nav aria-label="Этапы оформления заказа" class="grid grid-cols-2 gap-2 sm:grid-cols-4 mb-4" data-wizard-stepper="">
+<button aria-current="step" aria-disabled="false" class="bb-step group" data-state="active" data-step-trigger="0" type="button">
+<span class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center bg-surface-container text-[11px] font-bold group-data-[state=complete]:hidden dark:bg-primary-container">1</span>
+<span class="w-7 h-7 shrink-0 rounded-lg hidden items-center justify-center bg-semantic-success/15 text-semantic-success group-data-[state=complete]:flex"><span aria-hidden="true" class="material-symbols-outlined text-[16px]">check</span></span>
+<span class="flex flex-col items-start leading-tight"><span class="font-semibold">Личные данные</span><span class="text-[11px] opacity-70" data-step-hint="">Контакты для связи</span></span>
+</button>
+<button aria-current="false" aria-disabled="true" class="bb-step group" data-state="disabled" data-step-trigger="1" disabled="" type="button">
+<span class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center bg-surface-container text-[11px] font-bold group-data-[state=complete]:hidden dark:bg-primary-container">2</span>
+<span class="w-7 h-7 shrink-0 rounded-lg hidden items-center justify-center bg-semantic-success/15 text-semantic-success group-data-[state=complete]:flex"><span aria-hidden="true" class="material-symbols-outlined text-[16px]">check</span></span>
+<span class="flex flex-col items-start leading-tight"><span class="font-semibold">Адрес</span><span class="text-[11px] opacity-70" data-step-hint="">Доставка и адрес</span></span>
+</button>
+<button aria-current="false" aria-disabled="true" class="bb-step group" data-state="disabled" data-step-trigger="2" disabled="" type="button">
+<span class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center bg-surface-container text-[11px] font-bold group-data-[state=complete]:hidden dark:bg-primary-container">3</span>
+<span class="w-7 h-7 shrink-0 rounded-lg hidden items-center justify-center bg-semantic-success/15 text-semantic-success group-data-[state=complete]:flex"><span aria-hidden="true" class="material-symbols-outlined text-[16px]">check</span></span>
+<span class="flex flex-col items-start leading-tight"><span class="font-semibold">Оплата</span><span class="text-[11px] opacity-70" data-step-hint="">Удобный способ</span></span>
+</button>
+<button aria-current="false" aria-disabled="true" class="bb-step group" data-state="disabled" data-step-trigger="3" disabled="" type="button">
+<span class="w-7 h-7 shrink-0 rounded-lg flex items-center justify-center bg-surface-container text-[11px] font-bold group-data-[state=complete]:hidden dark:bg-primary-container">4</span>
+<span class="w-7 h-7 shrink-0 rounded-lg hidden items-center justify-center bg-semantic-success/15 text-semantic-success group-data-[state=complete]:flex"><span aria-hidden="true" class="material-symbols-outlined text-[16px]">check</span></span>
+<span class="flex flex-col items-start leading-tight"><span class="font-semibold">Подтверждение</span><span class="text-[11px] opacity-70" data-step-hint="">Проверка заказа</span></span>
+</button>
+</nav>
+<p aria-live="polite" class="sr-only" id="checkout-step-status">Шаг 1 из 4: Личные данные</p>
+<div aria-live="polite" class="bb-status hidden" data-state="idle" id="checkout-status" role="status"><span aria-hidden="true" class="material-symbols-outlined mr-2 text-[18px]" data-status-icon="">info</span><span data-status-text=""></span></div>
+<!-- 12-Column Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Cart Items, Personal Info, Delivery, Payment (Cols: 7) -->
+<section class="lg:col-span-7 flex flex-col gap-8">
+<!-- A. Cart Items List Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg soft-shadow border border-outline-variant/40">
+<div class="flex items-center justify-between pb-5 mb-5 border-b border-surface-container">
+<h2 class="text-headline-sm font-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="shopping_basket">shopping_basket</span>
+              Состав заказа
+            </h2>
+<span class="text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed px-3 py-1 rounded-full font-semibold" data-cart-count-label="">3 товара</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-container" data-cart-items="">
+<div class="rounded-xl border border-dashed border-outline-variant/60 p-8 text-center text-body-md font-body-md text-on-surface-variant">
+<div class="material-symbols-outlined text-[32px] text-outline mb-2" aria-hidden="true">shopping_bag</div>
+<p class="font-semibold text-primary mb-1">В корзине пока пусто</p>
+<p class="text-body-sm mb-4">Выберите средства для вашего ритуала ухода — они появятся здесь.</p>
+<a class="inline-flex h-11 items-center rounded-xl bg-tertiary-fixed-dim px-5 text-label-lg font-semibold text-primary transition-colors hover:bg-on-tertiary-container" href="../bald_bold_2/code.html">Перейти в каталог</a>
+</div>
+</div>
+</div>
+<div aria-labelledby="step-1-title" class="group" data-state="active" data-step-panel="1" id="checkout-step-1" role="region">
+<!-- B. Contact Info Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg soft-shadow border border-outline-variant/40">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center font-bold text-label-lg">1</div>
+<h2 class="text-headline-sm font-headline-sm text-primary" id="step-1-title">Контактные данные</h2>
+<span aria-hidden="true" class="ml-auto material-symbols-outlined text-semantic-success group-data-[state=complete]:inline hidden">check_circle</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<label class="block text-label-sm font-label-sm text-on-surface mb-1.5" for="full_name">Имя и Фамилия</label>
+<div class="relative">
+<input aria-invalid="false" class="bb-input peer" data-validate="" id="full_name" placeholder="Константин Романов" required="" type="text" value="Александр Макаров"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error">Укажите имя и фамилию</p>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1.5" for="phone">Телефон</label>
+<div class="relative">
+<input aria-invalid="false" class="bb-input peer" data-validate="" id="phone" placeholder="+7 (999) 000-00-00" required="" type="tel" value="+7 (926) 450-88-21"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error">Введите корректный телефон</p>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1.5" for="email">Email (для чека и трек-номера)</label>
+<div class="relative">
+<input aria-invalid="false" class="bb-input peer" data-validate="" id="email" placeholder="alex@domain.ru" required="" type="email" value="alex.makarov@boldgroom.ru"/>
+<div class="bb-field-frame"></div>
+<p class="bb-field-error">Введите корректный email</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="step-2-title" class="group hidden" data-state="idle" data-step-panel="2" id="checkout-step-2" role="region">
+<!-- C. Delivery Method Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg soft-shadow border border-outline-variant/40">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center font-bold text-label-lg">2</div>
+<h2 class="text-headline-sm font-headline-sm text-primary" id="step-2-title">Способ доставки</h2>
+<span aria-hidden="true" class="ml-auto material-symbols-outlined text-semantic-success group-data-[state=complete]:inline hidden">check_circle</span>
+</div>
+<!-- Radio Delivery Options -->
+<div class="grid grid-cols-1 gap-3 mb-6">
+<!-- Option 1: Selected -->
+<label class="bb-option">
+<input aria-label="Курьерская доставка СДЭК до двери" checked="" class="sr-only" name="delivery" required="" type="radio" value="cdek"/>
+<div class="flex items-center gap-3.5">
+<div class="bb-option-ring w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-surface-container-lowest">
+<div class="bb-option-dot w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<div class="text-body-md-medium font-body-md-medium text-primary flex items-center gap-2">
+                    Курьерская доставка СДЭК до двери
+                    <span class="text-label-sm font-label-sm bg-tertiary-fixed-dim/30 text-on-tertiary-fixed-variant px-2 py-0.5 rounded-full font-bold">Быстро</span>
+</div>
+<div class="text-body-sm font-body-sm text-outline">Срок: Завтра в удобный часовой интервал</div>
+</div>
+</div>
+<span class="text-label-lg font-label-lg text-primary font-bold" data-delivery-price="cdek">Бесплатно</span>
+</label>
+<!-- Option 2 -->
+<label class="bb-option">
+<input aria-label="Пункт выдачи заказов" class="sr-only" name="delivery" required="" type="radio" value="pickup"/>
+<div class="flex items-center gap-3.5">
+<div class="bb-option-ring w-5 h-5 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container-lowest">
+<div class="bb-option-dot w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<div class="text-body-md-medium font-body-md-medium text-primary">
+                    Пункт выдачи заказов (Яндекс Доставка / Boxberry)
+                  </div>
+<div class="text-body-sm font-body-sm text-outline">Срок: 1–2 рабочих дня, 650+ отделений</div>
+</div>
+</div>
+<span class="text-label-lg font-label-lg text-primary font-bold" data-delivery-price="pickup">Бесплатно</span>
+</label>
+<!-- Option 3 -->
+<label class="bb-option">
+<input aria-label="Экспресс-доставка за 2 часа" class="sr-only" name="delivery" required="" type="radio" value="express"/>
+<div class="flex items-center gap-3.5">
+<div class="bb-option-ring w-5 h-5 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container-lowest">
+<div class="bb-option-dot w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<div class="text-body-md-medium font-body-md-medium text-primary flex items-center gap-2">
+                    Экспресс-доставка за 2 часа (по Москве)
+                    <span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim" data-icon="bolt">bolt</span>
+</div>
+<div class="text-body-sm font-body-sm text-outline">Прямой мотокурьер доставит лично в руки</div>
+</div>
+</div>
+<span class="text-label-lg font-label-lg text-primary font-bold" data-delivery-price="express">—</span>
+</label>
+</div>
+<!-- Delivery Address Fields -->
+<div class="space-y-4 pt-4 border-t border-surface-container">
+<h3 class="text-body-md-medium font-body-md-medium text-primary">Адрес доставки</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-1">
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="city">Город</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="city" required="" type="text" value="Москва"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="street">Улица</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="street" placeholder="ул. Большая Никитская" required="" type="text" value="ул. Тверская"/>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="house">Дом</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="house" required="" type="text" value="12"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="apt">Кв. / Офис</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="apt" type="text" value="48"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="entrance">Подъезд</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="entrance" type="text" value="2"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="floor">Этаж</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="floor" type="text" value="6"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-1" for="comment">Комментарий курьеру</label>
+<input class="bb-input peer" data-validate="" aria-invalid="false" id="comment" placeholder="Код домофона, ориентир или оставить у двери" type="text" value="Код 48К, позвонить за 20 минут"/>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="step-3-title" class="group hidden" data-state="idle" data-step-panel="3" id="checkout-step-3" role="region">
+<!-- D. Payment Method Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg soft-shadow border border-outline-variant/40">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center font-bold text-label-lg">3</div>
+<h2 class="text-headline-sm font-headline-sm text-primary" id="step-3-title">Способ оплаты</h2>
+<span aria-hidden="true" class="ml-auto material-symbols-outlined text-semantic-success group-data-[state=complete]:inline hidden">check_circle</span>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<!-- Payment 1: Selected -->
+<label class="bb-option">
+<input aria-label="Банковская карта онлайн" checked="" class="sr-only" name="payment" required="" type="radio" value="card"/>
+<div class="flex items-center gap-3.5">
+<div class="bb-option-ring w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-surface-container-lowest">
+<div class="bb-option-dot w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<div class="text-body-md-medium font-body-md-medium text-primary">
+                    Банковская карта онлайн (Mir, Visa, MC)
+                  </div>
+<div class="text-body-sm font-body-sm text-outline">Безопасный шлюз, моментальный электронный чек</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]" data-icon="credit_card">credit_card</span>
+</div>
+</label>
+<!-- Payment 2: Split -->
+<label class="bb-option">
+<input aria-label="Оплата частями" class="sr-only" name="payment" required="" type="radio" value="split"/>
+<div class="flex items-center gap-3.5">
+<div class="bb-option-ring w-5 h-5 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container-lowest">
+<div class="bb-option-dot w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<div class="text-body-md-medium font-body-md-medium text-primary flex items-center gap-2">
+                    Оплата частями (Долями / Сплит без переплат)
+                    <span class="text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed px-2 py-0.5 rounded-full font-bold" data-installment="">—</span>
+</div>
+<div class="text-body-sm font-body-sm text-outline">Списание каждые 2 недели, 0% переплат</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[22px] text-outline" data-icon="pie_chart">pie_chart</span>
+</label>
+<!-- Payment 3: SBP -->
+<label class="bb-option">
+<input aria-label="СБП" class="sr-only" name="payment" required="" type="radio" value="sbp"/>
+<div class="flex items-center gap-3.5">
+<div class="bb-option-ring w-5 h-5 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container-lowest">
+<div class="bb-option-dot w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<div class="text-body-md-medium font-body-md-medium text-primary">
+                    СБП (Система быстрых платежей, QR-код)
+                  </div>
+<div class="text-body-sm font-body-sm text-outline">Оплата через приложение любого банка в один клик</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[22px] text-outline" data-icon="qr_code_2">qr_code_2</span>
+</label>
+</div>
+</div>
+</div>
+<div aria-labelledby="step-4-title" class="group hidden" data-state="idle" data-step-panel="4" id="checkout-step-4" role="region">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg soft-shadow border border-outline-variant/40">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 rounded-lg bg-semantic-success/15 text-semantic-success flex items-center justify-center"><span aria-hidden="true" class="material-symbols-outlined text-[20px]">fact_check</span></div>
+<h2 class="text-headline-sm font-headline-sm text-primary" id="step-4-title">Подтверждение заказа</h2>
+<span class="ml-auto text-label-sm font-label-sm bg-semantic-success/10 text-semantic-success px-3 py-1 rounded-full font-semibold">Почти готово</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="rounded-xl border border-outline-variant/50 bg-surface-container-low p-4 space-y-2 dark:bg-primary-container">
+<h3 class="text-label-sm font-label-sm uppercase tracking-wider text-outline">Получатель</h3>
+<p class="text-body-md-medium font-body-md-medium text-primary" data-confirm="name">Александр Макаров</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant" data-confirm="phone">+7 (926) 450-88-21</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant break-all" data-confirm="email">alex.makarov@boldgroom.ru</p>
+</div>
+<div class="rounded-xl border border-outline-variant/50 bg-surface-container-low p-4 space-y-2 dark:bg-primary-container">
+<h3 class="text-label-sm font-label-sm uppercase tracking-wider text-outline">Доставка и оплата</h3>
+<p class="text-body-md-medium font-body-md-medium text-primary" data-confirm="address">Москва, ул. Тверская, 12</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant" data-confirm="delivery">Курьерская доставка СДЭК до двери</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant" data-confirm="payment">Банковская карта онлайн</p>
+</div>
+</div>
+<label class="bb-option mt-4">
+<input aria-invalid="false" aria-label="Подтверждаю правильность данных заказа" class="sr-only" data-validate="" id="order-consent" name="consent" required="" type="checkbox"/>
+<span class="flex items-center gap-3.5">
+<span class="bb-option-ring w-5 h-5 rounded-md border border-outline-variant flex items-center justify-center"><span aria-hidden="true" class="bb-option-dot material-symbols-outlined text-[16px] text-primary">check</span></span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Подтверждаю правильность указанных данных и принимаю условия продажи</span>
+</span>
+</label>
+<p class="bb-field-error">Подтвердите данные заказа</p>
+</div>
+</div>
+<div class="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-4 soft-shadow dark:bg-primary-container">
+<button aria-disabled="true" class="bb-nav-button" data-state="disabled" disabled="" id="checkout-back" type="button"><span aria-hidden="true" class="material-symbols-outlined mr-1 text-[18px]">arrow_back</span>Назад</button>
+<div class="flex items-center justify-between gap-4 sm:justify-end">
+<span class="text-label-sm font-label-sm text-on-surface-variant" id="checkout-progress-text">Шаг 1 из 4</span>
+<button class="bb-next" id="checkout-next" type="button"><span data-next-label="">Далее: Адрес</span><span aria-hidden="true" class="material-symbols-outlined text-[20px]">arrow_forward</span></button>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Order Summary Sticky Card (Cols: 5) -->
+<aside class="lg:col-span-5 sticky top-28">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg soft-shadow border border-outline-variant/40 flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-surface-container pb-4">
+<h2 class="text-headline-sm font-headline-sm text-primary" data-order-count-label="">Ваш заказ (3 товара)</h2>
+<span class="material-symbols-outlined text-outline" data-icon="receipt_long">receipt_long</span>
+</div>
+<!-- Promo Code Section -->
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface mb-2 font-medium" for="promo">Промокод на скидку</label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-12 px-4 uppercase tracking-wider rounded-xl border border-outline-variant text-body-md font-body-md focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors bg-surface-container-lowest" id="promo" placeholder="Промокод (попробуйте SHINE2025)" type="text" value=""/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary hidden" data-icon="check_circle" id="promo-check">check_circle</span>
+</div>
+<button class="px-5 h-12 rounded-xl bg-tertiary-fixed-dim hover:bg-on-tertiary-container text-primary font-bold text-label-lg transition-colors flex items-center justify-center active:scale-95 duration-150" id="promo-apply" type="button">
+                Применить
+              </button>
+<button aria-label="Убрать промокод" class="px-4 h-12 rounded-xl border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary transition-colors hidden" id="promo-remove" type="button">
+<span class="material-symbols-outlined text-[20px]" aria-hidden="true">close</span>
+</button>
+</div>
+<div class="mt-1.5 flex items-center gap-1.5 text-label-sm font-label-sm text-secondary" data-state="idle" id="promo-status">
+<span class="material-symbols-outlined text-[16px]" data-icon="info" data-promo-status-icon="">info</span>
+              <span data-promo-status-text="">Введите промокод SHINE2025 для скидки 10%</span>
+            </div>
+</div>
+<!-- Price Breakdown -->
+<div class="space-y-3 pt-2 text-body-md font-body-md text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span data-cart-units-label="">Товары (0 шт.)</span>
+<span class="text-primary font-medium" data-subtotal="">—</span>
+</div>
+<div class="flex items-center justify-between text-secondary hidden" data-discount-row="">
+<span class="flex items-center gap-1" data-discount-label="">
+                Промокод SHINE2025 (-10%)
+              </span>
+<span class="font-semibold" data-discount="">—</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span>Доставка</span>
+<span class="text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed px-2 py-0.5 rounded-full font-bold" data-free-delivery="">—</span>
+</div>
+<span class="text-primary font-semibold" data-delivery="">—</span>
+</div>
+</div>
+<hr class="border-t border-outline-variant/40"/>
+<!-- Grand Total Section -->
+<div class="flex items-end justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider block">Итого к оплате</span>
+<span class="text-[28px] leading-9 font-headline-lg font-bold text-primary" data-grand-total="">—</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline">НДС включен</span>
+</div>
+<!-- Checkout Primary CTA Button -->
+<button aria-busy="false" aria-disabled="true" class="group w-full h-14 rounded-xl bg-tertiary-fixed-dim hover:bg-on-tertiary-container text-primary font-headline-sm font-headline-sm flex items-center justify-center gap-3 transition-all duration-150 hover:-translate-y-0.5 active:scale-95 shadow-md focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:opacity-50 disabled:cursor-not-allowed data-[state=success]:bg-semantic-success data-[state=success]:text-on-primary dark:bg-brand-400" data-state="disabled" disabled="" id="order-submit" type="button">
+<span class="flex items-center gap-3 group-data-[state=loading]:hidden"><span data-order-label="">Оформить заказ</span><span aria-hidden="true" class="material-symbols-outlined font-bold" data-icon="arrow_forward">arrow_forward</span></span>
+<span aria-hidden="true" class="hidden items-center gap-2 group-data-[state=loading]:flex"><span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Отправляем заказ...</span></span>
+</button>
+<!-- Security & Guarantee Badge -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-start gap-3 border border-outline-variant/30">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] flex-shrink-0 mt-0.5" data-icon="lock">lock</span>
+<div class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">
+<strong class="text-primary font-semibold">Безопасная оплата 256-bit SSL.</strong>
+              Гарантия возврата в течение 14 дней, если блеск или текстура не совпадут с вашим настроением.
+            </div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary text-on-primary border-t border-outline/20 docked full-width mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 flex flex-col gap-12">
+<!-- Top Section -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" style="width:100%;height:100%"><g transform="translate(10, 10)"><path d="M30 55 C16 55 8 44 8 28 C8 12 18 2 30 2 C42 2 52 12 52 28 C52 44 44 55 30 55 Z" fill="#1E1E24"/><path d="M18 16 C22 8 28 6 34 6" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M38 10 L41 3 L44 10 L51 13 L44 16 L41 23 L38 16 L31 13 Z" fill="#F2A93B"/><circle cx="23" cy="27" r="2.5" fill="#FFFFFF"/><circle cx="37" cy="27" r="2.5" fill="#FFFFFF"/><path d="M25 36 C27 40 33 40 35 36" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg>
+<span class="text-headline-md font-headline-md font-extrabold text-on-primary">Bald &amp; Bold</span>
+</div>
+<p class="text-body-md font-body-md text-outline-variant max-w-sm">
+            Манифест бескомпромиссного ухода за гладко выбритой головой. Мы превращаем отсутствие волос в главный элемент вашего стиля.
+          </p>
+<div class="inline-block mt-2">
+<span class="px-3 py-1.5 rounded-full bg-surface-container-low/10 text-tertiary-fixed-dim text-label-sm font-label-sm font-semibold border border-tertiary-fixed-dim/20">
+              Блестит — значит работает.
+            </span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-label-lg font-label-lg font-bold text-on-primary tracking-wide">Навигация</span>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_2/code.html">Новинки</a>
+<button class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors text-left" data-bb-info="about" type="button">О нас</button>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-label-lg font-label-lg font-bold text-on-primary tracking-wide">Покупателям</span>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_1/code.html#delivery">Доставка и оплата</a>
+<button class="text-outline-variant hover:text-tertiary-fixed transition-colors text-body-sm font-body-sm text-left" data-bb-info="return" type="button">Возврат</button>
+<button class="text-outline-variant hover:text-tertiary-fixed transition-colors text-body-sm font-body-sm text-left" data-bb-info="privacy" type="button">Политика конфиденциальности</button>
+</div>
+</div>
+<!-- Bottom Line -->
+<div class="pt-8 border-t border-outline/20 flex flex-col md:flex-row items-center justify-between gap-4 text-label-sm font-label-sm text-outline-variant">
+<span>© <span data-bb-year>2025</span> Bald &amp; Bold. Все права защищены. Блестит — значит работает.</span>
+<div class="flex items-center gap-6">
+<button class="hover:text-tertiary-fixed transition-colors text-left" data-bb-info="contacts" type="button">Москва, Столешников переулок 7</button>
+<button class="text-tertiary-fixed-dim font-medium text-left" data-bb-info="contacts" type="button">8 (800) 555-BOLD</button>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  const store = window.BBStore;
+  if (!store) return;
+
+  const panels = Array.from(document.querySelectorAll('[data-step-panel]'));
+  const triggers = Array.from(document.querySelectorAll('[data-step-trigger]'));
+  const back = document.getElementById('checkout-back');
+  const next = document.getElementById('checkout-next');
+  const nextLabel = next.querySelector('[data-next-label]');
+  const progress = document.getElementById('checkout-progress-text');
+  const stepStatus = document.getElementById('checkout-step-status');
+  const statusBox = document.getElementById('checkout-status');
+  const statusText = statusBox.querySelector('[data-status-text]');
+  const statusIcon = statusBox.querySelector('[data-status-icon]');
+  const orderSubmit = document.getElementById('order-submit');
+  const orderLabel = orderSubmit.querySelector('[data-order-label]');
+  const cartList = document.querySelector('[data-cart-items]');
+  const cartCountLabel = document.querySelector('[data-cart-count-label]');
+  const orderCountLabel = document.querySelector('[data-order-count-label]');
+  const cartUnitsLabel = document.querySelector('[data-cart-units-label]');
+  const headerBadge = document.querySelector('[data-bb-cart-count]');
+  const subtotalNode = document.querySelector('[data-subtotal]');
+  const discountNode = document.querySelector('[data-discount]');
+  const discountRow = document.querySelector('[data-discount-row]');
+  const discountLabel = document.querySelector('[data-discount-label]');
+  const deliveryNode = document.querySelector('[data-delivery]');
+  const freeDeliveryNode = document.querySelector('[data-free-delivery]');
+  const grandTotalNode = document.querySelector('[data-grand-total]');
+  const installmentNode = document.querySelector('[data-installment]');
+  const promoInput = document.getElementById('promo');
+  const promoApply = document.getElementById('promo-apply');
+  const promoRemove = document.getElementById('promo-remove');
+  const promoCheck = document.getElementById('promo-check');
+  const promoStatus = document.getElementById('promo-status');
+  const promoStatusText = promoStatus ? promoStatus.querySelector('[data-promo-status-text]') : null;
+  const promoStatusIcon = promoStatus ? promoStatus.querySelector('[data-promo-status-icon]') : null;
+  const deliveryPriceNodes = Array.from(document.querySelectorAll('[data-delivery-price]'));
+  const titles = ['Личные данные', 'Адрес', 'Оплата', 'Подтверждение'];
+  const nextTitles = ['Адрес', 'Оплата', 'Подтверждение'];
+  const completed = [false, false, false, false];
+  const promoCode = 'SHINE2025';
+  const deliveryOptions = {
+    cdek: { fee: 0, label: 'Курьерская доставка СДЭК до двери' },
+    pickup: { fee: 0, label: 'Пункт выдачи заказов (Яндекс Доставка / Boxberry)' },
+    express: { fee: 16.17, label: 'Экспресс-доставка за 2 часа (по Москве)' }
+  };
+  const productDetails = {
+    'shine-spf50': {
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1OMeUZKQEd9_XXGVUIthpSDdgD7Ghnl50FIkq9utp6a9jP1hknig-KxgPTycnZ_GMenlgzZYrIEXPmLErkIXnu_AFf-jZc9bimYWUgcNZgfKFJhD5KFMrC-SGh54nrHCA5Uv02agQzVUXA0DSoZpKgUOfPJzuP00mGNaAEoAdSw6oKxQqxzHEb9G5V2PbSUdiOKb8XIqoKmv0v4Rx5Sw_wEEHp8XhwYJThBHyAhh0T4mxRpDbTuZVjw',
+      meta: 'Объем: 100 мл',
+      badge: 'SPF 50 Защита',
+      badgeClass: 'bg-tertiary-fixed/40 text-on-tertiary-fixed-variant'
+    },
+    'skullcare-pro': {
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCImT-TkAKzZ9Cm6vbVvLhffwTHo4nEx0QEVR11W0YGIIn_xDu3YugqvDfgavA5KDIsov1M82nqcwFG7sYQl70FOk1F03aSBtsEBBx4vbK8egwMkssqJxbPJNXGAeABNHXw9Lu3eFUWD8Ln4-BL-iMWTm-qZPA_5L3V_wLNpaod2EFubmU9CqzmQEXnRSaleFMoix8c9tLVXVZ-IzA_Jpn5xdZoaJvMrBLEPBourtQC_gGUpyhIXOsKMw',
+      meta: 'Цвет: Чёрный графит',
+      badge: 'Массаж и пилинг',
+      badgeClass: 'bg-secondary-fixed-dim/40 text-on-secondary-fixed'
+    },
+    'anti-glare': {
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBhH2gBHyphFEnQ9Ty5MzUyfVa6TGRcHGdbLZG2qKdcvYf4o7kaI6XOlHGi5T4uL0nqliTCvU5G3gG_PksTSiuBABHyhBcxXfUsgFVvFcvicnhEYVP8gyhAI8fmqbcAw_Zsx0dJT3d4y9k5gANdrDhFC5QLZ_FBAntHriWNPGm_gHRpPSV0GEqdlDnhv325i_rghwUUqvC9oMQZURKvNfGXun9aosEoS6XbLVCpikYqxFKjG7Qxebg_jQ',
+      meta: 'Комплект: 2 упаковки',
+      badge: 'Anti-Glare эффект',
+      badgeClass: 'bg-tertiary-fixed/30 text-on-tertiary-fixed-variant'
+    }
+  };
+  const storedPromo = store.promo();
+  const storedPlan = store.plan() || {};
+  const savedDelivery = storedPlan.delivery;
+  const deliveryMethod = deliveryOptions[savedDelivery] ? savedDelivery : 'cdek';
+  const savedDeliveryInput = document.querySelector('input[name="delivery"][value="' + deliveryMethod + '"]');
+  if (savedDeliveryInput) savedDeliveryInput.checked = true;
+  let current = 0;
+  let submitted = false;
+  let promoActive = promoIsValid(storedPromo);
+
+  if (promoInput) promoInput.value = promoActive ? promoCode : '';
+
+  document.querySelectorAll('[data-validate]').forEach(function (input) {
+    if (input.type === 'checkbox' || input.type === 'radio') return;
+    if (input.parentElement.querySelector('.bb-field-frame')) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'bb-field-wrap';
+    input.parentNode.insertBefore(wrap, input);
+    wrap.appendChild(input);
+    const frame = document.createElement('div');
+    frame.className = 'bb-field-frame';
+    wrap.appendChild(frame);
+    const error = document.createElement('p');
+    error.className = 'bb-field-error';
+    error.id = input.id + '-error';
+    error.textContent = 'Проверьте значение поля';
+    wrap.appendChild(error);
+    input.setAttribute('aria-describedby', error.id);
+  });
+
+  function escapeHtml(value) {
+    const entities = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (char) { return entities[char]; });
+  }
+
+  function round2(value) {
+    return Math.round((value + Number.EPSILON) * 100) / 100;
+  }
+
+  function productWord(count) {
+    const mod10 = count % 10;
+    const mod100 = count % 100;
+    if (mod10 === 1 && mod100 !== 11) return 'товар';
+    if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 'товара';
+    return 'товаров';
+  }
+
+  function normalizedPromo(value) {
+    return String(value == null ? '' : value).trim().toUpperCase();
+  }
+
+  function promoIsValid(value) {
+    return normalizedPromo(value) === promoCode;
+  }
+
+  function readField(id) {
+    const field = document.getElementById(id);
+    return field ? field.value.trim() : '';
+  }
+
+  function selectedLabel(name) {
+    const option = document.querySelector('input[name="' + name + '"]:checked');
+    return option ? option.getAttribute('aria-label') : '';
+  }
+
+  function currentDelivery() {
+    const option = document.querySelector('input[name="delivery"]:checked');
+    const method = option && deliveryOptions[option.value] ? option.value : 'cdek';
+    return { method: method, label: deliveryOptions[method].label, fee: deliveryOptions[method].fee };
+  }
+
+  function syncPromoControls() {
+    if (promoInput) promoInput.value = promoActive ? promoCode : promoInput.value.toUpperCase();
+    if (promoCheck) promoCheck.classList.toggle('hidden', !promoActive);
+    if (promoRemove) promoRemove.classList.toggle('hidden', !promoActive);
+    if (discountRow) discountRow.classList.toggle('hidden', !promoActive);
+    if (discountLabel) discountLabel.textContent = 'Промокод ' + promoCode + ' (-10%)';
+  }
+
+  function getTotals() {
+    const subtotal = round2(store.subtotal());
+    const discount = promoActive ? round2(subtotal * 0.1) : 0;
+    const delivery = currentDelivery().fee;
+    return { subtotal: subtotal, discount: discount, delivery: delivery, total: round2(subtotal - discount + delivery) };
+  }
+
+  function showStatus(state, message) {
+    statusBox.classList.remove('hidden');
+    statusBox.dataset.state = state;
+    statusText.textContent = message;
+    statusIcon.textContent = state === 'success' ? 'check_circle' : state === 'error' ? 'error' : 'info';
+  }
+
+  function setPromoStatus(state, message) {
+    if (!promoStatus) return;
+    promoStatus.dataset.state = state;
+    promoStatus.classList.toggle('text-error', state === 'error');
+    promoStatus.classList.toggle('text-secondary', state !== 'error');
+    if (promoStatusText) promoStatusText.textContent = message;
+    if (promoStatusIcon) {
+      const icon = state === 'error' ? 'error' : state === 'success' ? 'check_circle' : 'info';
+      promoStatusIcon.textContent = icon;
+      promoStatusIcon.setAttribute('data-icon', icon);
+    }
+  }
+
+  function setAriaInvalid(field) {
+    field.setAttribute('aria-invalid', String(!field.checkValidity()));
+    return field.checkValidity();
+  }
+
+  function validate(index, show) {
+    const fields = Array.from(panels[index].querySelectorAll('input[required]'));
+    let valid = true;
+    fields.forEach(function (field) {
+      if (!setAriaInvalid(field)) valid = false;
+    });
+    if (show) {
+      showStatus(valid ? 'success' : 'error', valid ? 'Данные шага проверены' : 'Проверьте обязательные поля шага');
+    }
+    return valid;
+  }
+
+  function updateLabels() {
+    const count = store.cartCount();
+    const phrase = count + ' ' + productWord(count);
+    if (headerBadge) headerBadge.textContent = String(count);
+    if (cartCountLabel) cartCountLabel.textContent = phrase;
+    if (orderCountLabel) orderCountLabel.textContent = 'Ваш заказ (' + phrase + ')';
+    if (cartUnitsLabel) cartUnitsLabel.textContent = 'Товары (' + count + ' шт.)';
+  }
+
+  function updateTotals() {
+    syncPromoControls();
+    const totals = getTotals();
+    if (subtotalNode) subtotalNode.textContent = store.money(totals.subtotal);
+    if (discountNode) discountNode.textContent = totals.discount ? '-' + store.money(totals.discount) : store.money(0);
+    if (deliveryNode) deliveryNode.textContent = store.money(totals.delivery);
+    if (freeDeliveryNode) freeDeliveryNode.textContent = 'Бесплатно от ' + store.money(99);
+    if (grandTotalNode) grandTotalNode.textContent = store.money(totals.total);
+    if (installmentNode) installmentNode.textContent = '4 × ' + store.money(round2(totals.total / 4));
+    deliveryPriceNodes.forEach(function (node) {
+      const option = deliveryOptions[node.dataset.deliveryPrice];
+      if (option) node.textContent = option.fee ? store.money(option.fee) : 'Бесплатно';
+    });
+    return totals;
+  }
+
+  function detailsFor(item) {
+    const fallback = productDetails[item.id] || {};
+    const catalogItem = window.BBStore && Array.isArray(window.BBStore.products)
+      ? window.BBStore.products.find(function (product) { return product.id === item.id; })
+      : null;
+    return {
+      image: (catalogItem && catalogItem.image) || item.image || fallback.image || productDetails['shine-spf50'].image,
+      meta: fallback.meta || item.category || 'Bald & Bold',
+      badge: fallback.badge || (item.tags && item.tags[0]) || 'Bald & Bold',
+      badgeClass: fallback.badgeClass || 'bg-tertiary-fixed/40 text-on-tertiary-fixed-variant'
+    };
+  }
+
+  function cartItemMarkup(item) {
+    const details = detailsFor(item);
+    const qty = Number(item.qty || 1);
+    const id = escapeHtml(item.lineId || item.id);
+    const perItem = qty > 1 ? '<div class="text-label-sm font-label-sm text-outline">' + escapeHtml(store.money(item.price)) + ' / шт.</div>' : '';
+    const variant = item.variant ? '<span class="text-label-sm font-label-sm text-on-surface-variant">' + escapeHtml(item.variant) + '</span>' : '';
+    return '<article class="py-5 first:pt-0 last:pb-0 flex items-center gap-5 hover-lift rounded-xl p-2 transition-all" data-cart-id="' + id + '">' +
+      '<div class="w-24 h-24 rounded-xl bg-surface-container-low p-2 flex-shrink-0 flex items-center justify-center border border-outline-variant/30 overflow-hidden">' +
+      '<img class="w-full h-full object-contain" alt="' + escapeHtml(item.name) + '" loading="lazy" src="' + escapeHtml(details.image) + '"/>' +
+      '</div>' +
+      '<div class="flex-1 min-w-0">' +
+      '<div class="flex items-start justify-between gap-2 mb-1">' +
+      '<h3 class="text-body-md-medium font-body-md-medium text-primary line-clamp-1">' + escapeHtml(item.name) + '</h3>' +
+      '<button aria-label="Удалить товар: ' + escapeHtml(item.name) + '" class="text-outline hover:text-error transition-colors p-1" data-cart-remove="' + id + '" type="button">' +
+      '<span class="material-symbols-outlined text-[20px]" data-icon="delete">delete</span>' +
+      '</button>' +
+      '</div>' +
+      '<div class="flex items-center gap-2 mb-3 flex-wrap">' +
+      '<span class="text-label-sm font-label-sm text-on-surface-variant">' + escapeHtml(details.meta) + '</span>' +
+      '<span class="w-1 h-1 rounded-full bg-outline-variant"></span>' +
+      '<span class="text-label-sm font-label-sm ' + details.badgeClass + ' px-2 py-0.5 rounded-full font-semibold">' + escapeHtml(details.badge) + '</span>' +
+      variant +
+      '</div>' +
+      '<div class="flex items-center justify-between">' +
+      '<div class="inline-flex items-center border border-outline-variant rounded-xl bg-surface-container-lowest p-0.5">' +
+      '<button aria-label="Уменьшить количество" class="w-8 h-8 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container transition-colors" data-cart-dec="' + id + '" type="button">' +
+      '<span class="material-symbols-outlined text-[16px]" data-icon="remove">remove</span>' +
+      '</button>' +
+      '<span class="w-9 text-center text-body-md-medium font-body-md-medium text-primary">' + qty + '</span>' +
+      '<button aria-label="Увеличить количество" class="w-8 h-8 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container transition-colors" data-cart-inc="' + id + '" type="button">' +
+      '<span class="material-symbols-outlined text-[16px]" data-icon="add">add</span>' +
+      '</button>' +
+      '</div>' +
+      '<div class="text-right">' +
+      '<span class="text-headline-sm font-headline-sm text-primary">' + escapeHtml(store.money(round2(item.price * qty))) + '</span>' +
+      perItem +
+      '</div>' +
+      '</div>' +
+      '</div>' +
+      '</article>';
+  }
+
+  function renderCart() {
+    const items = store.cart();
+    if (cartList) {
+      cartList.innerHTML = items.length ? items.map(cartItemMarkup).join('') : '<div class="rounded-xl border border-dashed border-outline-variant/60 p-8 text-center text-body-md font-body-md text-on-surface-variant"><div class="material-symbols-outlined text-[32px] text-outline mb-2" aria-hidden="true">shopping_bag</div><p class="font-semibold text-primary mb-1">В корзине пока пусто</p><p class="text-body-sm mb-4">Выберите средства для вашего ритуала ухода — они появятся здесь.</p><a class="inline-flex h-11 items-center rounded-xl bg-tertiary-fixed-dim px-5 text-label-lg font-semibold text-primary transition-colors hover:bg-on-tertiary-container" href="../bald_bold_2/code.html">Перейти в каталог</a></div>';
+    }
+    updateLabels();
+    updateTotals();
+  }
+
+  function changeQty(id, delta) {
+    const item = store.cart().find(function (entry) { return (entry.lineId || entry.id) === id || entry.id === id; });
+    if (item) store.setQty(id, Number(item.qty || 1) + delta);
+  }
+
+  function updateSummary() {
+    const set = function (key, text) {
+      const target = document.querySelector('[data-confirm="' + key + '"]');
+      if (target) target.textContent = text;
+    };
+    set('name', readField('full_name'));
+    set('phone', readField('phone'));
+    set('email', readField('email'));
+    set('address', [readField('city'), readField('street'), readField('house'), readField('apt')].filter(Boolean).join(', '));
+    set('delivery', selectedLabel('delivery'));
+    set('payment', selectedLabel('payment'));
+  }
+
+  function customerFromForm() {
+    return {
+      name: readField('full_name'),
+      phone: readField('phone'),
+      email: readField('email'),
+      city: readField('city'),
+      street: readField('street'),
+      house: readField('house'),
+      apartment: readField('apt'),
+      entrance: readField('entrance'),
+      floor: readField('floor'),
+      comment: readField('comment'),
+      address: [readField('city'), readField('street'), readField('house'), readField('apt')].filter(Boolean).join(', '),
+      delivery: selectedLabel('delivery'),
+      payment: selectedLabel('payment')
+    };
+  }
+
+  function render() {
+    panels.forEach(function (panel, index) {
+      panel.classList.toggle('hidden', index !== current);
+      panel.dataset.state = index === current ? 'active' : (completed[index] ? 'complete' : 'idle');
+    });
+    triggers.forEach(function (trigger, index) {
+      const isActive = index === current;
+      const disabled = index > current && !completed[index - 1];
+      trigger.dataset.state = isActive ? 'active' : (completed[index] ? 'complete' : (disabled ? 'disabled' : 'idle'));
+      trigger.setAttribute('aria-current', isActive ? 'step' : 'false');
+      trigger.setAttribute('aria-disabled', String(disabled));
+      trigger.disabled = disabled;
+    });
+    back.disabled = current === 0;
+    back.setAttribute('aria-disabled', String(current === 0));
+    back.dataset.state = current === 0 ? 'disabled' : 'idle';
+    next.disabled = submitted && current === panels.length - 1;
+    nextLabel.textContent = current === panels.length - 1 ? 'Подтвердить заказ' : 'Далее: ' + nextTitles[current];
+    progress.textContent = 'Шаг ' + (current + 1) + ' из 4';
+    stepStatus.textContent = 'Шаг ' + (current + 1) + ' из 4: ' + titles[current];
+    const emptyCart = store.cartCount() === 0;
+    const submitDisabled = submitted || emptyCart || current !== panels.length - 1;
+    orderSubmit.disabled = submitDisabled;
+    orderSubmit.setAttribute('aria-disabled', String(submitDisabled));
+    orderSubmit.dataset.state = submitted ? 'success' : (current === panels.length - 1 && !emptyCart ? 'idle' : 'disabled');
+  }
+
+  function goTo(index) {
+    if (index < 0 || index >= panels.length) return;
+    current = index;
+    statusBox.classList.add('hidden');
+    render();
+    panels[current].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function placeOrder() {
+    if (current !== panels.length - 1 || submitted) return;
+    if (!validate(current, true)) return;
+    const items = store.cart().map(function (item) { return Object.assign({}, item); });
+    if (!items.length) {
+      showStatus('error', 'Корзина пуста — добавьте товары перед оформлением');
+      return;
+    }
+    const totals = getTotals();
+    const delivery = currentDelivery();
+    const customer = customerFromForm();
+    completed[current] = true;
+    submitted = true;
+    orderSubmit.disabled = false;
+    orderSubmit.dataset.state = 'loading';
+    orderSubmit.setAttribute('aria-busy', 'true');
+    orderLabel.textContent = 'Отправляем заказ...';
+    window.setTimeout(function () {
+      store.addOrder({
+        id: 'BB-' + Date.now(),
+        createdAt: new Date().toISOString(),
+        items: items,
+        subtotal: totals.subtotal,
+        discount: totals.discount,
+        delivery: delivery,
+        promo: promoActive ? promoCode : null,
+        total: totals.total,
+        status: 'Новый',
+        customer: customer
+      });
+      store.clear();
+      store.toast('Заказ оформлен! Мы свяжемся с вами для подтверждения.', 'success');
+      orderSubmit.setAttribute('aria-busy', 'false');
+      renderCart();
+      render();
+      orderLabel.textContent = 'Заказ оформлен';
+      showStatus('success', 'Заказ оформлен! Подтверждение отправлено на email.');
+    }, 900);
+  }
+
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      const index = Number(trigger.dataset.stepTrigger);
+      if (index === current) return;
+      if (index > current && !validate(current, true)) return;
+      if (index > current) completed[current] = true;
+      updateSummary();
+      goTo(index);
+    });
+  });
+
+  back.addEventListener('click', function () { goTo(current - 1); });
+  next.addEventListener('click', function () {
+    if (!validate(current, true)) return;
+    completed[current] = true;
+    if (current === panels.length - 1) {
+      placeOrder();
+      return;
+    }
+    updateSummary();
+    goTo(current + 1);
+  });
+  orderSubmit.addEventListener('click', placeOrder);
+
+  document.querySelectorAll('input[data-validate], input[name="delivery"], input[name="payment"]').forEach(function (input) {
+    input.addEventListener('input', function () { setAriaInvalid(input); });
+    input.addEventListener('change', function () { setAriaInvalid(input); });
+  });
+
+  document.querySelectorAll('input[name="delivery"]').forEach(function (input) {
+    input.addEventListener('change', function () {
+      if (!input.checked) return;
+      const delivery = currentDelivery();
+      store.setPlan(Object.assign({}, store.plan() || {}, { delivery: delivery.method, deliveryFee: delivery.fee }));
+      updateTotals();
+      updateSummary();
+    });
+  });
+
+  if (cartList) {
+    cartList.addEventListener('click', function (event) {
+      const remove = event.target.closest('[data-cart-remove]');
+      if (remove) {
+        store.remove(remove.getAttribute('data-cart-remove'));
+        return;
+      }
+      const dec = event.target.closest('[data-cart-dec]');
+      if (dec) {
+        changeQty(dec.getAttribute('data-cart-dec'), -1);
+        return;
+      }
+      const inc = event.target.closest('[data-cart-inc]');
+      if (inc) changeQty(inc.getAttribute('data-cart-inc'), 1);
+    });
+  }
+
+  if (promoApply && promoInput) {
+    promoApply.addEventListener('click', function () {
+      const value = normalizedPromo(promoInput.value);
+      promoInput.value = value;
+      if (promoIsValid(value)) {
+        store.setPromo(promoCode);
+        promoActive = true;
+        setPromoStatus('success', 'Промокод применён: скидка 10% на первый заказ');
+        store.toast('Промокод применён: скидка 10%', 'success');
+      } else {
+        store.setPromo(null);
+        promoActive = false;
+        setPromoStatus('error', 'Промокод не найден. Попробуйте SHINE2025');
+        store.toast('Промокод не найден', 'error');
+      }
+      updateTotals();
+    });
+    promoInput.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        promoApply.click();
+      }
+    });
+  }
+
+  if (promoRemove) {
+    promoRemove.addEventListener('click', function () {
+      store.setPromo(null);
+      promoActive = false;
+      if (promoInput) promoInput.value = '';
+      setPromoStatus('idle', 'Введите промокод SHINE2025 для скидки 10%');
+      store.toast('Промокод убран');
+      updateTotals();
+    });
+  }
+
+  window.addEventListener('bb:cart', renderCart);
+  window.addEventListener('bb:wishlist', renderCart);
+  window.addEventListener('bb:promo', function () {
+    promoActive = promoIsValid(store.promo());
+    syncPromoControls();
+    updateTotals();
+  });
+  window.addEventListener('bb:plan', function () {
+    const planned = store.plan() || {};
+    const target = deliveryOptions[planned.delivery] ? planned.delivery : 'cdek';
+    const input = document.querySelector('input[name="delivery"][value="' + target + '"]');
+    if (input) input.checked = true;
+    updateTotals();
+    updateSummary();
+  });
+
+  document.querySelectorAll('[data-bb-year]').forEach(function (node) {
+    node.textContent = String(new Date().getFullYear());
+  });
+  setPromoStatus(promoActive ? 'success' : 'idle', promoActive ? 'Промокод применён: скидка 10% на первый заказ' : 'Введите промокод SHINE2025 для скидки 10%');
+  updateSummary();
+  renderCart();
+  render();
+})();
+</script>
+</body></html>

@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Каталог — Bald &amp; Bold</title>
+<!-- Google Fonts: Montserrat & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com/3.4.17?plugins=forms,container-queries"></script>
+<!-- Injected Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#eeeef0",
+            "primary-container": "#1e1e24",
+            "inverse-surface": "#2f3132",
+            "on-primary-fixed": "#1b1b21",
+            "outline": "#78767b",
+            "secondary-fixed-dim": "#d6c4a7",
+            "on-secondary-container": "#6f6149",
+            "inverse-on-surface": "#f0f0f2",
+            "on-primary": "#ffffff",
+            "secondary": "#6a5d45",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#633f00",
+            "on-tertiary-fixed": "#2a1800",
+            "on-secondary-fixed": "#241a07",
+            "primary-fixed-dim": "#c8c5cd",
+            "on-tertiary-container": "#b87900",
+            "error-container": "#ffdad6",
+            "primary": "#05050a",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#47464d",
+            "tertiary-fixed-dim": "#ffb956",
+            "on-error-container": "#93000a",
+            "secondary-container": "#f0ddbf",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffddb5",
+            "inverse-primary": "#c8c5cd",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#51452f",
+            "primary-fixed": "#e4e1ea",
+            "on-primary-container": "#87858d",
+            "secondary-fixed": "#f3e0c2",
+            "outline-variant": "#c8c5cb",
+            "surface-dim": "#d9dadc",
+            "surface-container-lowest": "#ffffff",
+            "background": "#f9f9fb",
+            "surface-tint": "#5e5e65",
+            "surface-container-low": "#f3f3f5",
+            "on-surface-variant": "#47464b",
+            "surface-container-high": "#e8e8ea",
+            "on-background": "#1a1c1d",
+            "on-surface": "#1a1c1d",
+            "surface": "#f9f9fb",
+            "surface-container-highest": "#e2e2e4",
+            "tertiary-container": "#2d1a00",
+            "surface-variant": "#e2e2e4",
+            "tertiary": "#0a0400",
+            "surface-bright": "#f9f9fb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Montserrat", "sans-serif"],
+            "body-md-medium": ["Inter", "sans-serif"],
+            "display-mobile": ["Montserrat", "sans-serif"],
+            "display": ["Montserrat", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-sm": ["Montserrat", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Montserrat", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-lg-mobile": ["Montserrat", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "700" }],
+            "body-md-medium": ["16px", { lineHeight: "24px", fontWeight: "500" }],
+            "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "800" }],
+            "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<script src="../shared/tailwind.config.js"></script>
+<script>
+    tailwind.config = window.BB.extendTailwindConfig(tailwind.config);
+    document.addEventListener('DOMContentLoaded', window.BB.initTheme);
+  </script>
+<script src="../shared/bb-app.js"></script>
+<style>
+    /* Custom refined styling matching Brand Guidance */
+    .card-shadow {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+    }
+    /* Range Slider Styling */
+    input[type=range]::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #F2A93B;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #F2A93B;
+      cursor: pointer;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+    }
+    .dark input[type=range]::-webkit-slider-thumb,
+    .dark input[type=range]::-moz-range-thumb { border-color: #1e1e24; }
+  </style>
+<style type="text/tailwindcss">
+  @layer components {
+    .bb-product-card { @apply bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-6 border border-outline-variant/60 dark:border-outline/30 shadow-sm flex flex-col justify-between relative; }
+    .bb-add-btn { @apply bg-brand-400 hover:bg-brand-500 text-primary font-semibold text-label-sm px-4 py-2.5 rounded-xl shadow-sm flex items-center gap-1.5; }
+    .bb-tag-chip { @apply inline-flex items-center gap-1.5 rounded-full border border-outline-variant/70 px-3 py-1.5 text-label-sm font-label-sm text-on-surface-variant cursor-pointer select-none; }
+    .bb-skeleton-card { @apply bg-surface-container-lowest dark:bg-primary-container rounded-2xl p-5 border border-outline-variant/60 dark:border-outline/30 shadow-sm; }
+    .bb-theme-toggle { @apply p-2 rounded-xl text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-on-primary hover:bg-surface-container-low dark:hover:bg-inverse-surface; }
+    .bb-drawer-panel { @apply fixed inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-3xl bg-surface-container-lowest dark:bg-primary-container border-t border-outline-variant/60 px-6 pt-6 pb-28 shadow-2xl; }
+    .bb-filter-label { @apply flex items-center gap-2 rounded-xl border border-outline-variant/60 px-4 py-3 text-label-lg font-label-lg text-on-surface dark:text-on-primary; }
+  }
+</style>
+<style>
+    .bb-card-actions { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 2.75rem; }
+    .bb-card-actions .bb-add-btn { flex: 0 0 auto; max-width: 100%; min-width: 0; }
+    .bb-card-actions .bb-add-btn > span:last-child { overflow: hidden; text-overflow: ellipsis; }
+    .bb-list-card { display: grid !important; grid-template-columns: 88px minmax(0, 1fr) auto; column-gap: 1rem; row-gap: 0.15rem; align-items: center; height: 165px; padding: 1rem !important; }
+    .bb-list-card > div:last-child { align-self: stretch; }
+    .bb-list-card > div:last-child .text-error { display: none; }
+    .bb-list-card > div:first-child > p.line-clamp-2 { -webkit-line-clamp: 1; }
+    .bb-list-card > div:first-child { display: contents; }
+    .bb-list-card > div:first-child > div:first-child { grid-column: 1; grid-row: 1 / span 4; width: 88px; height: 88px; margin: 0; padding: 0.5rem; }
+    .bb-list-card > div:first-child > div:first-child .material-symbols-outlined { font-size: 34px !important; }
+    .bb-list-card > div:first-child > div:first-child .text-label-sm { display: none; }
+    .bb-list-card > div:first-child > p,
+    .bb-list-card > div:first-child > h3,
+    .bb-list-card > div:first-child > div:last-child { grid-column: 2; margin: 0; }
+    .bb-list-card > div:first-child > div:last-child { justify-self: start; }
+    .bb-list-card > div:last-child { grid-column: 3; grid-row: 1 / span 4; margin: 0; padding: 0; border: 0; align-self: stretch; gap: 0.75rem; }
+    .dark .bb-tag-chip { color: #c8c5cb; border-color: #4a4950; }
+    @media (max-width: 640px) {
+      .bb-list-card { grid-template-columns: 72px minmax(0, 1fr); height: auto; min-height: 250px; }
+      .bb-list-card > div:first-child > div:first-child { width: 72px; height: 72px; }
+      .bb-list-card > div:last-child { grid-column: 1 / -1; grid-row: auto; width: 100%; justify-content: space-between; border-top: 1px solid rgba(200, 197, 203, 0.4); padding-top: 0.75rem; }
+    }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md min-h-screen flex flex-col selection:bg-tertiary-fixed selection:text-tertiary-container">
+<!-- ==================== TOP NAV BAR ==================== -->
+<header class="bg-surface-container-lowest dark:bg-primary-container text-primary dark:text-inverse-primary docked full-width top-0 sticky z-50 shadow-sm border-b border-outline-variant/40 dark:border-outline/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-between gap-3 sm:gap-8">
+<!-- Logo & Brand Identity -->
+<a class="flex items-center gap-3 group" href="../bald_bold_1/code.html"><div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75" fill="none" style="width:100%;height:100%"><g transform="translate(10, 8)"><path d="M27 50 C13 50 5 39 5 24 C5 9 15 0 27 0 C39 0 49 9 49 24 C49 39 41 50 27 50 Z" fill="#1E1E24"/><path d="M15 14 C19 6 25 4 31 4" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M35 8 L38 1 L41 8 L48 11 L41 14 L38 21 L35 14 L28 11 Z" fill="#F2A93B"/><circle cx="20" cy="24" r="2.5" fill="#FFFFFF"/><circle cx="34" cy="24" r="2.5" fill="#FFFFFF"/><path d="M22 33 C24 37 30 37 32 33" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg></div><span class="text-headline-md font-headline-md font-bold tracking-tight text-primary dark:text-on-primary">Bald & Bold</span></a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8 text-label-lg font-label-lg">
+<a class="text-on-surface-variant dark:text-on-primary-container transition-colors hover:text-primary dark:hover:text-on-primary duration-150" href="../bald_bold_1/code.html">Главная</a>
+<a class="text-primary dark:text-on-primary font-semibold border-b-2 border-primary dark:border-tertiary-fixed-dim pb-1 hover:text-primary dark:hover:text-on-primary transition-colors duration-150" href="../bald_bold_2/code.html">Каталог</a>
+<a class="text-on-surface-variant dark:text-on-primary-container transition-colors hover:text-primary dark:hover:text-on-primary duration-150" href="../bald_bold_6/code.html">Войти</a>
+<a class="text-on-surface-variant dark:text-on-primary-container transition-colors hover:text-primary dark:hover:text-on-primary duration-150" href="../bald_bold_4/code.html">Корзина</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-1 sm:gap-4">
+<!-- Search Action -->
+<div class="relative hidden lg:block w-64">
+<input class="w-full h-11 pl-10 pr-4 text-body-sm font-body-sm bg-surface-container-low border border-outline-variant/60 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-outline" data-bb-search="true" name="q" placeholder="Поиск по уходу..." type="search"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">search</span>
+</div>
+<button class="lg:hidden p-2 text-primary hover:bg-surface-container-low rounded-xl transition-colors" title="Поиск">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button aria-label="Переключить тему" aria-pressed="false" class="bb-theme-toggle transition-colors" data-theme-toggle="" type="button">
+<span class="material-symbols-outlined text-[20px]" data-theme-icon="">dark_mode</span>
+</button>
+<!-- Account Action -->
+<a class="p-2 text-primary dark:text-on-primary hover:bg-surface-container-low dark:hover:bg-inverse-surface rounded-xl transition-colors" href="../bald_bold_5/code.html" title="Профиль">
+<span class="material-symbols-outlined">person</span>
+</a>
+<!-- Shopping Bag with Badge -->
+<a class="relative p-2.5 bg-primary-container text-on-primary rounded-xl hover:bg-primary transition-all duration-150 flex items-center justify-center shadow-sm" href="../bald_bold_4/code.html" title="Корзина">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="absolute -top-1.5 -right-1.5 bg-[#F2A93B] text-primary text-[11px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-surface-container-lowest" data-bb-cart-count="">
+            0
+          </span>
+</a>
+</div>
+</div>
+</header>
+<!-- ==================== MAIN CONTENT CANVAS ==================== -->
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 w-full">
+<!-- Breadcrumbs -->
+<nav aria-label="Хлебные крошки" class="flex items-center gap-2 text-body-sm font-body-sm text-outline mb-6">
+<a class="hover:text-primary transition-colors" href="../bald_bold_1/code.html">Главная</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-on-surface font-medium">Все товары (<span id="bb-crumb-count">9</span>)</span>
+</nav>
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-outline-variant/30">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm mb-3">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+          Премиальный уход нового уровня
+        </div>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">
+          Каталог для уверенных в себе
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2">
+          Специализированная косметика и аксессуары для безупречного сияния и защиты кожи головы.
+        </p>
+</div>
+<!-- Controls: Sort & Grid View Switcher -->
+<div class="flex items-center gap-4 self-start md:self-auto">
+<!-- Sort Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/60 rounded-xl px-4 py-2.5 pr-10 text-label-lg font-label-lg text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 cursor-pointer shadow-sm" id="sort-select">
+<option value="popular">По популярности</option>
+<option value="cheap">Сначала дешевле</option>
+<option value="expensive">Сначала дороже</option>
+<option value="rating">По рейтингу</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline pointer-events-none text-[20px]">
+            expand_more
+          </span>
+</div>
+<!-- View Switcher -->
+<div class="flex items-center p-1 bg-surface-container-low rounded-xl border border-outline-variant/40">
+<button aria-label="Сетка" aria-pressed="true" class="p-2 rounded-lg bg-surface-container-lowest text-primary shadow-sm" id="view-grid-btn" title="Сетка">
+<span class="material-symbols-outlined text-[20px]">grid_view</span>
+</button>
+<button aria-label="Список" aria-pressed="false" class="p-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors" id="view-list-btn" title="Список">
+<span class="material-symbols-outlined text-[20px]">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main 2-Column Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
+<!-- ==================== LEFT COLUMN: FILTERS ==================== -->
+<aside class="lg:col-span-3">
+<div class="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/50 card-shadow sticky top-28 space-y-6">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="text-headline-sm font-headline-sm text-primary text-[18px]">Фильтры</h2>
+</div>
+<button class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary transition-colors" id="bb-reset-btn" type="button">
+               Сбросить
+             </button>
+</div>
+<!-- Filter Block 1: Categories -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg text-primary uppercase tracking-wider text-[12px]">Категория</h3>
+<div class="space-y-2.5">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors" data-filter="category" data-value="Уход за кожей" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Уход за кожей</span>
+<span class="ml-auto text-label-sm text-outline" data-filter-count="category" data-value="Уход за кожей">0</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors" data-filter="category" data-value="Солнцезащита" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Солнцезащита</span>
+<span class="ml-auto text-label-sm text-outline" data-filter-count="category" data-value="Солнцезащита">0</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors" data-filter="category" data-value="Бритьё и массаж" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Бритьё и массаж</span>
+<span class="ml-auto text-label-sm text-outline" data-filter-count="category" data-value="Бритьё и массаж">0</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors" data-filter="category" data-value="Головные уборы" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Головные уборы</span>
+<span class="ml-auto text-label-sm text-outline" data-filter-count="category" data-value="Головные уборы">0</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors" data-filter="category" data-value="Аксессуары" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Аксессуары</span>
+<span class="ml-auto text-label-sm text-outline" data-filter-count="category" data-value="Аксессуары">0</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0 transition-colors" data-filter="category" data-value="Подарки" id="gift" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Подарки</span>
+<span class="ml-auto text-label-sm text-outline" data-filter-count="category" data-value="Подарки">0</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Filter Block 2: Price Range -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg text-primary uppercase tracking-wider text-[12px]">Цена, Br</h3>
+<div class="grid grid-cols-2 gap-2">
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-body-sm text-outline">от</span>
+<input class="w-full pl-8 pr-2 py-2 text-body-sm font-body-sm border border-outline-variant/60 rounded-xl bg-surface-container-low focus:outline-none focus:border-primary focus:ring-0" id="bb-price-min-input" max="170" min="20" type="number" value="20"/>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-body-sm text-outline">до</span>
+<input class="w-full pl-8 pr-2 py-2 text-body-sm font-body-sm border border-outline-variant/60 rounded-xl bg-surface-container-low focus:outline-none focus:border-primary focus:ring-0" id="bb-price-max-input" max="170" min="20" type="number" value="170"/>
+</div>
+</div>
+<div class="pt-2">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-brand-400" id="bb-price-min" max="170" min="20" type="range" value="20"/>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-brand-400 mt-2" id="bb-price-max" max="170" min="20" type="range" value="170"/>
+<div class="flex justify-between text-label-sm text-outline mt-1 font-mono">
+<span id="bb-price-min-label">20 Br</span>
+<span id="bb-price-max-label">170 Br</span>
+</div>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg text-primary uppercase tracking-wider text-[12px]">Теги</h3>
+<div class="flex flex-wrap gap-2">
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100">
+<input class="sr-only" data-filter="tag" data-value="SPF 50+" type="checkbox"/>
+<span>SPF 50+</span>
+</label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100">
+<input class="sr-only" data-filter="tag" data-value="Хит продаж" type="checkbox"/>
+<span>Хит продаж</span>
+</label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100">
+<input class="sr-only" data-filter="tag" data-value="Матовый финиш" type="checkbox"/>
+<span>Матовый финиш</span>
+</label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100">
+<input class="sr-only" data-filter="tag" data-value="Новинка" type="checkbox"/>
+<span>Новинка</span>
+</label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100">
+<input class="sr-only" data-filter="tag" data-value="Для спорта" type="checkbox"/>
+<span>Для спорта</span>
+</label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100">
+<input class="sr-only" data-filter="tag" data-value="Подарок" type="checkbox"/>
+<span>Подарок</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Filter Block 3: Effect / Finish -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg text-primary uppercase tracking-wider text-[12px]">Эффект / Финиш</h3>
+<div class="space-y-2.5">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-0 focus:ring-offset-0" data-filter="finish" data-value="Матовый финиш" name="finish" type="radio"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Матовый финиш</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-0 focus:ring-offset-0" data-filter="finish" data-value="Благородный глянец" name="finish" type="radio"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Благородный глянец</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-0 focus:ring-offset-0" data-filter="finish" data-value="Охлаждающий эффект" name="finish" type="radio"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Охлаждающий эффект</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 text-primary border-outline-variant focus:ring-0 focus:ring-offset-0" data-filter="finish" data-value="Глубокое увлажнение" name="finish" type="radio"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Глубокое увлажнение</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Filter Block 4: Scalp Type -->
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg text-primary uppercase tracking-wider text-[12px]">Тип кожи головы</h3>
+<div class="space-y-2.5">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0" data-filter="scalp" data-value="Чувствительная" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Чувствительная</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0" data-filter="scalp" data-value="Склонная к сухости" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Склонная к сухости</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded-[6px] border-outline-variant text-primary focus:ring-0 focus:ring-offset-0" data-filter="scalp" data-value="Жирная / комбинированная" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface group-hover:text-primary transition-colors">Жирная / комбинированная</span>
+</label>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30"></div>
+<!-- Filter Block 5: In Stock Switch -->
+<div class="flex items-center justify-between pt-1">
+<span class="text-body-sm font-body-sm text-on-surface font-medium">Только в наличии</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="bb-stock-switch" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Buttons Action -->
+<div class="pt-4 space-y-2">
+<button class="w-full bg-[#F2A93B] hover:bg-[#D88F23] text-primary font-semibold text-label-lg font-label-lg py-3.5 px-4 rounded-xl shadow-sm transition-all duration-150 active:scale-[0.98] flex items-center justify-center gap-2" id="bb-apply-btn" type="button">
+<span>Применить фильтры</span>
+</button>
+<button class="w-full py-2.5 text-center text-label-sm font-label-sm text-outline hover:text-primary transition-colors" id="bb-clear-btn" type="button">
+              Очистить все параметры
+            </button>
+</div>
+</div>
+</aside>
+<!-- ==================== RIGHT COLUMN: PRODUCT GRID ==================== -->
+<section class="lg:col-span-9 @container">
+<input class="peer sr-only" id="bb-skeleton-toggle" type="checkbox"/>
+<div class="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest px-4 py-3 card-shadow dark:border-outline/30 dark:bg-primary-container">
+<p aria-live="polite" class="text-label-lg font-label-lg text-on-surface-variant dark:text-on-primary-container" id="bb-found-count" role="status">Найдено 9 товаров</p>
+<div class="flex items-center gap-2">
+<label class="bb-filter-label cursor-pointer hover:border-brand-400 transition-colors" for="bb-skeleton-toggle">
+<span class="material-symbols-outlined text-[18px]">auto_awesome_mosaic</span>
+<span>Показать скелетон</span>
+          </label>
+<label class="bb-filter-label cursor-pointer hover:border-brand-400 transition-colors lg:hidden" for="bb-filter-drawer">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+            Фильтры
+          </label>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 @md:gap-5" id="bb-product-grid">
+<!-- Card 1 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="shine-spf50" data-category="Солнцезащита" data-price="62.37" data-rating="4.9" data-stock="true" data-tags="SPF 50+,Хит продаж,Матовый финиш,Жирная,Глянец">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<span class="absolute top-3 left-3 bg-[#F2A93B]/20 text-primary px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold border border-[#F2A93B]/30">
+                  Хит
+                </span>
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">wb_sunny</span>
+<span class="text-label-sm font-mono mt-1 text-outline">SPF50 Shield</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Блеск для лысины SPF50 Matt &amp; Glow
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Мгновенное впитывание, без ощущения липкости. Сбалансированный благородный тон.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.9</span>
+<span class="text-label-sm text-outline">(128)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">62.37 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="foam-purify" data-category="Уход за кожей" data-price="42.57" data-rating="4.8" data-stock="true" data-tags="Хит продаж,Матовый финиш,Чувствительная,Жирная">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">soap</span>
+<span class="text-label-sm font-mono mt-1 text-outline">Foam Purify</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Шампунь-пенка для кожи головы без волос
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Мягкая деликатная формула с цинком и экстрактом чайного дерева для тотальной свежести.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.8</span>
+<span class="text-label-sm text-outline">(64)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">42.57 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="thermal-gel" data-category="Головные уборы" data-price="79.20" data-rating="5.0" data-stock="true" data-tags="Новинка,Для спорта,Охлаждение,Жирная">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<span class="absolute top-3 left-3 bg-[#E8D5B7] text-primary px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold">
+                  New
+                </span>
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">ac_unit</span>
+<span class="text-label-sm font-mono mt-1 text-outline">Thermal Gel</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Охлаждающая термо-шапочка для релакса
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Анатомический гидрогель для снятия стресса и охлаждения черепа после тренировок.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-bold text-primary">5.0</span>
+<span class="text-label-sm text-outline">(42)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">79.20 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="skullcare-pro" data-category="Бритьё и массаж" data-price="32.67" data-rating="4.9" data-stock="true" data-tags="Хит продаж,Матовый финиш,Чувствительная">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">spa</span>
+<span class="text-label-sm font-mono mt-1 text-outline">Ergo Massage</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Силиконовая щетка-массажер SkullCare Pro
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Улучшает микроциркуляцию, очищает поры и дарит непревзойденный тонус при мытье.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.9</span>
+<span class="text-label-sm text-outline">(89)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">32.67 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="uv-bandana" data-category="Солнцезащита" data-price="57.75" data-rating="4.7" data-stock="false" data-tags="SPF 50+,Для спорта,Новинка,Глянец,Сухая">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">dry_cleaning</span>
+<span class="text-label-sm font-mono mt-1 text-outline">UPF 50+ Fabric</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Солнцезащитная кепка-бандана UV-Shield
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Дышащая ультратонкая мембрана с блокировкой 99% ультрафиолета. Идеальная посадка.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.7</span>
+<span class="text-label-sm text-outline">(31)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">57.75 Br</span>
+<span class="mt-1 block text-label-sm font-semibold text-error">Нет в наличии</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn cursor-not-allowed opacity-60 transition-all duration-150" data-bb-add="" data-stock="false" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="silk-turban" data-category="Аксессуары" data-price="39.27" data-rating="4.6" data-stock="false" data-tags="Подарок,Новинка,Сухая,Чувствительная">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">inventory_2</span>
+<span class="text-label-sm font-mono mt-1 text-outline">Silk Touch</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Шёлковое полотенце-тюрбан для быстрой сушки
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Натуральный шёлк тутового шелкопряда. Не травмирует эпидермис и полирует поверхность.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.6</span>
+<span class="text-label-sm text-outline">(19)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">39.27 Br</span>
+<span class="mt-1 block text-label-sm font-semibold text-error">Нет в наличии</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn cursor-not-allowed opacity-60 transition-all duration-150" data-bb-add="" data-stock="false" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 7 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="deep-moisture" data-category="Уход за кожей" data-price="69.30" data-rating="4.9" data-stock="true" data-tags="Хит продаж,Новинка,Увлажнение,Сухая">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">water_drop</span>
+<span class="text-label-sm font-mono mt-1 text-outline">Hyaluron 24H</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Увлажняющий крем для черепа "Deep Moisture"
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Мгновенное впитывание, без ощущения липкости. Ниацинамид и гиалуроновый комплекс.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.9</span>
+<span class="text-label-sm text-outline">(110)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">69.30 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 8 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="anti-glare" data-category="Уход за кожей" data-price="21.45" data-rating="4.8" data-stock="true" data-tags="Хит продаж,Матовый финиш,Жирная,Для спорта">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-primary/70">layers</span>
+<span class="text-label-sm font-mono mt-1 text-outline">Anti-Gloss 60pcs</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Антибликовые матирующие салфетки (60 шт.)
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Бамбуковый уголь мгновенно устраняет жирный блеск перед важными фотосессиями и встречами.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+<span class="text-label-sm font-bold text-primary">4.8</span>
+<span class="text-label-sm text-outline">(76)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">21.45 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+<!-- Card 9 -->
+<article class="bb-product-card group @md:p-8 card-hover transition-all duration-200" data-bb-product-id="gift-deluxe" data-category="Подарки" data-price="164.67" data-rating="5.0" data-stock="true" data-tags="Подарок,Хит продаж,Глянец,Сухая">
+<div>
+<div class="relative w-full aspect-square bg-[#F4F4F6] rounded-xl flex items-center justify-center p-6 mb-4 overflow-hidden">
+<span class="absolute top-3 left-3 bg-[#E8D5B7] text-primary px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold">
+                  Набор
+                </span>
+<button aria-label="Добавить в избранное" aria-pressed="false" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error transition-colors" data-bb-wish="" title="В избранное" type="button">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="flex flex-col items-center justify-center text-outline group-hover:scale-105 hover:scale-105 transition-transform transition duration-300">
+<span class="material-symbols-outlined text-[64px] text-[#F2A93B]">redeem</span>
+<span class="text-label-sm font-mono mt-1 text-primary font-bold">VIP Gift Set</span>
+</div>
+</div>
+<p class="text-label-sm font-label-sm text-outline uppercase tracking-wider mb-1">Bald &amp; Bold</p>
+<h3 class="text-headline-sm font-headline-sm text-primary text-[18px] leading-tight mb-2">
+                Подарочный бокс "Королевский Блеск Deluxe"
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2 mb-3">
+                Полный комплекс: сыворотка, матирующий крем, щетка и бархатная полировочная салфетка.
+              </p>
+<div class="flex items-center gap-1.5 mb-4">
+<div class="flex text-[#F2A93B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-label-sm font-bold text-primary">5.0</span>
+<span class="text-label-sm text-outline">(53)</span>
+</div>
+</div>
+<div class="bb-card-actions pt-3 border-t border-outline-variant/30 flex items-center justify-between gap-3">
+<div class="min-h-11 flex flex-col justify-center">
+<span class="text-headline-sm font-headline-sm text-primary font-bold">164.67 Br</span>
+</div>
+<button aria-label="В корзину" class="bb-add-btn transition-all duration-150" data-bb-add="" type="button">
+<span class="material-symbols-outlined grid place-items-center h-5 w-5 leading-none text-[18px]">shopping_bag</span>
+<span>В корзину</span>
+</button>
+</div>
+</article>
+</div>
+<div class="hidden peer-checked:grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 @md:gap-5 mt-6" id="bb-skeleton-demo">
+<div class="bb-skeleton-card animate-pulse"><div class="w-full aspect-square rounded-xl bg-surface-container-highest dark:bg-inverse-surface mb-4"></div><div class="h-3 w-1/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-3"></div><div class="h-4 w-5/6 rounded bg-surface-container-highest dark:bg-inverse-surface mb-2"></div><div class="h-4 w-2/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-5"></div><div class="h-10 w-full rounded-xl bg-surface-container-highest dark:bg-inverse-surface"></div></div>
+<div class="bb-skeleton-card animate-pulse"><div class="w-full aspect-square rounded-xl bg-surface-container-highest dark:bg-inverse-surface mb-4"></div><div class="h-3 w-1/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-3"></div><div class="h-4 w-5/6 rounded bg-surface-container-highest dark:bg-inverse-surface mb-2"></div><div class="h-4 w-2/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-5"></div><div class="h-10 w-full rounded-xl bg-surface-container-highest dark:bg-inverse-surface"></div></div>
+<div class="bb-skeleton-card animate-pulse"><div class="w-full aspect-square rounded-xl bg-surface-container-highest dark:bg-inverse-surface mb-4"></div><div class="h-3 w-1/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-3"></div><div class="h-4 w-5/6 rounded bg-surface-container-highest dark:bg-inverse-surface mb-2"></div><div class="h-4 w-2/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-5"></div><div class="h-10 w-full rounded-xl bg-surface-container-highest dark:bg-inverse-surface"></div></div>
+<div class="bb-skeleton-card animate-pulse"><div class="w-full aspect-square rounded-xl bg-surface-container-highest dark:bg-inverse-surface mb-4"></div><div class="h-3 w-1/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-3"></div><div class="h-4 w-5/6 rounded bg-surface-container-highest dark:bg-inverse-surface mb-2"></div><div class="h-4 w-2/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-5"></div><div class="h-10 w-full rounded-xl bg-surface-container-highest dark:bg-inverse-surface"></div></div>
+<div class="bb-skeleton-card animate-pulse"><div class="w-full aspect-square rounded-xl bg-surface-container-highest dark:bg-inverse-surface mb-4"></div><div class="h-3 w-1/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-3"></div><div class="h-4 w-5/6 rounded bg-surface-container-highest dark:bg-inverse-surface mb-2"></div><div class="h-4 w-2/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-5"></div><div class="h-10 w-full rounded-xl bg-surface-container-highest dark:bg-inverse-surface"></div></div>
+<div class="bb-skeleton-card animate-pulse"><div class="w-full aspect-square rounded-xl bg-surface-container-highest dark:bg-inverse-surface mb-4"></div><div class="h-3 w-1/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-3"></div><div class="h-4 w-5/6 rounded bg-surface-container-highest dark:bg-inverse-surface mb-2"></div><div class="h-4 w-2/3 rounded bg-surface-container-highest dark:bg-inverse-surface mb-5"></div><div class="h-10 w-full rounded-xl bg-surface-container-highest dark:bg-inverse-surface"></div></div>
+</div>
+<!-- ==================== PAGINATION & LOAD MORE ==================== -->
+<div class="mt-6 hidden rounded-2xl border border-dashed border-outline-variant/60 bg-surface-container-lowest p-10 text-center dark:border-outline/40 dark:bg-primary-container" id="bb-empty-state">
+<span class="material-symbols-outlined text-[40px] text-outline">search_off</span>
+<h3 class="mt-3 text-headline-sm font-headline-sm text-primary dark:text-on-primary">Ничего не нашлось</h3>
+<p class="mt-2 text-body-sm text-on-surface-variant dark:text-outline-variant">Попробуйте изменить запрос или сбросить фильтры.</p>
+<button class="mt-5 rounded-xl bg-brand-400 px-5 py-2.5 text-label-lg font-semibold text-primary" id="bb-empty-reset" type="button">Сбросить фильтры</button>
+</div>
+<div class="mt-12 flex flex-col items-center gap-6">
+<button class="px-8 py-3.5 rounded-xl border-2 border-outline-variant bg-surface-container-lowest hover:border-primary hover:bg-surface-container-low text-primary font-semibold text-label-lg font-label-lg transition-all duration-150 shadow-sm flex items-center gap-2" id="bb-load-more" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+<span id="bb-load-more-label">Показать ещё товары</span>
+</button>
+<div class="flex flex-wrap items-center justify-center gap-2" id="bb-pagination"></div>
+</div>
+</section>
+</div>
+</main>
+<input class="peer sr-only" id="bb-filter-drawer" type="checkbox"/>
+<div class="fixed inset-x-0 bottom-0 z-40 flex items-center justify-between border-t border-outline-variant/60 bg-surface-container-lowest dark:bg-primary-container px-6 py-3 lg:hidden">
+<span class="text-label-lg font-label-lg text-primary dark:text-on-primary">Фильтры и сортировка</span>
+<label class="cursor-pointer rounded-xl bg-brand-400 px-5 py-2.5 text-label-lg font-label-lg font-semibold text-primary" for="bb-filter-drawer">Открыть</label>
+</div>
+<label aria-label="Закрыть фильтры" class="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto lg:hidden" for="bb-filter-drawer"></label>
+<aside class="bb-drawer-panel z-[70] translate-y-full peer-checked:translate-y-0 transition-transform duration-300 lg:hidden">
+<div class="mx-auto mb-5 h-1.5 w-12 rounded-full bg-outline-variant/60"></div>
+<div class="flex items-center justify-between mb-5">
+<h2 class="text-headline-sm font-headline-sm text-primary dark:text-on-primary">Фильтры</h2>
+<label class="text-label-sm font-label-sm text-on-surface-variant dark:text-on-primary-container" for="bb-filter-drawer">Закрыть</label>
+</div>
+<div class="space-y-3">
+<h3 class="text-label-lg font-label-lg text-primary dark:text-on-primary uppercase tracking-wider text-[12px]">Категория</h3>
+<label class="flex items-center gap-3 cursor-pointer"><input class="w-5 h-5 rounded-[6px] border-outline-variant text-brand-400 focus:ring-0" data-filter="category" data-value="Уход за кожей" type="checkbox"/><span class="text-body-sm text-on-surface dark:text-on-primary-container">Уход за кожей</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="w-5 h-5 rounded-[6px] border-outline-variant text-brand-400 focus:ring-0" data-filter="category" data-value="Солнцезащита" type="checkbox"/><span class="text-body-sm text-on-surface dark:text-on-primary-container">Солнцезащита</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="w-5 h-5 rounded-[6px] border-outline-variant text-brand-400 focus:ring-0" data-filter="category" data-value="Бритьё и массаж" type="checkbox"/><span class="text-body-sm text-on-surface dark:text-on-primary-container">Бритьё и массаж</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="w-5 h-5 rounded-[6px] border-outline-variant text-brand-400 focus:ring-0" data-filter="category" data-value="Подарки" type="checkbox"/><span class="text-body-sm text-on-surface dark:text-on-primary-container">Подарки</span></label>
+</div>
+<div class="space-y-3 mt-6">
+<h3 class="text-label-lg font-label-lg text-primary dark:text-on-primary uppercase tracking-wider text-[12px]">Цена, Br</h3>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-brand-400" id="bb-drawer-price" max="170" min="20" type="range" value="170"/>
+</div>
+<div class="space-y-3 mt-6">
+<h3 class="text-label-lg font-label-lg text-primary dark:text-on-primary uppercase tracking-wider text-[12px]">Сортировка</h3>
+<select class="w-full rounded-xl border border-outline-variant/60 bg-surface-container-lowest px-4 py-3 text-label-lg text-on-surface focus:outline-none focus:border-primary dark:bg-primary-container dark:text-on-primary" id="bb-drawer-sort">
+<option value="popular">По популярности</option>
+<option value="cheap">Сначала дешевле</option>
+<option value="expensive">Сначала дороже</option>
+<option value="rating">По рейтингу</option>
+</select>
+</div>
+<div class="space-y-3 mt-6">
+<h3 class="text-label-lg font-label-lg text-primary dark:text-on-primary uppercase tracking-wider text-[12px]">Теги</h3>
+<div class="flex flex-wrap gap-2">
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100"><input class="sr-only" data-filter="tag" data-value="SPF 50+" type="checkbox"/><span>SPF 50+</span></label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100"><input class="sr-only" data-filter="tag" data-value="Хит продаж" type="checkbox"/><span>Хит продаж</span></label>
+<label class="bb-tag-chip has-[:checked]:border-brand-400 has-[:checked]:bg-brand-50 has-[:checked]:text-brand-900 dark:has-[:checked]:bg-brand-900/30 dark:has-[:checked]:text-brand-100"><input class="sr-only" data-filter="tag" data-value="Матовый финиш" type="checkbox"/><span>Матовый финиш</span></label>
+</div>
+</div>
+<label class="mt-7 block cursor-pointer rounded-xl bg-brand-400 py-3.5 text-center text-label-lg font-semibold text-primary" for="bb-filter-drawer" id="bb-drawer-apply">Применить фильтры</label>
+</aside>
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-primary docked full-width mt-auto border-t border-outline/20 dark:border-outline-variant/40 flat no shadows">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 flex flex-col gap-12">
+<!-- Upper Footer Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Brand Slogan & Info -->
+<div class="md:col-span-5 space-y-4">
+<a class="flex items-center gap-3" href="../bald_bold_1/code.html">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none" style="width:100%;height:100%"><g transform="translate(10, 10)"><path d="M30 55 C16 55 8 44 8 28 C8 12 18 2 30 2 C42 2 52 12 52 28 C52 44 44 55 30 55 Z" fill="#1E1E24"/><path d="M18 16 C22 8 28 6 34 6" stroke="#F2A93B" stroke-width="3.5" stroke-linecap="round"/><path d="M38 10 L41 3 L44 10 L51 13 L44 16 L41 23 L38 16 L31 13 Z" fill="#F2A93B"/><circle cx="23" cy="27" r="2.5" fill="#FFFFFF"/><circle cx="37" cy="27" r="2.5" fill="#FFFFFF"/><path d="M25 36 C27 40 33 40 35 36" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/></g></svg>
+<span class="text-headline-md font-headline-md font-extrabold text-on-primary dark:text-primary">
+              Bald &amp; Bold
+            </span>
+</a>
+<p class="text-tertiary-fixed-dim font-medium text-headline-sm font-headline-sm">
+            Блестит — значит работает.
+          </p>
+<p class="text-body-sm font-body-sm text-outline-variant dark:text-on-surface-variant max-w-sm">
+            Первый премиальный бренд для мужчин, превративших гладкость в культ эстетики, силы и харизмы.
+          </p>
+</div>
+<!-- Navigation Links Columns (from JSON) -->
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 text-label-sm font-label-sm">
+<div class="space-y-3">
+<h4 class="text-on-primary dark:text-primary font-bold uppercase tracking-wider text-[11px]">Продукция</h4>
+<ul class="space-y-2.5">
+<li>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_2/code.html">
+                  Каталог
+                </a>
+</li>
+<li>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_2/code.html">
+                  Новинки
+                </a>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="text-on-primary dark:text-primary font-bold uppercase tracking-wider text-[11px]">Покупателям</h4>
+<ul class="space-y-2.5">
+<li>
+<button class="text-left text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" data-bb-info="delivery" type="button">
+                  Доставка и оплата
+                </button>
+</li>
+<li>
+<button class="text-left text-outline-variant dark:text-on-surface-variant hover:text-tertiary-fixed dark:hover:text-primary transition-colors duration-150 hover:translate-y-[-2px] inline-block transition-transform" data-bb-info="return" type="button">
+                  Возврат
+                </button>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="text-on-primary dark:text-primary font-bold uppercase tracking-wider text-[11px]">Компания</h4>
+<ul class="space-y-2.5">
+<li>
+<a class="text-label-lg font-label-lg text-on-surface-variant hover:text-primary transition-colors" href="../bald_bold_1/code.html#about">
+                  О нас
+                </a>
+</li>
+<li>
+<button class="text-left text-outline-variant dark:text-on-surface-variant hover:text-tertiary-fixed dark:hover:text-primary transition-colors duration-150 hover:translate-y-[-2px] inline-block transition-transform" data-bb-info="privacy" type="button">
+                  Политика конфиденциальности
+                </button>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Footer Divider & Copyright -->
+<div class="pt-8 border-t border-outline/20 dark:border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-outline-variant dark:text-on-surface-variant">
+<span>© <span id="bb-year">2026</span> Bald &amp; Bold. Все права защищены. Блестит — значит работает.</span>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-1 text-[13px]">
+<span class="material-symbols-outlined text-[16px] text-[#F2A93B]">verified</span>
+            100% Оригинальный состав
+          </span>
+<span class="flex items-center gap-1 text-[13px]">
+<span class="material-symbols-outlined text-[16px] text-[#F2A93B]">local_shipping</span>
+            Экспресс-доставка от 24ч
+          </span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    (function () {
+      var grid = document.getElementById('bb-product-grid');
+      if (!grid) return;
+      var store = window.BBStore;
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('article'));
+      var found = document.getElementById('bb-found-count');
+      var crumb = document.getElementById('bb-crumb-count');
+      var sortSelect = document.getElementById('sort-select');
+      var drawerSort = document.getElementById('bb-drawer-sort');
+      var minInput = document.getElementById('bb-price-min-input');
+      var maxInput = document.getElementById('bb-price-max-input');
+      var minRange = document.getElementById('bb-price-min');
+      var maxRange = document.getElementById('bb-price-max');
+      var drawerRange = document.getElementById('bb-drawer-price');
+      var minLabel = document.getElementById('bb-price-min-label');
+      var maxLabel = document.getElementById('bb-price-max-label');
+      var stockSwitch = document.getElementById('bb-stock-switch');
+      var gridBtn = document.getElementById('view-grid-btn');
+      var listBtn = document.getElementById('view-list-btn');
+      var loadMore = document.getElementById('bb-load-more');
+      var loadMoreLabel = document.getElementById('bb-load-more-label');
+      var skeletonToggle = document.getElementById('bb-skeleton-toggle');
+      var skeletons = document.getElementById('bb-skeleton-demo');
+      var emptyState = document.getElementById('bb-empty-state');
+      var pagination = document.getElementById('bb-pagination');
+      var PRODUCTS = cards.map(function (card, index) {
+        return {
+          el: card,
+          id: card.dataset.bbProductId || 'product-' + index,
+          category: card.dataset.category || '',
+          price: Number(card.dataset.price || 0),
+          rating: Number(card.dataset.rating || 0),
+          stock: card.dataset.stock !== 'false',
+          tags: String(card.dataset.tags || '').split(',').map(function (tag) { return tag.trim(); }),
+          order: index
+        };
+      });
+      PRODUCTS.forEach(function (product) {
+        product.el.dataset.bbProductId = product.id;
+        var media = product.el.querySelector('.relative.aspect-square');
+        if (media) {
+          media.dataset.bbDetail = product.id;
+          media.setAttribute('role', 'button');
+          media.setAttribute('tabindex', '0');
+          media.setAttribute('title', 'Подробнее о товаре');
+          media.classList.add('cursor-pointer');
+        }
+        var placeholder = media && media.querySelector('div.flex.flex-col.items-center.justify-center');
+        var shopProduct = store && store.products ? store.products.find(function (item) { return item.id === product.id; }) : null;
+        if (media && placeholder && shopProduct && shopProduct.image) {
+          var icon = placeholder.querySelector('.material-symbols-outlined');
+          var label = placeholder.querySelector('.text-label-sm');
+          var image = document.createElement('img');
+          image.className = 'w-full h-full object-contain transition-transform duration-300 group-hover:scale-105';
+          image.alt = shopProduct.name || product.el.querySelector('h3').textContent.trim();
+          image.loading = 'lazy';
+          image.addEventListener('error', function () {
+            var fallback = document.createElement('div');
+            fallback.className = 'flex flex-col items-center justify-center text-outline group-hover:scale-105 transition-transform duration-300';
+            var iconEl = document.createElement('span');
+            iconEl.className = 'material-symbols-outlined text-[64px] text-primary/70';
+            iconEl.textContent = icon ? icon.textContent : 'inventory_2';
+            var labelEl = document.createElement('span');
+            labelEl.className = 'text-label-sm font-mono mt-1 text-outline';
+            labelEl.textContent = label ? label.textContent : '';
+            fallback.appendChild(iconEl);
+            fallback.appendChild(labelEl);
+            image.replaceWith(fallback);
+          });
+          image.src = shopProduct.image;
+          placeholder.replaceWith(image);
+        }
+        var wish = product.el.querySelector('[data-bb-wish]');
+        if (wish) wish.dataset.bbWishId = product.id;
+        var heading = product.el.querySelector('h3');
+        if (heading && !heading.querySelector('a')) {
+          heading.innerHTML = '<a class="hover:underline cursor-pointer" data-bb-detail="' + product.id + '" href="../bald_bold_3/code.html?id=' + encodeURIComponent(product.id) + '">' + heading.innerHTML + '</a>';
+        }
+        if (!product.stock) {
+          Array.prototype.slice.call(product.el.querySelectorAll('[data-bb-add]')).forEach(function (button) {
+            button.dataset.stock = 'false';
+            button.classList.add('cursor-not-allowed', 'opacity-60');
+          });
+        }
+      });
+
+      var PRICE_MIN = 20;
+      var PRICE_MAX = 170;
+      var PER_PAGE = 4;
+      var FINISH_TAGS = {
+        'Матовый финиш': 'Матовый финиш',
+        'Благородный глянец': 'Глянец',
+        'Охлаждающий эффект': 'Охлаждение',
+        'Глубокое увлажнение': 'Увлажнение'
+      };
+      var SCALP_TAGS = {
+        'Чувствительная': 'Чувствительная',
+        'Склонная к сухости': 'Сухая',
+        'Жирная / комбинированная': 'Жирная'
+      };
+      var CATEGORY_ALIASES = {
+        'уход за кожей головы': 'уход за кожей',
+        'защита от солнца': 'солнцезащита',
+        'подарки со смыслом': 'подарки',
+        'домашние мелочи': 'аксессуары'
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var rawQuery = params.get('q') || '';
+      var query = rawQuery.trim().toLowerCase();
+      var urlCategory = normalizeCategory(params.get('category') || '');
+      var allowedSort = ['popular', 'cheap', 'expensive', 'rating'];
+      var sortFromUrl = params.get('sort');
+      var pageFromUrl = parseInt(params.get('page'), 10);
+      var matchedTotal = 0;
+      var loading = false;
+
+      var state = {
+        categories: [],
+        tags: [],
+        scalps: [],
+        finish: '',
+        min: PRICE_MIN,
+        max: PRICE_MAX,
+        inStock: false,
+        sort: allowedSort.indexOf(sortFromUrl) !== -1 ? sortFromUrl : 'popular',
+        page: pageFromUrl > 0 ? pageFromUrl : 1,
+        revealAll: false,
+        listView: false
+      };
+
+      var gridClasses = grid.className;
+      var listClasses = 'grid grid-cols-1 gap-4 @md:gap-5';
+
+      cards.forEach(function (card, index) { card.dataset.order = String(index); });
+
+      function toast(message, type) {
+        if (window.BBStore) window.BBStore.toast(message, type);
+      }
+      function normalizeCategory(value) {
+        var key = String(value || '').trim().toLowerCase();
+        return CATEGORY_ALIASES[key] || key;
+      }
+      function cardTags(card) {
+        return String(card.dataset.tags || '').split(',').map(function (tag) { return tag.trim(); });
+      }
+      function plural(count, forms) {
+        var lastTwo = count % 100;
+        var last = count % 10;
+        if (last === 1 && lastTwo !== 11) return forms[0];
+        if (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14)) return forms[1];
+        return forms[2];
+      }
+      function countText(count) {
+        var prefix = count % 10 === 1 && count % 100 !== 11 ? 'Найден' : 'Найдено';
+        return prefix + ' ' + count + ' ' + plural(count, ['товар', 'товара', 'товаров']);
+      }
+      function scrollToResults() {
+        found.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      function syncUrl() {
+        var target = new URL(window.location.href);
+        if (rawQuery) target.searchParams.set('q', rawQuery);
+        else target.searchParams.delete('q');
+        if (urlCategory) target.searchParams.set('category', urlCategory);
+        else target.searchParams.delete('category');
+        if (state.sort !== 'popular') target.searchParams.set('sort', state.sort);
+        else target.searchParams.delete('sort');
+        if (state.page > 1 && !state.revealAll) target.searchParams.set('page', String(state.page));
+        else target.searchParams.delete('page');
+        try {
+          history.replaceState(null, '', target.pathname + target.search + target.hash);
+        } catch (error) {
+          window.location.hash = target.hash;
+        }
+      }
+      function renderWishButtons() {
+        if (!store) return;
+        Array.prototype.slice.call(document.querySelectorAll('[data-bb-wish-id]')).forEach(function (button) {
+          var active = store.isWish(button.dataset.bbWishId);
+          button.setAttribute('aria-pressed', String(active));
+          var icon = button.querySelector('.material-symbols-outlined');
+          if (icon) icon.style.fontVariationSettings = active ? "'FILL' 1" : "'FILL' 0";
+        });
+      }
+      function facetCounts() {
+        var base = PRODUCTS.filter(function (product) { return passes(product, true); });
+        Array.prototype.slice.call(document.querySelectorAll('[data-filter-count="category"]')).forEach(function (label) {
+          var value = label.dataset.value;
+          label.textContent = String(base.filter(function (product) { return product.category === value; }).length);
+        });
+      }
+      function checkedValues(name) {
+        return Array.prototype.slice.call(document.querySelectorAll('input[data-filter="' + name + '"]:checked'))
+          .map(function (input) { return input.dataset.value; });
+      }
+      function setChecked(name, values, selected) {
+        document.querySelectorAll('input[data-filter="' + name + '"]').forEach(function (input) {
+          if (values.indexOf(input.dataset.value) !== -1) input.checked = selected;
+        });
+      }
+      function setAllChecked(name, selected) {
+        document.querySelectorAll('input[data-filter="' + name + '"]').forEach(function (input) { input.checked = selected; });
+      }
+      function syncPrices(source) {
+        var min = source === 'minInput' ? parseFloat(minInput.value) : parseFloat(minRange.value);
+        var max;
+        if (source === 'maxInput') max = parseFloat(maxInput.value);
+        else if (source === 'drawerRange') max = parseFloat(drawerRange.value);
+        else max = parseFloat(maxRange.value);
+        if (isNaN(min)) min = PRICE_MIN;
+        if (isNaN(max)) max = PRICE_MAX;
+        min = Math.max(PRICE_MIN, Math.min(PRICE_MAX, min));
+        max = Math.max(PRICE_MIN, Math.min(PRICE_MAX, max));
+        if (min > max) {
+          if (source === 'minInput' || source === 'minRange') max = min;
+          else min = max;
+        }
+        state.min = min;
+        state.max = max;
+        minInput.value = String(min);
+        maxInput.value = String(max);
+        minRange.value = String(min);
+        maxRange.value = String(max);
+        drawerRange.value = String(max);
+        minLabel.textContent = min + ' Br';
+        maxLabel.textContent = max + ' Br';
+      }
+      function readFilters() {
+        state.categories = checkedValues('category');
+        state.tags = checkedValues('tag');
+        state.scalps = checkedValues('scalp');
+        var finish = document.querySelector('input[data-filter="finish"]:checked');
+        state.finish = finish ? finish.dataset.value : '';
+        state.inStock = !!(stockSwitch && stockSwitch.checked);
+        syncPrices('inputs');
+      }
+      function syncFromState() {
+        setAllChecked('category', false);
+        setAllChecked('tag', false);
+        setAllChecked('scalp', false);
+        document.querySelectorAll('input[data-filter="finish"]').forEach(function (input) { input.checked = false; });
+        state.categories.forEach(function (value) { setChecked('category', [value], true); });
+        state.tags.forEach(function (value) { setChecked('tag', [value], true); });
+        state.scalps.forEach(function (value) { setChecked('scalp', [value], true); });
+        if (state.finish) setChecked('finish', [state.finish], true);
+        stockSwitch.checked = state.inStock;
+        sortSelect.value = state.sort;
+        if (drawerSort) drawerSort.value = state.sort;
+        minInput.value = String(state.min);
+        maxInput.value = String(state.max);
+        minRange.value = String(state.min);
+        maxRange.value = String(state.max);
+        drawerRange.value = String(state.max);
+        minLabel.textContent = state.min + ' Br';
+        maxLabel.textContent = state.max + ' Br';
+      }
+      function passes(product, ignoreCategory) {
+        var tags = product.tags;
+        if (!ignoreCategory && urlCategory && normalizeCategory(product.category) !== urlCategory) return false;
+        if (query && product.el.textContent.toLowerCase().indexOf(query) === -1) return false;
+        if (!ignoreCategory && state.categories.length && state.categories.indexOf(product.category) === -1) return false;
+        if (product.price < state.min || product.price > state.max) return false;
+        if (state.tags.length && !state.tags.some(function (tag) { return tags.indexOf(tag) !== -1; })) return false;
+        if (state.finish && tags.indexOf(FINISH_TAGS[state.finish]) === -1) return false;
+        if (state.scalps.length && !state.scalps.some(function (tag) { return tags.indexOf(SCALP_TAGS[tag]) !== -1; })) return false;
+        if (state.inStock && !product.stock) return false;
+        return true;
+      }
+      function applyView() {
+        grid.className = state.listView ? listClasses : gridClasses;
+        PRODUCTS.forEach(function (product) { product.el.classList.toggle('bb-list-card', state.listView); });
+        if (loading || matchedTotal === 0) grid.classList.add('hidden');
+        else grid.classList.remove('hidden');
+        gridBtn.classList.toggle('bg-surface-container-lowest', !state.listView);
+        gridBtn.classList.toggle('text-primary', !state.listView);
+        gridBtn.classList.toggle('shadow-sm', !state.listView);
+        gridBtn.classList.toggle('text-on-surface-variant', state.listView);
+        gridBtn.setAttribute('aria-pressed', String(!state.listView));
+        listBtn.classList.toggle('bg-surface-container-lowest', state.listView);
+        listBtn.classList.toggle('text-primary', state.listView);
+        listBtn.classList.toggle('shadow-sm', state.listView);
+        listBtn.classList.toggle('text-on-surface-variant', !state.listView);
+        listBtn.setAttribute('aria-pressed', String(state.listView));
+      }
+      function renderPagination(pages) {
+        if (!pagination) return;
+        pagination.innerHTML = '';
+        var arrowClass = 'w-10 h-10 rounded-xl border border-outline-variant/60 flex items-center justify-center text-outline hover:text-primary hover:border-primary transition-colors disabled:opacity-30';
+        var prev = document.createElement('button');
+        prev.type = 'button';
+        prev.className = arrowClass;
+        prev.dataset.pageDir = '-1';
+        prev.setAttribute('aria-label', 'Предыдущая страница');
+        prev.disabled = state.revealAll || state.page <= 1;
+        prev.innerHTML = '<span class="material-symbols-outlined text-[20px]">chevron_left</span>';
+        pagination.appendChild(prev);
+        for (var page = 1; page <= pages; page += 1) {
+          var active = !state.revealAll && page === state.page;
+          var button = document.createElement('button');
+          button.type = 'button';
+          button.dataset.page = String(page);
+          button.setAttribute('aria-label', 'Страница ' + page);
+          button.setAttribute('aria-current', active ? 'page' : 'false');
+          button.className = active
+            ? 'w-10 h-10 rounded-xl bg-primary text-on-primary font-semibold text-label-sm flex items-center justify-center shadow-sm'
+            : 'w-10 h-10 rounded-xl border border-outline-variant/60 text-on-surface hover:border-primary hover:text-primary font-semibold text-label-sm flex items-center justify-center transition-colors';
+          button.textContent = String(page);
+          pagination.appendChild(button);
+        }
+        var next = document.createElement('button');
+        next.type = 'button';
+        next.className = arrowClass;
+        next.dataset.pageDir = '1';
+        next.setAttribute('aria-label', 'Следующая страница');
+        next.disabled = state.revealAll || state.page >= pages;
+        next.innerHTML = '<span class="material-symbols-outlined text-[20px]">chevron_right</span>';
+        pagination.appendChild(next);
+      }
+      function updateLoadMore() {
+        var remaining = Math.max(0, matchedTotal - state.page * PER_PAGE);
+        var show = !state.revealAll && remaining > 0;
+        if (loadMore) loadMore.classList.toggle('hidden', !show);
+        if (loadMoreLabel) loadMoreLabel.textContent = 'Показать ещё ' + remaining + ' ' + plural(remaining, ['товар', 'товара', 'товаров']);
+      }
+      function apply(scroll) {
+        readFilters();
+        var matched = PRODUCTS.filter(function (product) { return passes(product, false); });
+        matched.sort(function (a, b) {
+          if (state.sort === 'cheap') return a.price - b.price;
+          if (state.sort === 'expensive') return b.price - a.price;
+          if (state.sort === 'rating') return b.rating - a.rating || a.order - b.order;
+          return a.order - b.order;
+        });
+        matchedTotal = matched.length;
+        facetCounts();
+        var pages = Math.max(1, Math.ceil(matchedTotal / PER_PAGE));
+        if (state.page > pages) state.page = pages;
+        var start = state.revealAll ? 0 : (state.page - 1) * PER_PAGE;
+        var end = state.revealAll ? matchedTotal : start + PER_PAGE;
+        PRODUCTS.forEach(function (product) { product.el.style.display = 'none'; });
+        matched.forEach(function (product, index) {
+          if (index >= start && index < end) product.el.style.display = '';
+        });
+        found.textContent = countText(matchedTotal);
+        crumb.textContent = String(matchedTotal);
+        if (emptyState) emptyState.classList.toggle('hidden', matchedTotal !== 0);
+        renderPagination(pages);
+        updateLoadMore();
+        applyView();
+        syncUrl();
+        if (scroll) scrollToResults();
+      }
+      function resetFilters(notify) {
+        state.categories = [];
+        state.tags = [];
+        state.scalps = [];
+        state.finish = '';
+        state.min = PRICE_MIN;
+        state.max = PRICE_MAX;
+        state.inStock = false;
+        state.sort = 'popular';
+        state.page = 1;
+        state.revealAll = false;
+        urlCategory = '';
+        rawQuery = '';
+        query = '';
+        sortSelect.value = 'popular';
+        if (drawerSort) drawerSort.value = 'popular';
+        var searchField = document.querySelector('input[data-bb-search="true"]');
+        if (searchField) searchField.value = '';
+        syncFromState();
+        apply(false);
+        if (notify) toast('Фильтры сброшены', 'success');
+      }
+
+      function setSort(value) {
+        if (allowedSort.indexOf(value) === -1) value = 'popular';
+        state.sort = value;
+        sortSelect.value = value;
+        if (drawerSort) drawerSort.value = value;
+        state.page = 1;
+        state.revealAll = false;
+        apply(false);
+      }
+      document.querySelectorAll('input[data-filter]').forEach(function (input) {
+        input.addEventListener('change', function () {
+          if (input.dataset.filter === 'category') urlCategory = '';
+          if (input.type === 'radio') {
+            document.querySelectorAll('input[data-filter="finish"]').forEach(function (radio) {
+              if (radio !== input) radio.checked = false;
+            });
+          } else {
+            setChecked(input.dataset.filter, [input.dataset.value], input.checked);
+          }
+          state.page = 1;
+          state.revealAll = false;
+          apply(false);
+        });
+      });
+      stockSwitch.addEventListener('change', function () {
+        state.page = 1;
+        state.revealAll = false;
+        apply(false);
+      });
+      minInput.addEventListener('change', function () { syncPrices('minInput'); apply(false); });
+      maxInput.addEventListener('change', function () { syncPrices('maxInput'); apply(false); });
+      minRange.addEventListener('input', function () { syncPrices('minRange'); apply(false); });
+      maxRange.addEventListener('input', function () { syncPrices('maxRange'); apply(false); });
+      drawerRange.addEventListener('input', function () { syncPrices('drawerRange'); apply(false); });
+      sortSelect.addEventListener('change', function () { setSort(sortSelect.value); });
+      if (drawerSort) drawerSort.addEventListener('change', function () { setSort(drawerSort.value); });
+      gridBtn.addEventListener('click', function () { state.listView = false; apply(false); });
+      listBtn.addEventListener('click', function () { state.listView = true; apply(false); });
+      document.getElementById('bb-reset-btn').addEventListener('click', function () { resetFilters(true); });
+      document.getElementById('bb-clear-btn').addEventListener('click', function () { resetFilters(true); });
+      document.getElementById('bb-apply-btn').addEventListener('click', function () {
+        state.page = 1;
+        state.revealAll = false;
+        apply(false);
+        toast('Фильтры применены', 'success');
+      });
+      document.getElementById('bb-drawer-apply').addEventListener('click', function () {
+        state.page = 1;
+        state.revealAll = false;
+        apply(false);
+      });
+      loadMore.addEventListener('click', function () {
+        if (state.revealAll || matchedTotal <= state.page * PER_PAGE) {
+          toast('Все товары уже показаны');
+          return;
+        }
+        state.revealAll = true;
+        apply(true);
+        toast('Показаны все товары', 'success');
+      });
+      if (pagination) {
+        pagination.addEventListener('click', function (event) {
+          var target = event.target.closest('[data-page], [data-page-dir]');
+          if (!target || target.disabled) return;
+          state.revealAll = false;
+          if (target.dataset.page) state.page = Number(target.dataset.page);
+          else state.page = Math.max(1, state.page + Number(target.dataset.pageDir));
+          apply(true);
+        });
+      }
+      skeletonToggle.addEventListener('change', function () {
+        if (!skeletonToggle.checked) return;
+        loading = true;
+        grid.classList.add('hidden');
+        found.textContent = 'Загружаем товары…';
+        skeletons.classList.remove('hidden');
+        skeletons.classList.add('grid');
+        window.setTimeout(function () {
+          skeletons.classList.add('hidden');
+          skeletons.classList.remove('grid');
+          loading = false;
+          skeletonToggle.checked = false;
+          apply(false);
+        }, 700);
+      });
+      window.addEventListener('bb:search', function (event) {
+        rawQuery = String(event.detail || '');
+        query = rawQuery.trim().toLowerCase();
+        var searchField = document.querySelector('input[data-bb-search="true"]');
+        if (searchField) searchField.value = rawQuery;
+        state.page = 1;
+        state.revealAll = false;
+        apply(false);
+      });
+      var emptyReset = document.getElementById('bb-empty-reset');
+      if (emptyReset) emptyReset.addEventListener('click', function () { resetFilters(true); });
+      window.addEventListener('bb:wishlist', renderWishButtons);
+      var year = document.getElementById('bb-year');
+      if (year) year.textContent = String(new Date().getFullYear());
+      renderWishButtons();
+      var searchInput = document.querySelector('input[data-bb-search="true"]');
+      if (searchInput && rawQuery) searchInput.value = rawQuery;
+      syncFromState();
+      if (urlCategory) {
+        document.querySelectorAll('input[data-filter="category"]').forEach(function (input) {
+          input.checked = normalizeCategory(input.dataset.value) === urlCategory;
+        });
+      }
+      apply(false);
+    })();
+  </script>
+</body></html>
