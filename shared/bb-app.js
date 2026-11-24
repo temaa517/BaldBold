@@ -708,7 +708,7 @@
             window.dispatchEvent(new CustomEvent('bb:search', { detail: query }));
             return;
         }
-        const target = new URL('../bald_bold_2/code.html', location.href);
+        const target = new URL('../bald_bold_2/code.html', document.baseURI);
         target.searchParams.set('q', query);
         location.href = target.href;
     }
